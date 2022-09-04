@@ -5,29 +5,202 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Lexend:wght@100;200;400;700&display=swap" rel="stylesheet"> 
 
     <title>besties</title>
     <meta name="title" content="besties">
-    <meta name="description" content="besties house">
+    <meta name="description" content="besties.house">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://besties.house/">
     <meta property="og:title" content="besties">
-    <meta property="og:description" content="besties house">
-    <meta property="twitter:card" content="summary">
+    <meta property="og:image" content="https://besties.house/thumb.png">
+    <meta property="og:description" content="besties.house">
+    <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://besties.house/">
     <meta property="twitter:title" content="besties">
-    <meta property="twitter:description" content="besties house">
+    <meta property="twitter:description" content="besties.house">
+    <meta name="twitter:image" content="https://besties.house/thumb.png">
 </head>
 <body>
-    <div id="content">
-        <div id="besties-cont">
-            <div id="besties">
-                <p id="besties-text" class="text-center">besties</p>
+    <div class="scroll-page">
+        <div class="sections">
+            <p class="title-text"><span class="highlight">besties</span>.house</p>
+            <div class="content">
+                <div class="member">
+                    <div class="member-quick">
+                        <p class="member-name">quinn</p>
+                        <a href="https://twitter.com/intent/user?user_id=1528596604940341250" class="member-username">@FEMBOYBOURGEOIS</a>
+                    </div>
+                    <div class="member-moreinfo">
+                        <p class="member-pronouns">she/they</p>
+                        <a href="mailto:quinn@besties.house">quinn@besties.house</a>
+                    </div>
+                </div>
+                <div class="member" id="hazy-member">
+                    <div class="member-quick">
+                        <p class="member-name">hazy</p>
+                        <a href="https://twitter.com/intent/user?user_id=1021804959703212034" class="member-username">@hazysu</a>
+                    </div>
+                    <div class="member-moreinfo">
+                        <p class="member-pronouns">she/her</p>
+                        <a href="mailto:hazy@besties.house" id="hazy-email">hazy@besties.house</a>
+                        <a href="https://hazy.gay">hazy.gay</a>
+                    </div>
+                </div>
+                <div class="member">
+                    <div class="member-quick">
+                        <p class="member-name">aria</p>
+                        <a href="https://twitter.com/intent/user?user_id=1450703231642972161" class="member-username">@frequent_sexer</a>
+                    </div>
+                    <div class="member-moreinfo">
+                        <p class="member-pronouns">she/her</p>
+                        <a href="mailto:aria@besties.house">aria@besties.house</a>
+                        <a href="http://tacohitbox.com/">tacohitbox.com</a>
+                    </div>
+                </div>
+                <div class="member">
+                    <div class="member-quick">
+                        <p class="member-name">luna</p>
+                        <a href="https://twitter.com/intent/user?user_id=765711397820989440" class="member-username">@WoahItsLunaEpic</a>
+                    </div>
+                    <div class="member-moreinfo">
+                        <p class="member-pronouns">she/her</p>
+                    </div>
+                </div>
+                <div class="member">
+                    <div class="member-quick">
+                        <p class="member-name">shady</p>
+                        <a href="https://twitter.com/intent/user?user_id=1185565283001524226" class="member-username">@ginglygoogaga</a>
+                    </div>
+                    <div class="member-moreinfo">
+                        <p class="member-pronouns">he/him</p>
+                        <p class="note">we do not endorse shady...</p>
+                    </div>
+                </div>
+                <div class="member">
+                    <div class="member-quick">
+                        <p class="member-name">cup</p>
+                    </div>
+                    <div class="member-moreinfo">
+                        <p class="member-pronouns">he/him</p>
+                        <p class="note">honorary member lmao</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div id="members">
-        </div>
-        <p id="h">stuff will be here later</p>
     </div>
+    <div class="footer">
+        <a href="/">besties.house</a>
+        <p>contact at <a href="mailto:besties@riseup.net">besties@riseup.net</a></p>
+    </div>
+    <svg class="hidesvg" role="img" viewBox="0 0 0 0" width="0" height="0" xmlns="http://www.w3.org/2000/svg">
+        <filter id="refract_fast">
+            <feTurbulence baseFrequency="0.6" value="0"/>
+            <feDisplacementMap in="SourceGraphic" in2="map" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+    </svg>
+    <script>
+        async function setHazyEmail(str) {
+            let el = document.getElementById('hazy-email')
+            el.setAttribute('href', `mailto:${str}`)
+            let old = el.innerText
+            let parts0 = [old.split('@')[0], str.split('@')[0]]
+            let parts1 = [old.split('@')[1], str.split('@')[1]]
+            let steps
+            let delay = 80
+            if (parts0[0]!==parts0[1]) {
+                steps = makeSteps(...parts0)
+                // delay = 500/steps.length
+                for (let step of steps) {
+                    el.innerText = step+'@'+parts1[0]
+                    await new Promise(resolve => setTimeout(resolve, delay))
+                }
+            }
+            if (parts1[0]!==parts1[1]) {
+                steps = makeSteps(...parts1)
+                // delay = 500/steps.length
+                for (let step of steps) {
+                    el.innerText = parts0[1]+'@'+step
+                    await new Promise(resolve => setTimeout(resolve, delay))
+                }
+            }
+            el.innerText = str
+        }
+        function shuffle(array) {
+            let currentIndex = array.length
+            let randomIndex
+            while (currentIndex != 0) {
+                randomIndex = Math.floor(Math.random() * currentIndex)
+                currentIndex--
+                [array[currentIndex], array[randomIndex]] = [
+                    array[randomIndex], array[currentIndex]
+                ]
+            }
+            return array
+        }
+        function makeSteps(a, b) {
+            let rev = false
+            if (b.length>a.length) {
+                let h = a
+                a = b
+                b = h
+                rev = true
+            }
+            let diffs = []
+            for (let i = 0; i < a.length; i ++) {
+                diffs[i] = {
+                    val: a[i]
+                }
+                if (!b[i]) {
+                    diffs[i].edit = true
+                    diffs[i].swapFor = ''
+                } else if (b[i]!==a[i]) {
+                    diffs[i].edit = true
+                    diffs[i].swapFor = b[i]
+                }
+            }
+            let steps = []
+            steps.push(a)
+            // let order = shuffle([...Array(diffs.length).keys()])
+            let order = Array(diffs.length).keys()
+            for (let i of order) {
+                if (diffs[i].edit) {
+                    diffs[i].val = diffs[i].swapFor
+                    steps.push(diffs.map(e => e.val).join('').trimEnd())
+                }
+            }
+            steps = steps.filter((current, i, arr) => {
+                let previous = arr[i-1]
+                if (previous&&previous===current) {
+                    return false
+                }
+                return true
+            })
+            if (rev) return steps.reverse()
+            return steps
+        }
+        let hazyEmails = shuffle([
+            'hazy@besties.house',
+            'h@besties.house',
+            'hazysu@riseup.net',
+            'boymoder@riseup.net',
+            'oestradiol@riseup.net',
+        ])
+        hazyEmails.push('heatfromfire@riseup.net', 'firefromheat@riseup.net')
+        let i = 0;
+        (async () => {
+            while (true) {
+                if (document.querySelector('#hazy-member:hover')) {
+                    await new Promise(resolve => setTimeout(resolve, 1000))
+                    continue
+                }
+                await setHazyEmail(hazyEmails[i])
+                await new Promise(resolve => setTimeout(resolve, 1000))
+                i=(i+1)%hazyEmails.length
+            }
+        })()
+    </script>
 </body>
 </html>
