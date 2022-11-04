@@ -86,23 +86,24 @@
             splashI += 1
             splash = splashes[splashI]
         }, 10000)
-        return e => clearInterval(splashInterval)
+        return e => {
+            console.log('its ending lol')
+            clearInterval(splashInterval)
+        }
     })
 </script>
 
 <svelte:head>
-    <title>besties</title>
+    <title>besties{splash?' - '+splash:''}</title>
 </svelte:head>
 
 <div class="page">
     <div class="hero">
         <GlitchyBg></GlitchyBg>
         <h1 class="besties-heading">besties</h1>
-        {#if splash}
             {#key splash}
-                <p class="besties-splash" transition:slide>{splash}</p>
+            <p class="besties-splash" transition:slide>{splash?splash:''}</p>
             {/key}
-        {/if}
     </div>
     
     
