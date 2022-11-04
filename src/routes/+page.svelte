@@ -87,6 +87,7 @@
         splash = splashes[splashI]
         let splashInterval = setInterval(() => {
             splashI += 1
+            if (splashI>=splashes.length) splashI = 0
             splash = splashes[splashI]
         }, 10000)
         return e => {
