@@ -27,7 +27,8 @@
             name: 'aria',
             socials: {
                 twitter: '1450703231642972161',
-                mastodon: 'https://fuckgov.org/web/@a'
+                mastodon: 'https://fuckgov.org/web/@a',
+                lastfm: 'tacohitbox'
             },
             pronouns: 'she/it',
             email: 'aria@besties.house',
