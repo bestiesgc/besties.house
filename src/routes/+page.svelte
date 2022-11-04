@@ -41,6 +41,7 @@
                 twitter: '765711397820989440'
             },
             pronouns: 'she/her',
+            bio: 'hamburger'
         },
         {
             name: 'cup',
