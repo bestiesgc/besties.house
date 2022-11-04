@@ -89,6 +89,10 @@
     })
 </script>
 
+<svelte:head>
+    <title>besties</title>
+</svelte:head>
+
 <div class="page">
     <div class="hero">
         <GlitchyBg></GlitchyBg>
