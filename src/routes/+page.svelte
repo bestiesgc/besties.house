@@ -48,7 +48,7 @@
                 twitter: '1576737284992409601'
             },
             pronouns: 'she/her',
-            bio: 'left twix >'
+            bio: '13 year old andrew tate fangirl... interact with caution...'
         }
     ]
     function shuffle(a) {
@@ -102,9 +102,9 @@
     <div class="hero">
         <GlitchyBg></GlitchyBg>
         <h1 class="besties-heading">besties</h1>
-            {#key splash}
+        {#key splash}
             <p class="besties-splash" transition:slide>{splash?splash:''}</p>
-            {/key}
+        {/key}
     </div>
     
     
