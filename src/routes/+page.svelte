@@ -76,7 +76,8 @@
         '"i want to block you for this message"',
         'i tested positive for being all tuckered out',
         'i know this pic can get 100 likes',
-        'hyperpop on soundcloud'
+        'hyperpop on soundcloud',
+        'talking to strangers online was the best decision i ever made'
     ])
     let splash
     onMount(() => {
