@@ -103,8 +103,11 @@ a:hover {
 .page {
     position: relative;
     overflow-y: scroll;
+    overflow-y: overlay;
     height: 100vh;
     height: 100svh;
+    scrollbar-color: var(--violet-100) var(--violet-400);
+    scrollbar-width: thin;
 }
 
 .hero {
@@ -194,7 +197,6 @@ a:hover {
     flex-direction: column;
     flex-wrap: wrap;
     gap: 1rem;
-    overflow-x: scroll;
 }
 
 .member {
