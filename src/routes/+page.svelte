@@ -100,6 +100,21 @@
 
 <svelte:head>
     <title>besties{splash?' - '+splash:''}</title>
+    
+    <meta name="title" content="besties">
+    <meta name="description" content="the radical left, the marxists, the anarchists, the agitators, the looters,">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://besties.house/">
+    <meta property="og:title" content="besties">
+    <meta property="og:description" content="the radical left, the marxists, the anarchists, the agitators, the looters,">
+    <meta property="og:image" content="https://besties.house/besties-thumb.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://besties.house/">
+    <meta property="twitter:title" content="besties">
+    <meta property="twitter:description" content="the radical left, the marxists, the anarchists, the agitators, the looters,">
+    <meta property="twitter:image" content="https://besties.house/besties-thumb.png">
 </svelte:head>
 
 <div class="page">
