@@ -29,7 +29,7 @@
                 twitter: '1450703231642972161',
                 mastodon: 'https://fuckgov.org/web/@a'
             },
-            pronouns: 'she/her',
+            pronouns: 'she/it',
             email: 'aria@besties.house',
             url: 'https://tacohitbox.com',
             bio: 'weezer enjoyer, bad webdev'
