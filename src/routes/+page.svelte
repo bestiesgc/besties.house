@@ -45,8 +45,10 @@
         {
             name: 'cup',
             socials: {
-                twitter: '1576737284992409601'
+                twitter: '1576737284992409601',
+                mastodon: 'https://fuckgov.org/web/@cup'
             },
+            email: 'cuptwt@gmail.com',
             pronouns: 'she/her',
             bio: '13 year old andrew tate fangirl... interact with caution...'
         }
