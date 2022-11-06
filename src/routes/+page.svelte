@@ -1,8 +1,7 @@
 <script>
     import GlitchyBg from '$lib/GlitchyBg.svelte'
     import Member from '$lib/Member.svelte'
-    import { onMount } from 'svelte'
-    import { slide } from 'svelte/transition'
+    import RandomMessage from '$lib/RandomMessage.svelte'
     const members = [
         {
             name: 'quinn',
@@ -54,14 +53,7 @@
             bio: '13 year old andrew tate fangirl... interact with caution...'
         }
     ]
-    function shuffle(a) {
-        for (let i = a.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [a[i], a[j]] = [a[j], a[i]];
-        }
-        return a
-    }
-    let splashes = shuffle([
+    let splashes = [
         'first unionised group chat of all time',
         'x3',
         'hope you like amateur web design',
@@ -81,25 +73,14 @@
         'i know this pic can get 100 likes',
         'hyperpop on soundcloud',
         'talking to strangers online was the best decision i ever made'
-    ])
-    let splash
-    onMount(() => {
-        let splashI = 0
-        splash = splashes[splashI]
-        let splashInterval = setInterval(() => {
-            splashI += 1
-            if (splashI>=splashes.length) splashI = 0
-            splash = splashes[splashI]
-        }, 10000)
-        return e => {
-            console.log('its ending lol')
-            clearInterval(splashInterval)
-        }
-    })
+    ]
+    function handleRandomMessageUpdate(e) {
+        document.title = `besties - ${e.detail.text}`
+    }
 </script>
 
 <svelte:head>
-    <title>besties{splash?' - '+splash:''}</title>
+    <title>besties</title>
     
     <meta name="title" content="besties">
     <meta name="description" content="the radical left, the marxists, the anarchists, the agitators, the looters,">
@@ -122,18 +103,16 @@
     <div class="hero">
         <GlitchyBg></GlitchyBg>
         <h1 class="besties-heading">besties</h1>
-        {#key splash}
-            <p class="besties-splash" transition:slide>{splash?splash:''}</p>
-        {/key}
+        <RandomMessage class="besties-splash" messages={splashes} on:update-message={handleRandomMessageUpdate}></RandomMessage>
     </div>
     
-        <div class="members">
-    <div class="member-list-wrapper">
-        
-        <div class="member-list">
-            {#each members as member}
-                <Member {member}></Member>
-            {/each}
+    <div class="members">
+        <div class="member-list-wrapper">
+            <div class="member-list">
+                {#each members as member}
+                    <Member {member}></Member>
+                {/each}
+                </div>
             </div>
         </div>
     </div>
