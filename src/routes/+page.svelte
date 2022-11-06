@@ -109,7 +109,7 @@
                 {
                     name: 'ultra',
                     socials: {
-                        twitter: '1576737284992409601'
+                        twitter: '1580957316077215750'
                     },
                     pronouns: 'he/him',
                     bio: '(probably) breathing right now'
