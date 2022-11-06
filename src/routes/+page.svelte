@@ -118,6 +118,7 @@
 </svelte:head>
 
 <div class="page">
+    <div class="main-wrapper">
     <div class="hero">
         <GlitchyBg></GlitchyBg>
         <h1 class="besties-heading">besties</h1>
@@ -126,13 +127,14 @@
         {/key}
     </div>
     
-    
+        <div class="members">
     <div class="member-list-wrapper">
         
         <div class="member-list">
             {#each members as member}
                 <Member {member}></Member>
             {/each}
+            </div>
         </div>
     </div>
 
