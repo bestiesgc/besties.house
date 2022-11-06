@@ -129,17 +129,18 @@ nav a:hover {
 }
 
 .hero {
+    position: relative;
     padding: 0 2rem;
     text-align: center;
     overflow-x: hidden;
-    /* position: relative; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: 2rem;
     --negative-bottom-margin: 0rem;
-    min-height: calc(100% - var(--member-list-min-height));
+    min-height: calc(100vh - var(--member-list-min-height));
+    background-color: var(--violet-300);
 }
 
 .hero canvas {
@@ -343,5 +344,17 @@ a.member-meta-item:hover {
 @media (min-width: 1550px) {
     .member-list {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .member .member-heading::before {
+        animation: unset;
+        transition: unset;
+    }
+    .hero {
+        background-image: radial-gradient(var(--violet-200) 2px, var(--violet-300) 2px);
+        background-position: center center;
+        background-size: 10px 10px;
     }
 }
