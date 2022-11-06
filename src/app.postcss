@@ -15,13 +15,13 @@
 }
 
 :root {
-    font-size: 16px;
+    font-size: 14px;
     --fg-clr: var(--grey-200);
     --heading-clr: var(--grey-100);
     --bg-clr: var(--violet-400);
     --link-clr: var(--violet-100);
     --font-family: 'DM Sans', 'Poppins', Helvetica, Arial, sans-serif;
-    --member-list-min-height: 300px;
+    --member-list-min-height: 20rem;
 }
 
 .scrollbar {
@@ -291,7 +291,8 @@ nav a:hover {
 .member-meta-item-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem
+    gap: 0.5rem;
+    font-size: 0.8rem;
 }
 
 .member-meta-item {
@@ -319,24 +320,31 @@ a.member-meta-item:hover {
     font-size: 2rem;
     background: var(--violet-300);
 }
+
 @media (min-width: 500px) {
+    :root {
+        font-size: 16px;
+    }
     .member-list {
         grid-template-columns: 1fr 1fr;
     }
     .member {
-        width: 220px;
+        width: 12rem;
     }
 }
 @media (min-width: 750px) {
     .member-list {
         grid-template-columns: 1fr 1fr 1fr;
     }
+    :root {
+        font-size: 18px;
+    }
 }
 
 @media (min-width: 1050px) {
     .main-wrapper {
         display: grid;
-        grid-template-columns: 500px 1fr;
+        grid-template-columns: 24rem 1fr;
     }
     .members {
         height: 100vh;
@@ -346,6 +354,9 @@ a.member-meta-item:hover {
     .member-list {
         grid-template-columns: 1fr 1fr;
     }
+    :root {
+        font-size: 20px;
+    }
 }
 
 @media (min-width: 1300px) {
@@ -354,9 +365,63 @@ a.member-meta-item:hover {
     }
 }
 
-@media (min-width: 1550px) {
+@media (min-width: 1600px) {
     .member-list {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1900px) {
+    :root {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 2200px) {
+    :root {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 2400px) {
+    :root {
+        font-size: 26px;
+    }
+}
+
+@media (min-width: 2600px) {
+    :root {
+        font-size: 28px;
+    }
+}
+
+@media (min-width: 2800px) {
+    :root {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 3000px) {
+    :root {
+        font-size: 32px;
+    }
+}
+
+@media (min-width: 3200px) {
+    :root {
+        font-size: 34px;
+    }
+}
+
+@media (min-width: 3400px) {
+    :root {
+        font-size: 36px;
+    }
+}
+
+@media (min-width: 3600px) {
+    :root {
+        font-size: 38px;
     }
 }
 
