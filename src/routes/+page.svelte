@@ -97,16 +97,6 @@
             ],
             members: [
                 {
-                    name: 'cup',
-                    socials: {
-                        twitter: '1576737284992409601',
-                        mastodon: 'https://fuckgov.org/web/@cup'
-                    },
-                    email: 'cuptwt@gmail.com',
-                    pronouns: 'she/her',
-                    bio: '13 year old andrew tate fangirl... interact with caution...'
-                },
-                {
                     name: 'ultra',
                     socials: {
                         twitter: '1580957316077215750'
