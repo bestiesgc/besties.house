@@ -32,6 +32,7 @@ export const members = [
 			mastodon: 'https://fuckgov.org/web/@a',
 			lastfm: 'tacohitbox'
 		},
+		isCat: true,
 		group: 'teen bible study',
 		avatar: '/avatars/aria.webp',
 		color: '#33b2e7',

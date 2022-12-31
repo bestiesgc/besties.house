@@ -1,6 +1,7 @@
 <script>
     export let member
     import MemberPopout from '$lib/MemberPopout.svelte'
+    import Avatar from '$lib/Avatar.svelte'
     let popoutOpen = false
     function onMemberClick() {
         popoutOpen = !popoutOpen
@@ -10,11 +11,7 @@
 
 <button on:click={onMemberClick} bind:this={fromElement} class="member-item-wrapper" style={member.style||null}>
     <div class="member-item">
-        <div style:background-color={member.color} class="member-avatar" aria-hidden="true">
-            {#if member.avatar}
-                <img src="{member.avatar}" alt="">
-            {/if}
-        </div>
+        <Avatar {member} class="member-avatar"></Avatar>
         <div class="member-content">
             <div class="member-name" style:color={member.color}>{member.name}</div>
             {#if member.status}

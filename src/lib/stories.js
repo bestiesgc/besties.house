@@ -46,6 +46,7 @@ const fakeMembers = {
 		socials: {
 			twitter: '3004231'
 		},
+		blunt: true,
 		avatar: '/avatars/snoop.jpg',
 		color: '#1cbf68',
 		bio: '"I STILL GOT IT" mixtape OUT NOW'

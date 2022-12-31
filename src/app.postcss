@@ -324,6 +324,19 @@ heading {
     background-color: rgba(79,84,92,0.4);
 }
 
+.avatar {
+    position: relative;
+}
+
+.avatar-img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 100%;
+}
+
 .member-avatar {
     width: 32px;
     height: 32px;
@@ -377,7 +390,6 @@ heading {
     width: 80px;
     height: 80px;
     border-radius: 100%;
-    overflow: hidden;
     border: 6px solid var(--popout-bg);
     position: absolute;
     top: 10px;
@@ -499,16 +511,18 @@ heading {
     margin-top: 17px;
 }
 
-.message-author-avatar {
+.message-author-avatar-button {
     position: absolute;
     left: 16px;
     width: 40px;
     height: 40px;
-    background-color: rebeccapurple;
-    border-radius: 100%;
-    overflow: hidden;
     cursor: pointer;
     top: 0;
+}
+
+.message-author-avatar {
+    width: 40px;
+    height: 40px;
 }
 
 .message-header {
@@ -757,4 +771,88 @@ heading {
     height: 1px;
     width: 1px;
     overflow: hidden !important;
+}
+
+
+@keyframes wobble {
+    0% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(-5deg);
+    }
+}
+
+.blunt {
+    position: absolute;
+    left: 51%;
+    top: 50%;
+    width: 70%;
+    transform-origin: top left;
+    animation-name: wobble;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.cat {
+    color: white;
+    overflow: unset;
+    background-color: unset !important;
+}
+.cat .avatar-img {
+    border-radius: 100%;
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+@keyframes earwiggleleft {
+    from { transform: rotate(37.6deg) skew(30deg); }
+    25% { transform: rotate(10deg) skew(30deg); }
+    50% { transform: rotate(20deg) skew(30deg); }
+    75% { transform: rotate(0deg) skew(30deg); }
+    to { transform: rotate(37.6deg) skew(30deg); }
+}
+
+@keyframes earwiggleright {
+    from { transform: rotate(-37.6deg) skew(-30deg); }
+    30% { transform: rotate(-10deg) skew(-30deg); }
+    55% { transform: rotate(-20deg) skew(-30deg); }
+    75% { transform: rotate(-0deg) skew(-30deg); }
+    to { transform: rotate(-37.6deg) skew(-30deg); }
+}
+
+.cat::before, .cat::after {
+    position: absolute;
+    background: #df548f;
+    border: solid 4px currentColor;
+    box-sizing: border-box;
+    content: '';
+    display: inline-block;
+    width: 50%;
+    height: 50%;
+}
+.cat::before {
+    left: -4px;
+    border-radius: 0 75% 75%;
+    transform: rotate(37.5deg) skew(30deg);
+}
+.cat::after {
+    right: -4px;
+    border-radius: 75% 0 75% 75%;
+    transform: rotate(-37.5deg) skew(-30deg);
+}
+.cat:hover::before {
+    animation: earwiggleleft 1s infinite;
+}
+.cat:hover::after {
+    animation: earwiggleright 1s infinite;
 }

@@ -7,7 +7,6 @@
 	let showFullView = false
 	let fullViewElem
 	function toggleFullView(e) {
-		if (e.key&&e.key!='Enter') return
 		showFullView = !showFullView
 	}
 	function onFullViewClickout(e) {
@@ -42,6 +41,6 @@
 <!-- there is an event listener added to check for the escape key! -->
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div transition:fade={{duration: 100}} class="attachment-full-view" bind:this={fullViewElem} on:click={onFullViewClickout}>
-	<img transition:scale={{start: 0.5, duration: 100}} src="{attachment.url}" alt="{attachment.alt}">
+	<img transition:scale={{start: 0.9, duration: 100}} src="{attachment.url}" alt="{attachment.alt}">
 </div>
 {/if}

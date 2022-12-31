@@ -2,6 +2,7 @@
 	import { fly } from 'svelte/transition'
 	import Timestamp from '$lib/Timestamp.svelte'
 	import Attachment from '$lib/Attachment.svelte'
+    import Avatar from '$lib/Avatar.svelte'
 	import BasicMarkdown from '$lib/BasicMarkdown.svelte'
 	import MemberPopout from '$lib/MemberPopout.svelte'
 	export let full = true
@@ -26,11 +27,9 @@
 		{/if}
 	</h3>
 	{#if full}
-		<div style:background-color={message.author.color} class="message-author-avatar" bind:this={messageAvatar} on:click={onMemberClick} aria-hidden="true">
-			{#if message.author.avatar}
-				<img src="{message.author.avatar}" alt="">
-			{/if}
-		</div>
+		<button class="message-author-avatar-button" on:click={onMemberClick} bind:this={messageAvatar}>
+			<Avatar member={message.author} class="message-author-avatar"></Avatar>
+		</button>
 	{/if}
 	<div class="message-content"><BasicMarkdown text={message.content??''}></BasicMarkdown></div>
 	{#if message.attachments}

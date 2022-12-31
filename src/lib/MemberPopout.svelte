@@ -2,6 +2,7 @@
 	import { fade, fly } from 'svelte/transition'
     import { onMount, createEventDispatcher } from 'svelte'
 	import BasicMarkdown from '$lib/BasicMarkdown.svelte'
+	import Avatar from '$lib/Avatar.svelte'
 	import { afterNavigate } from '$app/navigation'
 
 	const dispatch = createEventDispatcher()
@@ -73,9 +74,7 @@
 	{#if done}
 		<div class="member-popout" transition:fly={transition} bind:this={popoutElem} style={member.style||null}>
 			<div class="member-popout-banner" style:background-color={member.color}></div>
-			<div class="member-popout-avatar" aria-hidden="true">
-				<img src="{member.avatar}" alt="">
-			</div>
+			<Avatar class="member-popout-avatar" {member}></Avatar>
 			<div class="member-popout-info">
 				<h1 class="member-popout-name">{member.name}</h1>
 				{#if member.status}
