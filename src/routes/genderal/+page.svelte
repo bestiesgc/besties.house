@@ -1,22 +1,11 @@
 <script>
-    import { members, channels } from '$lib/guild-data.js'
+    import { members, channels, makeChannelObj } from '$lib/guild-data.js'
     import messageStories from '$lib/stories.js'
     import FakeDiscordApp from '$lib/FakeDiscordApp.svelte'
 	import { beforeNavigate } from '$app/navigation'
     import { onMount } from 'svelte'
-    let channel = {
-        name: 'genderal',
-        messages: []
-    }
-    function addMessage(message) {
-        message = Object.assign({}, message)
-        if (typeof(message.author)=='string') message.author = members.find(e => e.name===message.author)??{
-            name: message.author,
-            color: '#ffffff'
-        }
-        if (!message.time) message.time = Date.now()
-        channel.messages[channel.messages.length] = message
-    }
+    let channel = makeChannelObj('genderal', (newChannel => channel=newChannel))
+    
     function shuffleArray(array) {
         let currentIndex = array.length,  randomIndex
 
@@ -55,7 +44,8 @@
                         await new Promise(r => setTimeout(r, Math.random()*200+400))
                     }
                     if (doneTelling) return
-                    addMessage(story[i])
+                    channel.addMessage(story[i])
+                    // channel.messages = channel.messages
                 }
                 await new Promise(r => setTimeout(r, Math.random()*8000+6200))
             }

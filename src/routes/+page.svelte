@@ -1,7 +1,6 @@
 <script>
     import { members, channels, makeChannelObj } from '$lib/guild-data.js'
     import FakeDiscordApp from '$lib/FakeDiscordApp.svelte'
-    import { onMount } from 'svelte'
 	const splashes = [
         'first unionised group chat of all time',
         'x3',
@@ -25,28 +24,25 @@
         'comic sans is aweosme',
         'my clique got me for life'
     ]
-    let channel = makeChannelObj('about')
-	onMount(() => {
-		channel.messages = channel.messages
-        channel.addMessage({
-            author: 'hazycora',
-            content: ``,
-            attachments: [
-                {
-                    type: 'img',
-                    url: '/besties-thumb.png',
-                    alt: 'Thumbnail for Besties'
-                }
-            ],
-			time: 1672415395766
-        })
-        channel.addMessage({
-            author: 'hazycora',
-            content: `**besties.house** - "${splashes[Math.round(Math.random()*(splashes.length-1))]}"\n` +
-            `**Our Twitter:** https://twitter.com/twtbesties\n**Our services:**\nMastodon instance - https://fuckgov.org\nFile storage - https://files.gay\nGitea - https://git.gay`,
-			time: 1672415395766
-        })
-	})
+    let channel = makeChannelObj('about', (newChannel => channel=newChannel))
+    channel.addMessage({
+        author: 'hazycora',
+        content: ``,
+        attachments: [
+            {
+                type: 'img',
+                url: '/besties-thumb.png',
+                alt: 'Thumbnail for Besties'
+            }
+        ],
+        time: 1672415395766
+    })
+    channel.addMessage({
+        author: 'hazycora',
+        content: `**besties.house** - "${splashes[Math.round(Math.random()*(splashes.length-1))]}"\n` +
+        `**Our Twitter:** https://twitter.com/twtbesties\n**Our services:**\nMastodon instance - https://fuckgov.org\nFile storage - https://files.gay\nGitea - https://git.gay`,
+        time: 1672415395766
+    })
 </script>
 
 <svelte:head>

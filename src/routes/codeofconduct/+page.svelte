@@ -2,8 +2,7 @@
     import { members, channels, makeChannelObj } from '$lib/guild-data.js'
     import FakeDiscordApp from '$lib/FakeDiscordApp.svelte'
     import { onMount } from 'svelte'
-    let channel = makeChannelObj('codeofconduct')
-    channel.messages = channel.messages
+    let channel = makeChannelObj('codeofconduct', (newChannel => channel=newChannel))
 	channel.addMessage({
 		author: 'hazycora',
 		content: 'this channel is 100% serious',

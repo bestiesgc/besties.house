@@ -110,12 +110,13 @@ export const channels = [
 		]
 	}
 ]
-export function makeChannelObj(name) {
+export function makeChannelObj(name, cb) {
 	let messages = []
 	return {
 		name: name,
 		messages: messages,
 		addMessage: function (message) {
+			console.log(message)
 			message = Object.assign({}, message)
 			if (typeof(message.author)=='string') message.author = members.find(e => e.name===message.author)??{
 				name: message.author,
@@ -123,6 +124,19 @@ export function makeChannelObj(name) {
 			}
 			if (!message.time) message.time = Date.now()
 			messages[messages.length] = message
+			cb(this)
+			// if (messages.length > 400) {
+			// 	// messages = messages.slice(messages.length-400)
+			// }
 		}
 	}
+}
+export function makeMessage(message) {
+	message = Object.assign({}, message)
+	if (typeof(message.author)=='string') message.author = members.find(e => e.name===message.author)??{
+		name: message.author,
+		color: '#ffffff'
+	}
+	if (!message.time) message.time = Date.now()
+	return message
 }
