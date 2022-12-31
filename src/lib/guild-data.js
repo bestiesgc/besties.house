@@ -52,6 +52,18 @@ export const members = [
 		bio: 'hamburger'
 	},
 	{
+		name: 'the proletariat',
+		group: 'childrens church',
+		avatar: '/avatars/proletariat.webp',
+		color: '#71368a',
+		pronouns: 'she/her',
+		bio: `hello 👋
+
+
+
+		goodbye 👋`
+	},
+	{
 		name: 'ultra',
 		socials: {
 			twitter: '1580957316077215750'

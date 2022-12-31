@@ -372,6 +372,62 @@ const messageStories = [
 			author: 'cup',
 			content: 'you have to find my character on omegle to learn about it'
 		}
+	],
+	[
+		{
+			author: 'hazycora',
+			content: 'netflix but for dhar mann and nothing else',
+			attachments: [
+				{
+					type: 'img',
+					url: '/dharmann.png'
+				}
+			]
+		},
+		{
+			author: 'the proletariat',
+			content: 'id pay for that'
+		},
+		{
+			author: 'hazycora',
+			content: 'no u wouldnt lol'
+		},
+		{
+			author: 'hazycora',
+			content: 'u dont even have a job'
+		},
+		{
+			author: 'the proletariat',
+			content: 'if i did have a job'
+		},
+		{
+			author: 'hazycora',
+			content: '8 dollars. for dhar mann.'
+		},
+		{
+			author: 'the proletariat',
+			content: 'yup'
+		},
+		{
+			author: 'hazycora',
+			content: 'you could get spotify premium for that'
+		},
+		{
+			author: 'the proletariat',
+			content: 'i loveee dhar mann'
+		},
+		{
+			author: 'the proletariat',
+			content: 'they make me feel inspired.'
+		},
+		{
+			author: 'the proletariat',
+			content: 'kids MAKE FUN of boy with AUTISM'
+		},
+		{
+			author: 'the proletariat',
+			content: 'they INSTANTLY REGRET IT'
+		}
 	]
 ]
 
