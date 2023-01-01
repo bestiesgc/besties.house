@@ -4,6 +4,7 @@ export const members = [
 		socials: {
 			twitter: '1021804959703212034'
 		},
+		isCat: true,
 		// style: 'background-image: radial-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("/noise.gif"); background-attachment: fixed;',
 		group: 'teen bible study',
 		avatar: '/avatars/hazycora.webp',
@@ -116,7 +117,6 @@ export function makeChannelObj(name, cb) {
 		name: name,
 		messages: messages,
 		addMessage: function (message) {
-			console.log(message)
 			message = Object.assign({}, message)
 			if (typeof(message.author)=='string') message.author = members.find(e => e.name===message.author)??{
 				name: message.author,
@@ -125,9 +125,9 @@ export function makeChannelObj(name, cb) {
 			if (!message.time) message.time = Date.now()
 			messages[messages.length] = message
 			cb(this)
-			// if (messages.length > 400) {
-			// 	// messages = messages.slice(messages.length-400)
-			// }
+			if (messages.length > 400) {
+				messages = messages.slice(messages.length-400)
+			}
 		}
 	}
 }
