@@ -4,7 +4,6 @@ export const members = [
 		socials: {
 			twitter: '1021804959703212034'
 		},
-		isCat: true,
 		// style: 'background-image: radial-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("/noise.gif"); background-attachment: fixed;',
 		group: 'teen bible study',
 		avatar: '/avatars/hazycora.webp',
