@@ -78,9 +78,9 @@ export const members = [
 	{
 		name: 'cup',
 		socials: {
-			twitter: '1576737284992409601'
+			twitter: '811377'
 		},
-		group: 'purgatory',
+		group: 'Home Depot (Heaven)',
 		avatar: '/avatars/cup.webp',
 		color: '#e74c3c',
 		pronouns: 'nor/mal',

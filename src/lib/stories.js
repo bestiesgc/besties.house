@@ -2,9 +2,9 @@ const fakeMembers = {
 	cupSchlatt: {
 		name: 'cup',
 		socials: {
-			twitter: '1576737284992409601'
+			twitter: '811377'
 		},
-		group: 'purgatory',
+		group: 'Home Depot (Heaven)',
 		avatar: '/avatars/cup-era-1.png',
 		color: '#e50015',
 		bio: 'I translate Schlatt into Cup!'
@@ -12,9 +12,9 @@ const fakeMembers = {
 	cupFallenCat: {
 		name: 'cup',
 		socials: {
-			twitter: '1576737284992409601'
+			twitter: '811377'
 		},
-		group: 'purgatory',
+		group: 'Home Depot (Heaven)',
 		avatar: '/avatars/cup-era-3.png',
 		color: '#ffffff',
 		bio: "It's me, Cup! | Member of &kThe Benchwarmers&r"
@@ -22,9 +22,9 @@ const fakeMembers = {
 	cupEmicord: {
 		name: 'cup',
 		socials: {
-			twitter: '1576737284992409601'
+			twitter: '811377'
 		},
-		group: 'purgatory',
+		group: 'Home Depot (Heaven)',
 		avatar: '/avatars/cup-era-2.jpg',
 		color: '#35fce8',
 		bio: "I'm awesome 😎"
