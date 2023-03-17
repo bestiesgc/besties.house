@@ -57,6 +57,7 @@ body {
 	margin: 0;
 	font-family: var(--font-primary);
 	color: white;
+	overflow-y: hidden;
 }
 
 button {
@@ -179,6 +180,7 @@ ol {
 	background-color: var(--secondary-bg);
 	display: grid;
 	grid-template-columns: 1fr;
+	min-width: 0;
 }
 
 .server-heading-dropdown-icon {
@@ -207,6 +209,7 @@ heading {
 	display: flex;
 	flex-direction: column;
 	gap: 1px;
+	min-width: 0;
 }
 
 .channel-group-wrapper {
@@ -562,6 +565,10 @@ heading {
 .message-timestamp {
 	font-size: 12px;
 	color: rgb(163, 166, 170);
+}
+
+.message-content {
+	word-break: break-word;
 }
 
 .message-content a,
