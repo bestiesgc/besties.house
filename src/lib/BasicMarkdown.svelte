@@ -7,10 +7,14 @@
 	function obscure(text) {
 		let chars = `!”#$%'()*+,-./0123456789:;=?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[|]^_\`abcdefghijklmnopqrstuvwxyz{}~`
 		let newText = text.split('')
-		for (let i = 0; i < newText.length; i ++) {
-			newText[i] = chars[Math.round(Math.random()*(chars.length-1))]
+		for (let i = 0; i < newText.length; i++) {
+			newText[i] = chars[Math.round(Math.random() * (chars.length - 1))]
 		}
-		return newText.join('').match(/.{1,3}/g).map(e => `<span>${e}</span>`).join('')
+		return newText
+			.join('')
+			.match(/.{1,3}/g)
+			.map(e => `<span>${e}</span>`)
+			.join('')
 	}
 	onMount(() => {
 		let textElem = document.createElement('span')
@@ -18,12 +22,17 @@
 		let html = textElem.innerHTML
 		// minecraft's obscured text formatting, using &ktext to obscure&r syntax
 		html = html.replace(/&amp;k(.*?)&amp;r/gm, (e, html) => {
-			return `<span class="screen-reader-only">[REDACTED]</span><span class="glitchy-text" aria-hidden="true">${obscure(html)}</span>`
+			return `<span class="screen-reader-only">[REDACTED]</span><span class="glitchy-text" aria-hidden="true">${obscure(
+				html
+			)}</span>`
 		})
 		// urls to anchor tags
-		html = html.replace(/https?:\/\/.*?(\.[^\.\/<>\s]{2,})+(\/[^\s<>]*)?/gm, (e) => {
-			return `<a href="${e}">${e}</a>`
-		})
+		html = html.replace(
+			/https?:\/\/.*?(\.[^./<>\s]{2,})+(\/[^\s<>]*)?/gm,
+			e => {
+				return `<a href="${e}">${e}</a>`
+			}
+		)
 		// **bold**
 		html = html.replace(/\*\*(.*?)\*\*/gm, (e, h) => {
 			return `<b>${h}</b>`
@@ -39,15 +48,16 @@
 
 		markdownEl.innerHTML = html
 		let glitchyTexts = markdownEl.querySelectorAll('.glitchy-text')
-		let interval = setInterval(e => {
+		let interval = setInterval(() => {
 			for (let el of glitchyTexts) {
 				el.innerHTML = obscure(el.innerText)
 			}
 		}, 50)
 		markdownEl.querySelectorAll('.glitchy-text')
-		return e => clearInterval(interval)
+		return () => clearInterval(interval)
 	})
 </script>
+
 <span bind:this={markdownEl}>
 	{#if !htmlContent}
 		{text}

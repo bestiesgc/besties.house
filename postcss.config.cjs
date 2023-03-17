@@ -1,13 +1,9 @@
-const autoprefixer = require("autoprefixer");
-const scrollbar = require('postcss-scrollbar');
-const apply = require('postcss-class-apply/dist/index');
+const autoprefixer = require('autoprefixer')
+const scrollbar = require('postcss-scrollbar')
+const apply = require('postcss-class-apply/dist/index')
 
 const config = {
-  plugins: [
-    apply,
-    scrollbar,
-    autoprefixer
-  ],
-};
+	plugins: [apply, scrollbar, autoprefixer]
+}
 
-module.exports = config;
+module.exports = config

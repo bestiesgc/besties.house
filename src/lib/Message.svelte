@@ -2,7 +2,7 @@
 	import { fly } from 'svelte/transition'
 	import Timestamp from '$lib/Timestamp.svelte'
 	import Attachment from '$lib/Attachment.svelte'
-    import Avatar from '$lib/Avatar.svelte'
+	import Avatar from '$lib/Avatar.svelte'
 	import BasicMarkdown from '$lib/BasicMarkdown.svelte'
 	import MemberPopout from '$lib/MemberPopout.svelte'
 	export let full = true
@@ -10,33 +10,57 @@
 	let messageHeader
 	let messageAvatar
 	let popoutOpen = false
-    function onMemberClick(e) {
-        popoutOpen = !popoutOpen
-    }
+	function onMemberClick() {
+		popoutOpen = !popoutOpen
+	}
 </script>
 
-<li class="message" transition:fly={{y: 10, duration: 100}} style={message.author.style||null} class:message-with-header={full}>
-	<h3 class="message-header" class:screen-reader-only={!full} bind:this={messageHeader}>
-		<button style:color={message.author.color} class="message-author-name" on:click={onMemberClick}>
+<li
+	class="message"
+	transition:fly={{ y: 10, duration: 100 }}
+	style={message.author.style || null}
+	class:message-with-header={full}
+>
+	<h3
+		class="message-header"
+		class:screen-reader-only={!full}
+		bind:this={messageHeader}
+	>
+		<button
+			style:color={message.author.color}
+			class="message-author-name"
+			on:click={onMemberClick}
+		>
 			{message.author.name}
 		</button>
-		<Timestamp class="message-timestamp" time={message.time}></Timestamp>
+		<Timestamp class="message-timestamp" time={message.time} />
 
 		{#if popoutOpen}
-			<MemberPopout member={message.author} on:clickout={e=>popoutOpen=false} dontClickOut={[messageHeader,messageAvatar]} transitionX=5></MemberPopout>
+			<MemberPopout
+				member={message.author}
+				on:clickout={() => (popoutOpen = false)}
+				dontClickOut={[messageHeader, messageAvatar]}
+				transitionX="5"
+			/>
 		{/if}
 	</h3>
 	{#if full}
-		<button class="message-author-avatar-button" on:click={onMemberClick} bind:this={messageAvatar}>
-			<Avatar member={message.author} class="message-author-avatar"></Avatar>
+		<button
+			class="message-author-avatar-button"
+			on:click={onMemberClick}
+			bind:this={messageAvatar}
+		>
+			<Avatar member={message.author} class="message-author-avatar" />
 		</button>
 	{/if}
-	<div class="message-content"><BasicMarkdown text={message.content??''}></BasicMarkdown></div>
+	<div class="message-content">
+		<BasicMarkdown text={message.content ?? ''} />
+	</div>
 	{#if message.attachments}
 		<div class="message-attachments">
 			{#each message.attachments as attachment}
-				{#if attachment.type==='img'}
-					<Attachment {attachment}></Attachment>
+				{#if attachment.type === 'img'}
+					<Attachment {attachment} />
 				{/if}
 			{/each}
 		</div>

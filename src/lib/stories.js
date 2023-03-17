@@ -57,20 +57,21 @@ const messageStories = [
 	[
 		{
 			author: fakeMembers.markiplier,
-			content: "Hello everybody my name is Markiplier and welcome to Five Nights at Freddy's"
+			content:
+				"Hello everybody my name is Markiplier and welcome to Five Nights at Freddy's"
 		},
 		{
 			author: 'cup',
-			content: "WHAT THE FUCK"
+			content: 'WHAT THE FUCK'
 		},
 		{
 			author: 'hazycora',
-			content: "markiplier??"
+			content: 'markiplier??'
 		},
 		{
 			author: fakeMembers.markiplier,
-			content: "Markiplier"
-		},
+			content: 'Markiplier'
+		}
 	],
 	[
 		{
@@ -135,7 +136,7 @@ const messageStories = [
 		{
 			author: fakeMembers.cupSchlatt,
 			content: ':('
-		},
+		}
 	],
 	[
 		{
@@ -211,7 +212,7 @@ const messageStories = [
 		{
 			author: 'hazycora',
 			content: '1. how do you spell it bidder\n2. How is it bitter tf'
-		},
+		}
 	],
 	[
 		{
@@ -281,7 +282,7 @@ const messageStories = [
 		{
 			author: 'hazycora',
 			content: 'sure'
-		},
+		}
 	],
 	[
 		{
@@ -307,7 +308,8 @@ const messageStories = [
 		},
 		{
 			author: 'cup',
-			content: 'ADD A ROCCO TO THE SITE THAT HAS A RARE CHANCE OF SENDING A MESSAGe'
+			content:
+				'ADD A ROCCO TO THE SITE THAT HAS A RARE CHANCE OF SENDING A MESSAGe'
 		},
 		{
 			author: 'cup',

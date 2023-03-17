@@ -1,5 +1,5 @@
 <script>
-    import { onMount } from 'svelte'
+	import { onMount } from 'svelte'
 
 	let imgElem
 	let blobUrl
@@ -10,7 +10,7 @@
 
 	export let src
 	export let alt
-	export {classList as class}
+	export { classList as class }
 
 	onMount(async () => {
 		if (loaded) return
@@ -24,7 +24,14 @@
 
 <div class="img">
 	{#if !loaded}
-		<slot></slot>
+		<slot />
 	{/if}
-	<img bind:this={imgElem} src={blobUrl||src} {alt} class={classList} class:unloaded={!loaded} on:load={e => loaded = true}>
+	<img
+		bind:this={imgElem}
+		src={blobUrl || src}
+		{alt}
+		class={classList}
+		class:unloaded={!loaded}
+		on:load={() => (loaded = true)}
+	/>
 </div>

@@ -84,16 +84,13 @@ export const members = [
 		avatar: '/avatars/cup.webp',
 		color: '#e74c3c',
 		pronouns: 'nor/mal',
-		bio: [
-			'Loser',
-			'Cool'
-		]
+		bio: ['Loser', 'Cool']
 	}
 ]
 export const channels = [
 	{
 		name: 'codeofconduct',
-		path: '/codeofconduct',
+		path: '/codeofconduct'
 	},
 	{
 		name: 'about',
@@ -105,7 +102,7 @@ export const channels = [
 		channels: [
 			{
 				name: 'genderal',
-				path: '/genderal',
+				path: '/genderal'
 			}
 		]
 	}
@@ -117,25 +114,27 @@ export function makeChannelObj(name, cb) {
 		messages: messages,
 		addMessage: function (message) {
 			message = Object.assign({}, message)
-			if (typeof(message.author)=='string') message.author = members.find(e => e.name===message.author)??{
-				name: message.author,
-				color: '#ffffff'
-			}
+			if (typeof message.author == 'string')
+				message.author = members.find(e => e.name === message.author) ?? {
+					name: message.author,
+					color: '#ffffff'
+				}
 			if (!message.time) message.time = Date.now()
 			messages[messages.length] = message
 			cb(this)
 			if (messages.length > 400) {
-				messages = messages.slice(messages.length-400)
+				messages = messages.slice(messages.length - 400)
 			}
 		}
 	}
 }
 export function makeMessage(message) {
 	message = Object.assign({}, message)
-	if (typeof(message.author)=='string') message.author = members.find(e => e.name===message.author)??{
-		name: message.author,
-		color: '#ffffff'
-	}
+	if (typeof message.author == 'string')
+		message.author = members.find(e => e.name === message.author) ?? {
+			name: message.author,
+			color: '#ffffff'
+		}
 	if (!message.time) message.time = Date.now()
 	return message
 }
