@@ -12,20 +12,20 @@
 	"devDependencies": {
 		"@sveltejs/adapter-static": "^1.0.0-next.47",
 		"@sveltejs/eslint-config": "github:sveltejs/eslint-config",
-		"@sveltejs/kit": "next",
+		"@sveltejs/kit": "^1.12.0",
+		"autoprefixer": "^10.4.7",
 		"eslint": "^8.35.0",
 		"eslint-config-prettier": "^8.7.0",
 		"eslint-plugin-svelte3": "^4.0.0",
-		"prettier": "^2.8.4",
-		"prettier-plugin-svelte": "^2.9.0",
-		"autoprefixer": "^10.4.7",
 		"postcss": "^8.4.18",
 		"postcss-class-apply": "^4.0.1",
 		"postcss-load-config": "^4.0.1",
 		"postcss-scrollbar": "^0.5.1",
+		"prettier": "^2.8.4",
+		"prettier-plugin-svelte": "^2.9.0",
 		"svelte": "^3.44.0",
 		"svelte-preprocess": "^4.10.7",
-		"vite": "^3.1.0"
+		"vite": "^4.0.0"
 	},
 	"type": "module"
 }
