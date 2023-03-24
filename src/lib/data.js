@@ -121,7 +121,7 @@ export const memberGroups = [
 				avatar: '/avatars/cup.webp',
 				color: '#e74c3c',
 				pronouns: 'nor/mal',
-				bio: ['Loser', 'Cool']
+				bio: 'i am not a part of this group if there is any ever search on this group i can give info (for a price xoxo)'
 			}
 		]
 	}
