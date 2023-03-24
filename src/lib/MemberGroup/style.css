@@ -1,0 +1,19 @@
+.member-list {
+	display: grid;
+	gap: 1rem;
+	justify-items: center;
+	grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+
+.project-list-wrapper {
+	display: grid;
+	gap: 1rem;
+}
+
+.member-group-title {
+	margin-top: 0;
+}
+
+.member-group-subtitles {
+	margin-bottom: 1rem;
+}

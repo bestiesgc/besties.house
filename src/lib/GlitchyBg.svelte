@@ -1,6 +1,6 @@
 <script>
-    import Shadertoy from '$lib/Shadertoy.svelte';
-    const shader = `vec2 GetGradient(vec2 intPos, float t) {
+	import Shadertoy from '$lib/Shadertoy.svelte'
+	const shader = `vec2 GetGradient(vec2 intPos, float t) {
     
     // Uncomment for calculated rand
     float rand = fract(sin(dot(intPos, vec2(12.9898, 78.233))) * 43758.5453);
@@ -57,8 +57,8 @@ vec3 warpGrid(vec2 fragCoord) {
     );
     col = clamp(col, 0.0, 1.0);
     
-    vec3 startCol = h(vec3(278.0/360.0, 0.9, 0.2));
-    vec3 endCol = h(vec3(283.0/360.0, 1.0, 0.07));
+    vec3 startCol = h(vec3(263.0/360.0, 0.9, 0.2));
+    vec3 endCol = h(vec3(263.0/360.0, 1.0, 0.07));
 
     // Output to screen
     return mix(startCol, endCol, col);
@@ -74,4 +74,5 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     fragColor.rgb = warpGrid(vec2(fragCoord.x+offset, fragCoord.y));
 }`
 </script>
-<Shadertoy {shader}></Shadertoy>
+
+<Shadertoy {shader} />

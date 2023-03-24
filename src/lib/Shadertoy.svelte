@@ -1,21 +1,21 @@
 <script>
-    import { onMount } from "svelte";
-    export let shader
-    let loaded = false
-    export let doResize = true
-    export let width = null
-    export let height = null
-    export let style = ''
-    let className = ''
+	import { onMount } from 'svelte'
+	export let shader
+	let loaded = false
+	export let doResize = true
+	export let width = null
+	export let height = null
+	export let style = ''
+	let className = ''
 	export { className as class }
-    let animate = false
+	let animate = false
 
-    const vertexShader = `attribute vec2 inPos;
+	const vertexShader = `attribute vec2 inPos;
 void main()
 {
     gl_Position = vec4(inPos, 0.0, 1.0);
 }`
-    const fragmentShader = `
+	const fragmentShader = `
 #ifdef GL_ES
 precision highp float;
 precision highp int;
@@ -54,135 +54,142 @@ void main()
     mainImage( gl_FragColor, gl_FragCoord.xy );
 }
 `
-    let doneAnimating = false
+	let doneAnimating = false
 
-    function mouseHandler(e) {
-        mousepos = [e.clientX, e.clientY]
-    }
+	onMount(() => {
+		var gl = null
+		var canvas,
+			vp_size,
+			bufObj = {},
+			mousepos = [0, 0]
+		let progDraw
 
-    onMount(() => {
-        var gl = null
-        var canvas, vp_size, prog, bufObj = {}, mousepos = [0, 0];
-        let progDraw
+		function mouseHandler(e) {
+			mousepos = [e.clientX, e.clientY]
+		}
 
-        let query = window.matchMedia(`(prefers-reduced-motion: reduce)`)
-        animate = !((query===true)?true:(query.matches===true))
+		let query = window.matchMedia(`(prefers-reduced-motion: reduce)`)
+		animate = !(query === true ? true : query.matches === true)
 
-        function initScene() {
-            let opts = {
-                alpha: false, 
-                depth: false, 
-                stencil: false, 
-                premultipliedAlpha: false, 
-                antialias: false, 
-                preserveDrawingBuffer: true, 
-                powerPreference: "high-performance"
-            }
-            canvas = document.querySelector('canvas');
-            if( gl === null) gl = canvas.getContext( "webgl2", opts );
-            if( gl === null) gl = canvas.getContext( "experimental-webgl2", opts );
-            if( gl === null) gl = canvas.getContext( "webgl", opts );
-            if( gl === null) gl = canvas.getContext( "experimental-webgl", opts );
+		function initScene() {
+			let opts = {
+				alpha: false,
+				depth: false,
+				stencil: false,
+				premultipliedAlpha: false,
+				antialias: false,
+				preserveDrawingBuffer: true,
+				powerPreference: 'high-performance'
+			}
+			canvas = document.querySelector('canvas')
+			if (gl === null) gl = canvas.getContext('webgl2', opts)
+			if (gl === null) gl = canvas.getContext('experimental-webgl2', opts)
+			if (gl === null) gl = canvas.getContext('webgl', opts)
+			if (gl === null) gl = canvas.getContext('experimental-webgl', opts)
 
-            if ( !gl ) return;
+			if (!gl) return
 
-            canvas.addEventListener('mousemove', mouseHandler);
+			canvas.addEventListener('mousemove', mouseHandler)
 
-            progDraw = gl.createProgram();
-            let sources = [
-                {
-                    type: gl.VERTEX_SHADER,
-                    code: vertexShader,
-                },
-                {
-                    type: gl.FRAGMENT_SHADER,
-                    code: fragmentShader,
-                }
-            ]
-            for (let source of sources) {
-                let shaderObj = gl.createShader(source.type);
-                gl.shaderSource(shaderObj, source.code);
-                gl.compileShader(shaderObj);
-                let status = gl.getShaderParameter(shaderObj, gl.COMPILE_STATUS);
-                if (!status) alert(gl.getShaderInfoLog(shaderObj));
-                gl.attachShader(progDraw, shaderObj);
-            }
-            gl.linkProgram(progDraw);
-            let status = gl.getProgramParameter(progDraw, gl.LINK_STATUS);
-            if ( !status ) alert(gl.getProgramInfoLog(progDraw));
-            progDraw.inPos = gl.getAttribLocation(progDraw, "inPos");
-            progDraw.iTime = gl.getUniformLocation(progDraw, "iTime");
-            progDraw.iMouse = gl.getUniformLocation(progDraw, "iMouse");
-            progDraw.iResolution = gl.getUniformLocation(progDraw, "iResolution");
-            gl.useProgram(progDraw);
+			progDraw = gl.createProgram()
+			let sources = [
+				{
+					type: gl.VERTEX_SHADER,
+					code: vertexShader
+				},
+				{
+					type: gl.FRAGMENT_SHADER,
+					code: fragmentShader
+				}
+			]
+			for (let source of sources) {
+				let shaderObj = gl.createShader(source.type)
+				gl.shaderSource(shaderObj, source.code)
+				gl.compileShader(shaderObj)
+				let status = gl.getShaderParameter(shaderObj, gl.COMPILE_STATUS)
+				if (!status) alert(gl.getShaderInfoLog(shaderObj))
+				gl.attachShader(progDraw, shaderObj)
+			}
+			gl.linkProgram(progDraw)
+			let status = gl.getProgramParameter(progDraw, gl.LINK_STATUS)
+			if (!status) alert(gl.getProgramInfoLog(progDraw))
+			progDraw.inPos = gl.getAttribLocation(progDraw, 'inPos')
+			progDraw.iTime = gl.getUniformLocation(progDraw, 'iTime')
+			progDraw.iMouse = gl.getUniformLocation(progDraw, 'iMouse')
+			progDraw.iResolution = gl.getUniformLocation(progDraw, 'iResolution')
+			gl.useProgram(progDraw)
 
-            var pos = [ -1, -1, 1, -1, 1, 1, -1, 1 ];
-            var inx = [ 0, 1, 2, 0, 2, 3 ];
-            bufObj.pos = gl.createBuffer();
-            gl.bindBuffer( gl.ARRAY_BUFFER, bufObj.pos );
-            gl.bufferData( gl.ARRAY_BUFFER, new Float32Array( pos ), gl.STATIC_DRAW );
-            bufObj.inx = gl.createBuffer();
-            bufObj.inx.len = inx.length;
-            gl.bindBuffer( gl.ELEMENT_ARRAY_BUFFER, bufObj.inx );
-            gl.bufferData( gl.ELEMENT_ARRAY_BUFFER, new Uint16Array( inx ), gl.STATIC_DRAW );
-            gl.enableVertexAttribArray( progDraw.inPos );
-            gl.vertexAttribPointer( progDraw.inPos, 2, gl.FLOAT, false, 0, 0 ); 
-            
-            gl.enable( gl.DEPTH_TEST );
-            gl.clearColor( 0.0, 0.0, 0.0, 1.0 );
+			var pos = [-1, -1, 1, -1, 1, 1, -1, 1]
+			var inx = [0, 1, 2, 0, 2, 3]
+			bufObj.pos = gl.createBuffer()
+			gl.bindBuffer(gl.ARRAY_BUFFER, bufObj.pos)
+			gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(pos), gl.STATIC_DRAW)
+			bufObj.inx = gl.createBuffer()
+			bufObj.inx.len = inx.length
+			gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, bufObj.inx)
+			gl.bufferData(
+				gl.ELEMENT_ARRAY_BUFFER,
+				new Uint16Array(inx),
+				gl.STATIC_DRAW
+			)
+			gl.enableVertexAttribArray(progDraw.inPos)
+			gl.vertexAttribPointer(progDraw.inPos, 2, gl.FLOAT, false, 0, 0)
 
-            if (doResize) {
-                window.onresize = resize;
-            }
-            resize();
-            requestAnimationFrame(render)
-            doneAnimating = !animate
-        }
+			gl.enable(gl.DEPTH_TEST)
+			gl.clearColor(0.0, 0.0, 0.0, 1.0)
 
-        function resize() {
-            if (width&&height) {
-                vp_size = [width, height];
-            } else {
-                vp_size = [canvas.clientWidth, canvas.clientHeight];
-            }
-            canvas.width = vp_size[0];
-            canvas.height = vp_size[1];
-        }
+			if (doResize) {
+				window.onresize = resize
+			}
+			resize()
+			requestAnimationFrame(render)
+			doneAnimating = !animate
+		}
 
-        let startOffset = Math.random()*10000
+		function resize() {
+			if (width && height) {
+				vp_size = [width, height]
+			} else {
+				vp_size = [canvas.clientWidth, canvas.clientHeight]
+			}
+			canvas.width = vp_size[0]
+			canvas.height = vp_size[1]
+		}
 
-        function render(deltaMS) {
-            gl.viewport( 0, 0, canvas.width, canvas.height );
-            gl.clear( gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT );
+		let startOffset = Math.random() * 10000
 
-            gl.uniform1f(progDraw.iTime, startOffset+deltaMS/1000.0);
-            gl.uniform2f(progDraw.iResolution, canvas.width, canvas.height);
-            gl.uniform2f(progDraw.iMouse, mousepos[0], mousepos[1]);
-            gl.drawElements( gl.TRIANGLES, bufObj.inx.len, gl.UNSIGNED_SHORT, 0 );
-            if (!doneAnimating) requestAnimationFrame(render);
-            loaded = true;
-        }
+		function render(deltaMS) {
+			gl.viewport(0, 0, canvas.width, canvas.height)
+			gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT)
 
-        initScene();
-        return () => {
-            doneAnimating = true
-            canvas.removeEventListener('mousemove', mouseHandler);
-        }
-    })
+			gl.uniform1f(progDraw.iTime, startOffset + deltaMS / 1000.0)
+			gl.uniform2f(progDraw.iResolution, canvas.width, canvas.height)
+			gl.uniform2f(progDraw.iMouse, mousepos[0], mousepos[1])
+			gl.drawElements(gl.TRIANGLES, bufObj.inx.len, gl.UNSIGNED_SHORT, 0)
+			if (!doneAnimating) requestAnimationFrame(render)
+			loaded = true
+		}
+
+		initScene()
+		return () => {
+			doneAnimating = true
+			canvas.removeEventListener('mousemove', mouseHandler)
+		}
+	})
 </script>
 
 {#if doneAnimating}
-    <div {style} class="{className} tooslow"></div>
+	<div {style} class="{className} tooslow" />
 {:else}
-    <canvas {style} class="{className} {(loaded)?'loaded':''}"></canvas>
+	<canvas {style} class="{className} {loaded ? 'loaded' : ''}" />
 {/if}
 
 <style>
-    canvas {
-        opacity: 0;
-        transition: opacity 2s;
-    }
-    canvas.loaded {
-        opacity: 1;
-    }
+	canvas {
+		opacity: 0;
+		transition: opacity 2s;
+	}
+	canvas.loaded {
+		opacity: 1;
+	}
 </style>
