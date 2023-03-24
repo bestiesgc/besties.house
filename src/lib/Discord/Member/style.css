@@ -93,6 +93,11 @@
 	font-weight: 600;
 }
 
+.member-popout-social svg {
+	width: 24px;
+	height: 24px;
+}
+
 .member-popout-social-label {
 	min-width: 0;
 	text-overflow: ellipsis;
