@@ -3,14 +3,8 @@
 	import Avatar from '$lib/Discord/Avatar.svelte'
 	import BasicMarkdown from '$lib/Discord/BasicMarkdown.svelte'
 	export let member
-	let bio = ''
-	if (Array.isArray(member.bio)) {
-		bio = member.bio[Math.round(Math.random() * (member.bio.length - 1))]
-	} else {
-		bio = member.bio
-	}
-	if (member.pronouns) {
-		bio = `pronouns: ${member.pronouns}\n` + bio
+	if (member.bio && Array.isArray(member.bio)) {
+		member.bio = member.bio[Math.round(Math.random() * (member.bio.length - 1))]
 	}
 </script>
 
@@ -25,9 +19,12 @@
 		{/if}
 		<hr />
 		<h2>about me</h2>
-		<pre class="member-popout-bio">
-					<BasicMarkdown text={bio} />
-				</pre>
+		{#if member.pronouns}
+			<pre class="member-popout-bio">pronouns: {member.pronouns}</pre>
+		{/if}
+		{#if member.bio}
+			<pre class="member-popout-bio"><BasicMarkdown text={member.bio} /></pre>
+		{/if}
 		{#if member.socials || member.email}
 			<hr />
 			<div class="member-popout-social-list">
