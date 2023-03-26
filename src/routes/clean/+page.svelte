@@ -52,8 +52,7 @@
 					},
 					avatar: '/avatars/luna.webp',
 					color: '#71368a',
-					pronouns: 'she/her',
-					bio: 'hamburger'
+					pronouns: 'hamburger'
 				}
 			]
 		},
