@@ -92,7 +92,7 @@
 					},
 					avatar: '/avatars/ultra.webp',
 					color: '#206694',
-					pronouns: 'he/him',
+					pronouns: 'they/them',
 					bio: 'breathing right now'
 				}
 			]

@@ -23,7 +23,7 @@ export const memberGroups = [
 				color: '#2ecc71',
 				pronouns: 'she/they',
 				email: 'quinn@besties.house',
-				bio: 'fucked up loser'
+				bio: 'you have little pencil arms LOSER'
 			},
 			{
 				name: 'aria',
@@ -105,7 +105,7 @@ export const memberGroups = [
 				},
 				avatar: '/avatars/ultra.webp',
 				color: '#206694',
-				pronouns: 'he/him',
+				pronouns: 'they/them',
 				bio: '(probably) breathing right now'
 			}
 		]
