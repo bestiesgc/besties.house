@@ -33,6 +33,7 @@
 
 .member-popout-avatar img {
 	width: 100%;
+	border-radius: 100%;
 }
 
 .member-popout-name {

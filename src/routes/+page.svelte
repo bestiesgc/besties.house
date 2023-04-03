@@ -1,5 +1,5 @@
 <script>
-	import GlitchyBg from '$lib/GlitchyBg.svelte'
+	import Hero from '$lib/Hero/Component.svelte'
 	import MemberGroup from '$lib/MemberGroup/Component.svelte'
 	import ProjectItem from '$lib/ProjectItem.svelte'
 	import RandomMessage from '$lib/RandomMessage.svelte'
@@ -42,15 +42,14 @@
 
 <div class="page">
 	<div class="main-wrapper">
-		<div class="hero">
-			<GlitchyBg />
+		<Hero>
 			<h1 class="besties-heading">besties</h1>
 			<RandomMessage
 				on:update-message={handleRandomMessageUpdate}
 				class="besties-splash"
 				messages={splashes}
 			/>
-		</div>
+		</Hero>
 
 		<div class="info">
 			<h2>projects</h2>

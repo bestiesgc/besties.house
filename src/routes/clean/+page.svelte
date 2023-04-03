@@ -1,5 +1,5 @@
 <script>
-	import GlitchyBg from '$lib/GlitchyBg.svelte'
+	import Hero from '$lib/Hero/Component.svelte'
 	import MemberGroup from '$lib/MemberGroup/Component.svelte'
 	import ProjectItem from '$lib/ProjectItem.svelte'
 	import RandomMessage from '$lib/RandomMessage.svelte'
@@ -17,7 +17,7 @@
 					pronouns: 'she/her',
 					email: 'hazy@besties.house',
 					url: 'https://hazy.gay',
-					bio: 'h'
+					bio: "cup also asked for this feature to be added: &klol example&r but it's now unused"
 				},
 				{
 					name: 'quinn',
@@ -151,8 +151,7 @@
 
 <div class="page">
 	<div class="main-wrapper">
-		<div class="hero">
-			<GlitchyBg />
+		<Hero>
 			<h1 class="besties-heading">besties</h1>
 			<p style="z-index: 2; font-size: 0.5em; margin-bottom: 0.5em;">
 				(clean edition for demo lol)
@@ -162,7 +161,7 @@
 				class="besties-splash"
 				messages={splashes}
 			/>
-		</div>
+		</Hero>
 
 		<div class="info">
 			<h2>projects</h2>
