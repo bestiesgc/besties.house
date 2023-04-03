@@ -182,14 +182,6 @@
 						description: 'Open-sourced file sharing site'
 					}}
 				/>
-				<ProjectItem
-					project={{
-						name: 'wandering eye',
-						url: 'https://eye.besties.house',
-						iconUrl: '/icons/eye.svg',
-						description: 'Easily retrieve information on any domain'
-					}}
-				/>
 			</div>
 			<h2>members</h2>
 			<div class="member-list-wrapper">

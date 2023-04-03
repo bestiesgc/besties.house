@@ -72,14 +72,6 @@
 				/>
 				<ProjectItem
 					project={{
-						name: 'wandering eye',
-						url: 'https://eye.besties.house',
-						iconUrl: '/icons/eye.svg',
-						description: 'Easily retrieve information on any domain'
-					}}
-				/>
-				<ProjectItem
-					project={{
 						name: 'fuckgov.org',
 						url: 'https://fuckgov.org',
 						iconUrl: '/icons/ucb.svg',
@@ -93,6 +85,14 @@
 					<MemberGroup {group} />
 				{/each}
 			</div>
+			<br />
+			<img
+				src="/badges/besties.gif"
+				alt="besties - first unionised group chat"
+			/>
+			<img src="/badges/trans.png" alt="trans flag" />
+			<img src="/badges/piracy.gif" alt="piracy now" />
+			<img src="/badges/acab.gif" alt="acab" />
 		</div>
 	</div>
 </div>
