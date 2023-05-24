@@ -59,3 +59,14 @@
 .besties-splash {
 	z-index: 2;
 }
+
+@media (min-width: 1050px) {
+	.hero {
+		position: fixed;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		width: 24rem;
+		pointer-events: none;
+	}
+}
