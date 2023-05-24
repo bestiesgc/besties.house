@@ -110,6 +110,22 @@ export const memberGroups = [
 		]
 	},
 	{
+		name: 'poneeee :3',
+		subtitles: ['i bite!', 'pls give me a free laptop', 'neigh'],
+		members: [
+			{
+				name: 'Izzy Moonbow',
+				socials: {
+					twitter: '845547479336669185'
+				},
+				avatar: '/avatars/izzy.gif',
+				color: '#2f0a4f',
+				pronouns: 'she/they/pony',
+				bio: 'silly pony doing silly things on her puter'
+			}
+		]
+	},
+	{
 		name: 'home depot (heaven)',
 		members: [
 			{
