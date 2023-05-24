@@ -1,5 +1,11 @@
 @import url('/static/figtree/style.css');
 
+@font-face {
+	font-family: 'Monocraft';
+	font-weight: 400;
+	src: url(/monocraft.ttf);
+}
+
 :root {
 	--grey-100: #d8d4e8;
 	--grey-200: #a39fb2;
@@ -261,5 +267,9 @@ nav a:hover {
 }
 
 .glitchy-text {
-	font-family: monospace;
+	font-family: 'Monocraft', monospace;
+}
+.glitchy-text > span {
+	display: inline-block;
+	white-space: nowrap;
 }

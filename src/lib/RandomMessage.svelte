@@ -1,4 +1,5 @@
 <script>
+	import BasicMarkdown from '$lib/Discord/BasicMarkdown.svelte'
 	import { onMount } from 'svelte'
 	import { slide } from 'svelte/transition'
 	import { createEventDispatcher } from 'svelte'
@@ -38,5 +39,7 @@
 </script>
 
 {#key splash}
-	<p class={classList} transition:slide>{splash ? splash : ''}</p>
+	<p class={classList} transition:slide>
+		<BasicMarkdown text={splash ? splash : ''} />
+	</p>
 {/key}

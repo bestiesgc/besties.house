@@ -4,7 +4,7 @@
 	let htmlContent
 	let markdownEl
 	function obscure(text) {
-		let chars = `!”#$%'()*+,-./0123456789:;=?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[|]^_\`abcdefghijklmnopqrstuvwxyz{}~`
+		let chars = `#$%()*+-/0123456789=?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[|]^_abcdefghijklmnopqrstuvwxyz{}~`
 		let newText = text.split('')
 		for (let i = 0; i < newText.length; i++) {
 			newText[i] = chars[Math.round(Math.random() * (chars.length - 1))]
