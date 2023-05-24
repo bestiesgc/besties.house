@@ -111,7 +111,15 @@ export const memberGroups = [
 	},
 	{
 		name: 'poneeee :3',
-		subtitles: ['i bite!', 'pls give me a free laptop', 'neigh'],
+		subtitles: [
+			'&kaaaaaaaaa&r is the best pony!',
+			'startrix 4 life!!!',
+			'm.a. larson is the best writer of the decade',
+			'derpy!!!!!!!',
+			'i bite!',
+			'pls give me a free laptop',
+			'neigh'
+		],
 		members: [
 			{
 				name: 'Izzy Moonbow',
