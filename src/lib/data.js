@@ -122,12 +122,13 @@ export const memberGroups = [
 		],
 		members: [
 			{
-				name: 'Izzy Moonbow',
+				name: 'Millie',
 				socials: {
 					twitter: '845547479336669185',
-					mastodon: 'https://equestria.social/web/@twilightemi'
+					mastodon: 'https://equestria.social/web/@twilightemi',
+					lastfm: 'twilightemi'
 				},
-				avatar: '/avatars/izzy.gif',
+				avatar: '/avatars/millie.webp',
 				email: 'izzy@besties.house',
 				color: '#2f0a4f',
 				pronouns: 'she/they/pony',
