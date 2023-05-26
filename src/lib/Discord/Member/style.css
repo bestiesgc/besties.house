@@ -26,12 +26,13 @@
 	height: 80px;
 	border-radius: 100%;
 	border: 6px solid var(--popout-bg);
+	background-color: var(--popout-bg);
 	position: absolute;
 	top: 10px;
 	left: 16px;
 }
 
-.member-popout-avatar img {
+.member-popout-avatar .avatar-img {
 	width: 100%;
 	border-radius: 100%;
 }
