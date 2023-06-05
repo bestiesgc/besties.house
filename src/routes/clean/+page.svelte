@@ -97,6 +97,33 @@
 			]
 		},
 		{
+			name: 'poneeee :3',
+			subtitles: [
+				'&kaaaaaaaaa&r is the best pony!',
+				'startrix 4 life!!!',
+				'm.a. larson is the best writer of the decade',
+				'derpy!!!!!!!',
+				'i bite!',
+				'pls give me a free laptop',
+				'neigh'
+			],
+			members: [
+				{
+					name: 'Trixie',
+					socials: {
+						twitter: '845547479336669185',
+						mastodon: 'https://equestria.social/web/@twilightemi',
+						lastfm: 'twilightemi'
+					},
+					avatar: '/avatars/trixie.webp',
+					email: 'izzy@besties.house',
+					color: '#2f0a4f',
+					pronouns: 'she/they/pony',
+					bio: 'silly pony doing silly things on her puter'
+				}
+			]
+		},
+		{
 			name: 'home depot (heaven)',
 			members: [
 				{
