@@ -72,6 +72,14 @@
 				/>
 				<ProjectItem
 					project={{
+						name: 'wandering-eye',
+						url: 'https://eye.besties.house',
+						iconUrl: '/icons/eye.svg',
+						description: 'Easily find information on any domain'
+					}}
+				/>
+				<ProjectItem
+					project={{
 						name: 'fuckgov.org',
 						url: 'https://fuckgov.org',
 						iconUrl: '/icons/ucb.svg',
