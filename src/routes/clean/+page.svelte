@@ -17,7 +17,7 @@
 					pronouns: 'she/her',
 					email: 'hazy@besties.house',
 					url: 'https://hazy.gay',
-					bio: "cup also asked for this feature to be added: &klol example&r but it's now unused"
+					bio: 'h'
 				},
 				{
 					name: 'quinn',
