@@ -10,7 +10,8 @@
 				{
 					name: 'hazycora',
 					socials: {
-						twitter: '1021804959703212034'
+						twitter: '1021804959703212034',
+						mastodon: 'https://fuckgov.org/@h'
 					},
 					avatar: '/avatars/hazycora.webp',
 					color: '#ff36ed',
@@ -48,7 +49,8 @@
 				{
 					name: 'luna',
 					socials: {
-						twitter: '765711397820989440'
+						twitter: '765711397820989440',
+						mastodon: 'https://fuckgov.org/@Luna'
 					},
 					avatar: '/avatars/luna.webp',
 					color: '#71368a',
@@ -111,8 +113,7 @@
 				{
 					name: 'Trixie',
 					socials: {
-						twitter: '845547479336669185',
-						mastodon: 'https://equestria.social/web/@twilightemi',
+						mastodon: 'https://yiff.life/@trixie',
 						lastfm: 'twilightemi'
 					},
 					avatar: '/avatars/trixie.webp',
