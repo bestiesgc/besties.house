@@ -6,7 +6,8 @@ export const memberGroups = [
 				name: 'hazycora',
 				socials: {
 					twitter: '1021804959703212034',
-					mastodon: 'https://fuckgov.org/@h'
+					mastodon: 'https://fuckgov.org/@h',
+					lastfm: 'hazysu'
 				},
 				avatar: '/avatars/hazycora.webp',
 				color: '#ff36ed',
