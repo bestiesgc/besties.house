@@ -13,8 +13,9 @@
 			`https://yc.besties.house/api/last/${member.socials.lastfm}`
 		)
 		const data = await resp.json()
-		if (data.success) listening = data.response
-		console.log(listening)
+		if (data.success && data.response['est-timestamp'] == 'live') {
+			listening = data.response
+		}
 	})
 
 	if (member.bio && Array.isArray(member.bio)) {
