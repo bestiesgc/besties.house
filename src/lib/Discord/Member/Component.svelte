@@ -2,7 +2,21 @@
 	import './style.css'
 	import Avatar from '$lib/Discord/Avatar.svelte'
 	import BasicMarkdown from '$lib/Discord/BasicMarkdown.svelte'
+	import { onMount } from 'svelte'
+
 	export let member
+
+	let listening = null
+	onMount(async () => {
+		if (!member.socials.lastfm) return
+		const resp = await fetch(
+			`https://yc.besties.house/api/last/${member.socials.lastfm}`
+		)
+		const data = await resp.json()
+		if (data.success) listening = data.response
+		console.log(listening)
+	})
+
 	if (member.bio && Array.isArray(member.bio)) {
 		member.bio = member.bio[Math.round(Math.random() * (member.bio.length - 1))]
 	}
@@ -24,6 +38,19 @@
 		{/if}
 		{#if member.bio}
 			<pre class="member-popout-bio"><BasicMarkdown text={member.bio} /></pre>
+		{/if}
+		{#if listening}
+			<h2>listening on spotify</h2>
+			<div class="listening">
+				<img src={listening.cover.replace('/200s/', '/avatar300s/')} alt="" />
+				<div class="listening-meta">
+					<p class="track-name">{listening.track.name}</p>
+					<p class="artist-name">by {listening.artist.name}</p>
+					{#if listening.album.name}
+						<p class="album-name">on {listening.album.name}</p>
+					{/if}
+				</div>
+			</div>
 		{/if}
 		{#if member.socials || member.email}
 			<hr />
@@ -188,3 +215,27 @@
 		{/if}
 	</div>
 </div>
+
+<style>
+	.listening {
+		display: grid;
+		grid-template-columns: 3rem 1fr;
+		gap: 0.25rem;
+		font-size: 0.75rem;
+	}
+
+	.listening img {
+		width: 100%;
+		border-radius: 0.125rem;
+	}
+
+	.listening-meta {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.listening .track-name {
+		font-weight: 600;
+	}
+</style>
