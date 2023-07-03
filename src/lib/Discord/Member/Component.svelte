@@ -233,6 +233,13 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		min-width: 0;
+	}
+
+	.listening-meta p {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 	}
 
 	.listening .track-name {
