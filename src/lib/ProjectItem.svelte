@@ -45,6 +45,7 @@
 		gap: 0.5rem;
 	}
 	.project-icon-wrapper {
+		user-select: none;
 		display: grid;
 		align-items: center;
 	}

@@ -24,3 +24,9 @@
 		<img src="/blunt.png" alt="" class="blunt" />
 	{/if}
 </div>
+
+<style>
+	div:global(.avatar) {
+		user-select: none;
+	}
+</style>

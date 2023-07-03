@@ -93,14 +93,27 @@
 					<MemberGroup {group} />
 				{/each}
 			</div>
-			<br />
-			<img
-				src="/badges/besties.gif"
-				alt="besties - first unionised group chat"
-			/>
-			<img src="/badges/trans.png" alt="trans flag" />
-			<img src="/badges/piracy.gif" alt="piracy now" />
-			<img src="/badges/acab.gif" alt="acab" />
+			<div class="button-badges">
+				<img
+					class="button-badge"
+					src="/badges/besties.gif"
+					alt="besties - first unionised group chat"
+				/>
+				<img class="button-badge" src="/badges/trans.png" alt="trans flag" />
+				<img class="button-badge" src="/badges/piracy.gif" alt="piracy now" />
+				<img class="button-badge" src="/badges/acab.gif" alt="acab" />
+			</div>
 		</div>
 	</div>
 </div>
+
+<style>
+	.button-badges {
+		margin-top: 1rem;
+		display: flex;
+		gap: 0.5rem;
+	}
+	.button-badge {
+		user-select: none;
+	}
+</style>
