@@ -61,14 +61,11 @@
 		{
 			name: 'childrens church',
 			subtitles: [
-				`Left Twix > Right Twix`,
 				`Hazy is a Dictator please help`,
 				`i'm silly i'm silly i'm silly`,
 				`my head hurts`,
 				`IM NORMAL IM NORMAL IM NORMAL IM NORMAL IM NORMAL IM NORMAL IM NORMAL `,
-				`80k reddit karma and counting`,
 				`:( `,
-				`We live in misery…`,
 				`skill issue`,
 				`no comment`,
 				`The Funny Ones`,
@@ -81,8 +78,7 @@
 				`Interact with caution`,
 				`Thats a subtitle its funny dont delete it hazy (this is also a subtitle)`,
 				`reduce your expectations to zero`,
-				`loud != funny`,
-				`Cool Person#0001 on discord wants money please send them money`
+				`loud != funny`
 			],
 			members: [
 				{
