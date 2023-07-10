@@ -83,7 +83,6 @@ export const memberGroups = [
 			`Hazy filtered out all the funny subtitles :(`,
 			`They are holding us in cages in Antarctica`,
 			`Interact with caution`,
-			`Who is Cup?`,
 			`Thats a subtitle its funny dont delete it hazy (this is also a subtitle)`,
 			`We love Jesus`,
 			`h is a bad letter`,
@@ -135,21 +134,6 @@ export const memberGroups = [
 				color: '#2f0a4f',
 				pronouns: 'she/they/pony',
 				bio: 'silly pony doing silly things on her puter'
-			}
-		]
-	},
-	{
-		name: 'home depot (heaven)',
-		members: [
-			{
-				name: 'cup',
-				socials: {
-					twitter: '811377'
-				},
-				avatar: '/avatars/cup.webp',
-				color: '#e74c3c',
-				pronouns: 'nor/mal',
-				bio: 'i am not a part of this group if there is any ever search on this group i can give info (for a price xoxo)'
 			}
 		]
 	}
