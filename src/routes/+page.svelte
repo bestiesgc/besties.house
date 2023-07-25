@@ -39,6 +39,12 @@
 		content="https://besties.house/besties-thumb.png"
 	/>
 </svelte:head>
+<div style:display="none">
+	<!-- For fediverse link verification -->
+	<a rel="me" href="https://social.besties.house/@besties"
+		>@besties@besties.house</a
+	>
+</div>
 
 <div class="page">
 	<div class="main-wrapper">
