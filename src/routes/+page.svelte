@@ -1,9 +1,8 @@
 <script>
 	import Hero from '$lib/Hero.svelte'
 	import MemberGroup from '$lib/MemberGroup.svelte'
-	import ProjectItem from '$lib/Project/ProjectItem.svelte'
 	import ProjectList from '$lib/Project/ProjectList.svelte'
-	import { memberGroups, splashes } from '$lib/data.js'
+	import { memberGroups, splashes, projects } from '$lib/data.js'
 </script>
 
 <svelte:head>
@@ -49,40 +48,7 @@
 
 		<div class="info">
 			<h2>projects</h2>
-			<ProjectList>
-				<ProjectItem
-					project={{
-						name: 'git.gay',
-						url: 'https://git.gay',
-						iconUrl: '/icons/git.gay.svg',
-						description: 'A git server owned and operated by us queers'
-					}}
-				/>
-				<ProjectItem
-					project={{
-						name: 'files.gay',
-						url: 'https://files.gay',
-						iconUrl: '/icons/files.gay.svg',
-						description: 'Open-sourced file sharing site'
-					}}
-				/>
-				<ProjectItem
-					project={{
-						name: 'wandering-eye',
-						url: 'https://eye.besties.house',
-						iconUrl: '/icons/eye.svg',
-						description: 'Easily find information on any domain'
-					}}
-				/>
-				<ProjectItem
-					project={{
-						name: 'social.besties.house',
-						url: 'https://social.besties.house',
-						iconUrl: '/icons/ucb.svg',
-						description: 'A Mastodon server'
-					}}
-				/>
-			</ProjectList>
+			<ProjectList {projects} />
 			<h2>members</h2>
 			<div class="member-list-wrapper">
 				{#each memberGroups as group}

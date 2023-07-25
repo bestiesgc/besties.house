@@ -1,5 +1,12 @@
+<script>
+	import ProjectItem from './ProjectItem.svelte'
+	export let projects
+</script>
+
 <div class="project-list-wrapper">
-	<slot />
+	{#each projects as project}
+		<ProjectItem {project} />
+	{/each}
 </div>
 
 <style>
