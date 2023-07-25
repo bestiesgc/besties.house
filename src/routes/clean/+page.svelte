@@ -1,7 +1,8 @@
 <script>
 	import Hero from '$lib/Hero/Component.svelte'
 	import MemberGroup from '$lib/MemberGroup/Component.svelte'
-	import ProjectItem from '$lib/ProjectItem.svelte'
+	import ProjectItem from '$lib/Project/ProjectItem.svelte'
+	import ProjectList from '$lib/Project/ProjectList.svelte'
 	import RandomMessage from '$lib/RandomMessage.svelte'
 	const memberGroups = [
 		{
@@ -173,7 +174,7 @@
 
 		<div class="info">
 			<h2>projects</h2>
-			<div class="project-list-wrapper">
+			<ProjectList>
 				<ProjectItem
 					project={{
 						name: 'git.gay',
@@ -206,7 +207,7 @@
 						description: 'A Mastodon server'
 					}}
 				/>
-			</div>
+			</ProjectList>
 			<h2>members</h2>
 			<div class="member-list-wrapper">
 				{#each memberGroups as group}

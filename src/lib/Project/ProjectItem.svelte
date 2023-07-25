@@ -35,6 +35,7 @@
 	.project-item {
 		overflow: hidden;
 		border-radius: 0.5rem;
+		height: 100%;
 		display: grid;
 		grid-template-rows: min-content 1fr;
 	}
