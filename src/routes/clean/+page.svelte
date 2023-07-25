@@ -12,7 +12,7 @@
 					name: 'hazycora',
 					socials: {
 						twitter: '1021804959703212034',
-						mastodon: 'https://social.besties.house/@h'
+						mastodon: 'https://besties.house/@h'
 					},
 					avatar: '/avatars/hazycora.webp',
 					color: '#ff36ed',
@@ -36,7 +36,7 @@
 					name: 'aria',
 					socials: {
 						twitter: '1450703231642972161',
-						mastodon: 'https://fuckgov.org/web/@a',
+						mastodon: 'https://besties.house/@a',
 						lastfm: 'tacohitbox'
 					},
 					isCat: true,
@@ -109,7 +109,7 @@
 				{
 					name: 'Trixie',
 					socials: {
-						mastodon: 'https://yiff.life/@trixie',
+						mastodon: 'https://besties.house/@t',
 						lastfm: 'twilightemi'
 					},
 					avatar: '/avatars/trixie.webp',

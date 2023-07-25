@@ -6,7 +6,7 @@ export const memberGroups = [
 				name: 'hazycora',
 				socials: {
 					twitter: '1021804959703212034',
-					mastodon: 'https://social.besties.house/@h',
+					mastodon: 'https://besties.house/@h',
 					lastfm: 'hazysu'
 				},
 				avatar: '/avatars/hazycora.webp',
@@ -31,7 +31,7 @@ export const memberGroups = [
 				name: 'aria',
 				socials: {
 					twitter: '1450703231642972161',
-					mastodon: 'https://fuckgov.org/web/@a',
+					mastodon: 'https://besties.house/@a',
 					lastfm: 'tacohitbox'
 				},
 				isCat: true,
@@ -120,7 +120,7 @@ export const memberGroups = [
 			{
 				name: 'Trixie',
 				socials: {
-					mastodon: 'https://yiff.life/@trixie',
+					mastodon: 'https://besties.house/@t',
 					lastfm: 'twilightemi'
 				},
 				avatar: '/avatars/trixie.webp',
