@@ -57,22 +57,22 @@ void main()
 	let doneAnimating = false
 
 	onMount(() => {
-		var gl = null
-		var canvas,
+		let gl = null
+		let canvas,
 			vp_size,
-			bufObj = {},
 			mousepos = [0, 0]
+		const bufObj = {}
 		let progDraw
 
 		function mouseHandler(e) {
 			mousepos = [e.clientX, e.clientY]
 		}
 
-		let query = window.matchMedia(`(prefers-reduced-motion: reduce)`)
+		const query = window.matchMedia('(prefers-reduced-motion: reduce)')
 		animate = !(query === true ? true : query.matches === true)
 
 		function initScene() {
-			let opts = {
+			const opts = {
 				alpha: false,
 				depth: false,
 				stencil: false,
@@ -92,7 +92,7 @@ void main()
 			canvas.addEventListener('mousemove', mouseHandler)
 
 			progDraw = gl.createProgram()
-			let sources = [
+			const sources = [
 				{
 					type: gl.VERTEX_SHADER,
 					code: vertexShader
@@ -102,16 +102,16 @@ void main()
 					code: fragmentShader
 				}
 			]
-			for (let source of sources) {
-				let shaderObj = gl.createShader(source.type)
+			for (const source of sources) {
+				const shaderObj = gl.createShader(source.type)
 				gl.shaderSource(shaderObj, source.code)
 				gl.compileShader(shaderObj)
-				let status = gl.getShaderParameter(shaderObj, gl.COMPILE_STATUS)
+				const status = gl.getShaderParameter(shaderObj, gl.COMPILE_STATUS)
 				if (!status) alert(gl.getShaderInfoLog(shaderObj))
 				gl.attachShader(progDraw, shaderObj)
 			}
 			gl.linkProgram(progDraw)
-			let status = gl.getProgramParameter(progDraw, gl.LINK_STATUS)
+			const status = gl.getProgramParameter(progDraw, gl.LINK_STATUS)
 			if (!status) alert(gl.getProgramInfoLog(progDraw))
 			progDraw.inPos = gl.getAttribLocation(progDraw, 'inPos')
 			progDraw.iTime = gl.getUniformLocation(progDraw, 'iTime')
@@ -119,8 +119,8 @@ void main()
 			progDraw.iResolution = gl.getUniformLocation(progDraw, 'iResolution')
 			gl.useProgram(progDraw)
 
-			var pos = [-1, -1, 1, -1, 1, 1, -1, 1]
-			var inx = [0, 1, 2, 0, 2, 3]
+			const pos = [-1, -1, 1, -1, 1, 1, -1, 1]
+			const inx = [0, 1, 2, 0, 2, 3]
 			bufObj.pos = gl.createBuffer()
 			gl.bindBuffer(gl.ARRAY_BUFFER, bufObj.pos)
 			gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(pos), gl.STATIC_DRAW)
@@ -156,7 +156,7 @@ void main()
 			canvas.height = vp_size[1]
 		}
 
-		let startOffset = Math.random() * 10000
+		const startOffset = Math.random() * 10000
 
 		function render(deltaMS) {
 			gl.viewport(0, 0, canvas.width, canvas.height)

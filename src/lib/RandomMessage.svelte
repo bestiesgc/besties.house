@@ -1,8 +1,7 @@
 <script>
 	import BasicMarkdown from '$lib/Discord/BasicMarkdown.svelte'
-	import { onMount } from 'svelte'
+	import { onMount, createEventDispatcher } from 'svelte'
 	import { slide } from 'svelte/transition'
-	import { createEventDispatcher } from 'svelte'
 
 	const dispatch = createEventDispatcher()
 
@@ -23,7 +22,7 @@
 		dispatch('update-message', {
 			text: splash
 		})
-		let splashInterval = setInterval(() => {
+		const splashInterval = setInterval(() => {
 			splashI += 1
 			if (splashI >= messages.length) splashI = 0
 			splash = messages[splashI]

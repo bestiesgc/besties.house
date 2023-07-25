@@ -1,11 +1,5 @@
 <script>
 	export let project
-	let urlText
-	if (project.url) {
-		let urlObj = new URL(project.url)
-		urlText = urlObj.hostname
-		if (urlObj.pathname !== '/') urlText += urlObj.pathname
-	}
 </script>
 
 <a href={project.url} class="project-item-wrapper">

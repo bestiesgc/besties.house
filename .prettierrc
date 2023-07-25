@@ -9,7 +9,6 @@
 	"arrowParens": "avoid",
 	"bracketSameLine": false,
 	"plugins": ["prettier-plugin-svelte"],
-	"pluginSearchDirs": ["."],
 	"overrides": [
 		{
 			"files": "*.svelte",

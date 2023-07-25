@@ -4,8 +4,9 @@
 	let htmlContent
 	let markdownEl
 	function obscure(text) {
-		let chars = `#$%()*+-/0123456789=?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[|]^_abcdefghijklmnopqrstuvwxyz{}~`
-		let newText = text.split('')
+		const chars =
+			'#$%()*+-/0123456789=?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[|]^_abcdefghijklmnopqrstuvwxyz{}~'
+		const newText = text.split('')
 		for (let i = 0; i < newText.length; i++) {
 			newText[i] = chars[Math.round(Math.random() * (chars.length - 1))]
 		}
@@ -16,7 +17,7 @@
 			.join('')
 	}
 	onMount(() => {
-		let textElem = document.createElement('span')
+		const textElem = document.createElement('span')
 		textElem.innerText = text
 		let html = textElem.innerHTML
 		// minecraft's obscured text formatting, using &ktext to obscure&r syntax
@@ -45,9 +46,9 @@
 			return `<i>${h}</i>`
 		})
 		markdownEl.innerHTML = html
-		let glitchyTexts = markdownEl.querySelectorAll('.glitchy-text')
-		let interval = setInterval(() => {
-			for (let el of glitchyTexts) {
+		const glitchyTexts = markdownEl.querySelectorAll('.glitchy-text')
+		const interval = setInterval(() => {
+			for (const el of glitchyTexts) {
 				el.innerHTML = obscure(el.innerText)
 			}
 		}, 50)
@@ -60,6 +61,7 @@
 	{#if !htmlContent}
 		{text}
 	{:else}
+		<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 		{@html htmlContent}
 	{/if}
 </span>
