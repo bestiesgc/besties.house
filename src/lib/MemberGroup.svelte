@@ -1,5 +1,4 @@
 <script>
-	import './style.css'
 	import Member from '$lib/Discord/Member/Component.svelte'
 	import RandomMessage from '$lib/RandomMessage.svelte'
 	export let group
@@ -21,3 +20,20 @@
 		{/each}
 	</div>
 </div>
+
+<style>
+	.member-list {
+		display: grid;
+		gap: 1rem;
+		justify-items: center;
+		grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+	}
+
+	.member-group-title {
+		margin-top: 0;
+	}
+
+	.member-group :global(.member-group-subtitles) {
+		margin-bottom: 1rem;
+	}
+</style>

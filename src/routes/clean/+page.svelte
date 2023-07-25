@@ -1,6 +1,6 @@
 <script>
 	import Hero from '$lib/Hero/Component.svelte'
-	import MemberGroup from '$lib/MemberGroup/Component.svelte'
+	import MemberGroup from '$lib/MemberGroup.svelte'
 	import ProjectItem from '$lib/Project/ProjectItem.svelte'
 	import ProjectList from '$lib/Project/ProjectList.svelte'
 	import RandomMessage from '$lib/RandomMessage.svelte'
