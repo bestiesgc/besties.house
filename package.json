@@ -10,7 +10,7 @@
 		"format": "prettier --write ."
 	},
 	"devDependencies": {
-		"@besties/eslint-config": "^0.2.1",
+		"@besties/eslint-config": "^0.2.2",
 		"@sveltejs/adapter-static": "^2.0.2",
 		"@sveltejs/kit": "^1.22.3",
 		"autoprefixer": "^10.4.14",

@@ -6,8 +6,8 @@ settings:
 
 devDependencies:
   '@besties/eslint-config':
-    specifier: ^0.2.1
-    version: 0.2.1(eslint-config-prettier@8.8.0)(eslint-plugin-svelte@2.32.4)(eslint@8.45.0)
+    specifier: ^0.2.2
+    version: 0.2.2(eslint-config-prettier@8.8.0)(eslint-plugin-svelte@2.32.4)(eslint@8.45.0)
   '@sveltejs/adapter-static':
     specifier: ^2.0.2
     version: 2.0.2(@sveltejs/kit@1.22.3)
@@ -60,12 +60,12 @@ packages:
       '@jridgewell/trace-mapping': 0.3.18
     dev: true
 
-  /@besties/eslint-config@0.2.1(eslint-config-prettier@8.8.0)(eslint-plugin-svelte@2.32.4)(eslint@8.45.0):
-    resolution: {integrity: sha512-bqmkuuVgVx/0ZgCRBYlR6noVTlw352wi4zVmsbGwOoU1tO/VvfOGTda6wnkcEkvXG3b0o6YqyYuMgsJvfxQfTQ==}
+  /@besties/eslint-config@0.2.2(eslint-config-prettier@8.8.0)(eslint-plugin-svelte@2.32.4)(eslint@8.45.0):
+    resolution: {integrity: sha512-Sc5+jPLOqWoBnKdYKzFBuho2nbJ02MGJxTRmOTbeUzFBz+Vli5Xy7Q0unM3ItlGdTKKNF5eSV5yVE097bsPqrQ==}
     peerDependencies:
       eslint: ^8.43.0
       eslint-config-prettier: ^8.8.0
-      eslint-plugin-svelte: '>= 2'
+      eslint-plugin-svelte: ^2.32.4
     dependencies:
       eslint: 8.45.0
       eslint-config-prettier: 8.8.0(eslint@8.45.0)
