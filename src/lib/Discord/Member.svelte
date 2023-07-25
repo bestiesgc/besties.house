@@ -1,21 +1,9 @@
 <script>
 	import Avatar from '$lib/Discord/Avatar.svelte'
+	import Listening from '$lib/Discord/Listening.svelte'
 	import BasicMarkdown from '$lib/Discord/BasicMarkdown.svelte'
-	import { onMount } from 'svelte'
 
 	export let member
-
-	let listening = null
-	onMount(async () => {
-		if (!member.socials.lastfm) return
-		const resp = await fetch(
-			`https://yc.besties.house/api/last/${member.socials.lastfm}`
-		)
-		const data = await resp.json()
-		if (data.success && data.response['est-timestamp'] == 'live') {
-			listening = data.response
-		}
-	})
 
 	if (member.bio && Array.isArray(member.bio)) {
 		member.bio = member.bio[Math.round(Math.random() * (member.bio.length - 1))]
@@ -39,19 +27,7 @@
 		{#if member.bio}
 			<pre class="bio"><BasicMarkdown text={member.bio} /></pre>
 		{/if}
-		{#if listening}
-			<p class="heading">listening on spotify</p>
-			<div class="listening">
-				<img src={listening.cover.replace('/200s/', '/avatar300s/')} alt="" />
-				<div class="listening-meta">
-					<p class="track-name">{listening.track.name}</p>
-					<p class="artist-name">by {listening.artist.name}</p>
-					{#if listening.album.name}
-						<p class="album-name">on {listening.album.name}</p>
-					{/if}
-				</div>
-			</div>
-		{/if}
+		<Listening {member} />
 		{#if member.socials || member.email}
 			<hr />
 			<div class="social-list">
@@ -234,9 +210,13 @@
 		font-size: 20px;
 		margin: 0;
 	}
-	.heading {
+	.member :global(.heading) {
+		margin: 0.8em 0;
 		font-weight: 700;
 		color: inherit;
+		font-size: 12px;
+		text-transform: uppercase;
+		letter-spacing: 0.24px;
 	}
 	.banner {
 		height: 60px;
@@ -269,11 +249,6 @@
 	br {
 		display: block;
 		margin: 4px 0 0;
-	}
-	.heading {
-		font-size: 12px;
-		text-transform: uppercase;
-		letter-spacing: 0.24px;
 	}
 	.bio {
 		font: inherit;
@@ -310,29 +285,5 @@
 		min-width: 0;
 		text-overflow: ellipsis;
 		overflow: hidden;
-	}
-	.listening {
-		display: grid;
-		grid-template-columns: 3rem 1fr;
-		gap: 0.25rem;
-		font-size: 0.75rem;
-	}
-	.listening img {
-		width: 100%;
-		border-radius: 0.125rem;
-	}
-	.listening-meta {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		min-width: 0;
-	}
-	.listening-meta p {
-		overflow: hidden;
-		white-space: nowrap;
-		text-overflow: ellipsis;
-	}
-	.listening .track-name {
-		font-weight: 600;
 	}
 </style>
