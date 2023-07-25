@@ -12,7 +12,7 @@ export const memberGroups = [
 				avatar: '/avatars/hazycora.webp',
 				color: '#ff36ed',
 				pronouns: 'she/her',
-				email: 'hazy@besties.house',
+				email: 'h@besties.house',
 				url: 'https://hazy.gay',
 				bio: 'im cute'
 			},
