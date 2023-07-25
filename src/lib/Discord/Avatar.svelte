@@ -17,13 +17,90 @@
 			/>
 		</ImgAndFallback>
 	{/if}
-	{#if member.blunt}
-		<img src="/blunt.png" alt="" class="blunt" />
-	{/if}
 </div>
 
 <style>
 	div:global(.avatar) {
 		user-select: none;
+	}
+
+	.cat {
+		color: white;
+		overflow: unset;
+		background-color: unset !important;
+	}
+	.cat :global(.avatar-img) {
+		border-radius: 100%;
+		z-index: 1;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+	}
+
+	@keyframes earwiggleleft {
+		from {
+			transform: rotate(37.6deg) skew(30deg);
+		}
+		25% {
+			transform: rotate(10deg) skew(30deg);
+		}
+		50% {
+			transform: rotate(20deg) skew(30deg);
+		}
+		75% {
+			transform: rotate(0deg) skew(30deg);
+		}
+		to {
+			transform: rotate(37.6deg) skew(30deg);
+		}
+	}
+
+	@keyframes earwiggleright {
+		from {
+			transform: rotate(-37.6deg) skew(-30deg);
+		}
+		30% {
+			transform: rotate(-10deg) skew(-30deg);
+		}
+		55% {
+			transform: rotate(-20deg) skew(-30deg);
+		}
+		75% {
+			transform: rotate(-0deg) skew(-30deg);
+		}
+		to {
+			transform: rotate(-37.6deg) skew(-30deg);
+		}
+	}
+
+	.cat :global(.img)::before,
+	.cat :global(.img)::after {
+		position: absolute;
+		background: #df548f;
+		border: solid 4px currentColor;
+		box-sizing: border-box;
+		content: '';
+		display: inline-block;
+		width: 50%;
+		height: 50%;
+		z-index: 0;
+	}
+	.cat :global(.img)::before {
+		left: -4px;
+		border-radius: 0 75% 75%;
+		transform: rotate(37.5deg) skew(30deg);
+	}
+	.cat :global(.img)::after {
+		right: -4px;
+		border-radius: 75% 0 75% 75%;
+		transform: rotate(-37.5deg) skew(-30deg);
+	}
+	.cat :global(.img):hover::before {
+		animation: earwiggleleft 1s infinite;
+	}
+	.cat :global(.img):hover::after {
+		animation: earwiggleright 1s infinite;
 	}
 </style>
