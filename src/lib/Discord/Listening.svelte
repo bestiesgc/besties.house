@@ -17,7 +17,11 @@
 {#if listening}
 	<p class="heading">listening on spotify</p>
 	<div class="listening">
-		<img src={listening.cover.replace('/200s/', '/avatar300s/')} alt="" />
+		<img
+			aria-hidden="true"
+			src={listening.cover.replace('/200s/', '/avatar300s/')}
+			alt=""
+		/>
 		<div class="listening-meta">
 			<p class="track-name">{listening.track.name}</p>
 			<p class="artist-name">by {listening.artist.name}</p>

@@ -15,17 +15,13 @@
 	<Avatar {member} />
 	<div class="info">
 		<p class="member-name">{member.name}</p>
-		{#if member.status}
-			<br />
-			<div class="status">{member.status}</div>
-		{/if}
 		<hr />
 		<p class="heading">about me</p>
 		{#if member.pronouns}
-			<pre class="bio">pronouns: {member.pronouns}</pre>
+			<p class="bio">pronouns: {member.pronouns}</p>
 		{/if}
 		{#if member.bio}
-			<pre class="bio"><BasicMarkdown text={member.bio} /></pre>
+			<p class="bio"><BasicMarkdown text={member.bio} /></p>
 		{/if}
 		<Listening {member} />
 		{#if member.socials || member.email}
@@ -245,10 +241,6 @@
 		color: transparent;
 		border: none;
 		border-top: 1px solid rgba(79, 84, 92, 0.48);
-	}
-	br {
-		display: block;
-		margin: 4px 0 0;
 	}
 	.bio {
 		font: inherit;
