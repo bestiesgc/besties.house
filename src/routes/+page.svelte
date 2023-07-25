@@ -80,8 +80,8 @@
 				/>
 				<ProjectItem
 					project={{
-						name: 'fuckgov.org',
-						url: 'https://fuckgov.org',
+						name: 'social.besties.house',
+						url: 'https://social.besties.house',
 						iconUrl: '/icons/ucb.svg',
 						description: 'A Mastodon server'
 					}}

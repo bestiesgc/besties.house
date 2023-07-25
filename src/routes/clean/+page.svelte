@@ -198,6 +198,14 @@
 						description: 'Easily find information on any domain'
 					}}
 				/>
+				<ProjectItem
+					project={{
+						name: 'social.besties.house',
+						url: 'https://social.besties.house',
+						iconUrl: '/icons/ucb.svg',
+						description: 'A Mastodon server'
+					}}
+				/>
 			</div>
 			<h2>members</h2>
 			<div class="member-list-wrapper">
