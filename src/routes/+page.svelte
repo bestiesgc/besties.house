@@ -111,6 +111,7 @@
 	.button-badges {
 		margin-top: 1rem;
 		display: flex;
+		flex-wrap: wrap;
 		gap: 0.5rem;
 	}
 	.button-badge {
