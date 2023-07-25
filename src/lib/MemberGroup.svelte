@@ -1,5 +1,5 @@
 <script>
-	import Member from '$lib/Discord/Member/Component.svelte'
+	import Member from '$lib/Discord/Member.svelte'
 	import RandomMessage from '$lib/RandomMessage.svelte'
 	export let group
 </script>

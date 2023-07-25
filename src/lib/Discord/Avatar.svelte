@@ -1,14 +1,11 @@
 <script>
 	import ImgAndFallback from '$lib/Discord/ImgAndFallback.svelte'
 	export let member
-	let classList = ''
-	classList += ' avatar'
-	export { classList as class }
 </script>
 
 <div
 	style:--member-color={member.color}
-	class={classList}
+	class="avatar"
 	class:cat={member.isCat}
 	aria-hidden="true"
 >
