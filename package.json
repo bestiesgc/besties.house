@@ -6,25 +6,23 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
-		"lint": "prettier --plugin-search-dir . --check . && eslint .",
-		"format": "prettier --plugin-search-dir . --write ."
+		"lint": "prettier --check . && eslint .",
+		"format": "prettier --write ."
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-static": "^2.0.1",
-		"@sveltejs/kit": "^1.13.0",
-		"autoprefixer": "^10.4.7",
-		"eslint": "^8.28.0",
-		"eslint-config-prettier": "^8.5.0",
-		"eslint-plugin-svelte3": "^4.0.0",
-		"postcss": "^8.4.14",
-		"postcss-class-apply": "^4.0.1",
-		"postcss-load-config": "^4.0.1",
+		"@besties/eslint-config": "^0.2.1",
+		"@sveltejs/adapter-static": "^2.0.2",
+		"@sveltejs/kit": "^1.22.3",
+		"autoprefixer": "^10.4.14",
+		"eslint": "^8.45.0",
+		"eslint-plugin-svelte": "^2.32.4",
+		"postcss": "^8.4.27",
 		"postcss-scrollbar": "^0.5.1",
-		"prettier": "^2.8.0",
-		"prettier-plugin-svelte": "^2.8.1",
-		"svelte": "^3.57.0",
-		"svelte-preprocess": "^5.0.3",
-		"vite": "^4.0.0"
+		"prettier": "^3.0.0",
+		"prettier-plugin-svelte": "^3.0.0",
+		"svelte": "^4.1.1",
+		"svelte-preprocess": "^5.0.4",
+		"vite": "^4.4.7"
 	},
 	"type": "module"
 }
