@@ -179,9 +179,13 @@ void main()
 </script>
 
 {#if doneAnimating}
-	<div {style} class="{className} tooslow" />
+	<div {style} class="{className} tooslow" {...$$restProps} />
 {:else}
-	<canvas {style} class="{className} {loaded ? 'loaded' : ''}" />
+	<canvas
+		{style}
+		class="{className} {loaded ? 'loaded' : ''}"
+		{...$$restProps}
+	/>
 {/if}
 
 <style>

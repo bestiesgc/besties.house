@@ -75,4 +75,4 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
 }`
 </script>
 
-<Shadertoy {shader} />
+<Shadertoy aria-hidden="true" {shader} />
