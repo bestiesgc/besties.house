@@ -1,13 +1,9 @@
 <script>
-	import Hero from '$lib/Hero/Component.svelte'
+	import Hero from '$lib/Hero.svelte'
 	import MemberGroup from '$lib/MemberGroup.svelte'
 	import ProjectItem from '$lib/Project/ProjectItem.svelte'
 	import ProjectList from '$lib/Project/ProjectList.svelte'
-	import RandomMessage from '$lib/RandomMessage.svelte'
 	import { memberGroups, splashes } from '$lib/data.js'
-	function handleRandomMessageUpdate(e) {
-		document.title = `besties - ${e.detail.text}`
-	}
 </script>
 
 <svelte:head>
@@ -49,14 +45,7 @@
 
 <div class="page">
 	<div class="main-wrapper">
-		<Hero>
-			<h1 class="besties-heading">besties</h1>
-			<RandomMessage
-				on:update-message={handleRandomMessageUpdate}
-				class="besties-splash"
-				messages={splashes}
-			/>
-		</Hero>
+		<Hero {splashes} />
 
 		<div class="info">
 			<h2>projects</h2>

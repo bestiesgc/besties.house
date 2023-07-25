@@ -1,5 +1,5 @@
 <script>
-	import Hero from '$lib/Hero/Component.svelte'
+	import Hero from '$lib/Hero.svelte'
 	import MemberGroup from '$lib/MemberGroup.svelte'
 	import ProjectItem from '$lib/Project/ProjectItem.svelte'
 	import ProjectList from '$lib/Project/ProjectList.svelte'
@@ -131,9 +131,6 @@
 		'comic sans is aweosme',
 		'my clique got me for life'
 	]
-	function handleRandomMessageUpdate(e) {
-		document.title = `besties - ${e.detail.text}`
-	}
 </script>
 
 <svelte:head>
@@ -160,16 +157,10 @@
 
 <div class="page">
 	<div class="main-wrapper">
-		<Hero>
-			<h1 class="besties-heading">besties</h1>
+		<Hero {splashes}>
 			<p style="z-index: 2; font-size: 0.5em; margin-bottom: 0.5em;">
 				(clean edition for demo lol)
 			</p>
-			<RandomMessage
-				on:update-message={handleRandomMessageUpdate}
-				class="besties-splash"
-				messages={splashes}
-			/>
 		</Hero>
 
 		<div class="info">
