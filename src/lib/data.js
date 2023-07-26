@@ -9,6 +9,7 @@ export const memberGroups = [
 					mastodon: 'https://besties.house/@h',
 					lastfm: 'hazysu'
 				},
+				isCat: true,
 				avatar: '/avatars/hazycora.webp',
 				color: '#ff36ed',
 				pronouns: 'she/her',

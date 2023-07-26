@@ -13,6 +13,7 @@
 						twitter: '1021804959703212034',
 						mastodon: 'https://besties.house/@h'
 					},
+					isCat: true,
 					avatar: '/avatars/hazycora.webp',
 					color: '#ff36ed',
 					pronouns: 'she/her',
