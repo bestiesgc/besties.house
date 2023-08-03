@@ -25,7 +25,7 @@
 		<div class="listening-meta">
 			<p class="track-name">{listening.track.name}</p>
 			<p class="artist-name">by {listening.artist.name}</p>
-			{#if listening.album.name}
+			{#if listening.album.name && listening.album.name != listening.track.name}
 				<p class="album-name">on {listening.album.name}</p>
 			{/if}
 		</div>
