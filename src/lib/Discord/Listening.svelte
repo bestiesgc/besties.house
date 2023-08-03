@@ -15,7 +15,7 @@
 </script>
 
 {#if listening}
-	<p class="heading">listening on spotify</p>
+	<p class="heading">listening to music</p>
 	<div class="listening">
 		<img
 			aria-hidden="true"
