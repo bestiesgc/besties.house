@@ -7,7 +7,7 @@ export const memberGroups = [
 				socials: {
 					twitter: '1021804959703212034',
 					mastodon: 'https://besties.house/@h',
-					lastfm: 'hazysu'
+					lastfm: 'hazycora'
 				},
 				isCat: true,
 				avatar: '/avatars/hazycora.webp',
