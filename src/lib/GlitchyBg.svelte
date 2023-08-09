@@ -68,7 +68,7 @@ vec3 warpGrid(vec2 fragCoord) {
 void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     vec2 uv = fragCoord.xy / iResolution.y;
     float glitcha = 5.0;
-    float offset = floor(Pseudo3dNoise(vec3(floor(uv.x*0.8 + cos(iTime/5.0)), uv.y*14.0/2.0, iTime / 3.0))*glitcha)/glitcha;
+    float offset = floor(Pseudo3dNoise(vec3(floor(uv.y*0.8 + cos(iTime/5.0)), uv.y*14.0/2.0, iTime / 3.0))*glitcha)/glitcha;
     offset = offset*20.0;
     // float offset = 0.0;
     fragColor.rgb = warpGrid(vec2(fragCoord.x+offset, fragCoord.y));
