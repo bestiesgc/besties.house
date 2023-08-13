@@ -240,10 +240,11 @@
 	hr {
 		color: transparent;
 		border: none;
-		border-top: 1px solid rgba(216, 204, 240, 0.25);
+		border-top: 1px solid hsl(258 40% 75% / 0.2);
 	}
 	.pronouns {
-		color: rgba(216, 204, 240, 0.6);
+		font-size: 0.75rem;
+		color: hsl(258 40% 75% / 0.6);
 	}
 	.bio {
 		font: inherit;
