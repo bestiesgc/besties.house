@@ -15,11 +15,11 @@
 	<Avatar {member} />
 	<div class="info">
 		<p class="member-name">{member.name}</p>
+		{#if member.pronouns}
+			<p class="pronouns">{member.pronouns}</p>
+		{/if}
 		<hr />
 		<p class="heading">about me</p>
-		{#if member.pronouns}
-			<p class="bio">pronouns: {member.pronouns}</p>
-		{/if}
 		{#if member.bio}
 			<p class="bio"><BasicMarkdown text={member.bio} /></p>
 		{/if}
@@ -241,6 +241,9 @@
 		color: transparent;
 		border: none;
 		border-top: 1px solid rgba(79, 84, 92, 0.48);
+	}
+	.pronouns {
+		color: rgba(216, 204, 240, 0.6);
 	}
 	.bio {
 		font: inherit;
