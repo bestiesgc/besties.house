@@ -240,7 +240,7 @@
 	hr {
 		color: transparent;
 		border: none;
-		border-top: 1px solid rgba(79, 84, 92, 0.48);
+		border-top: 1px solid rgba(216, 204, 240, 0.25);
 	}
 	.pronouns {
 		color: rgba(216, 204, 240, 0.6);
@@ -262,7 +262,7 @@
 	}
 	.social {
 		user-select: none;
-		border: 1px solid rgba(79, 84, 92, 0.48);
+		border: 1px solid rgba(216, 204, 240, 0.25);
 		display: grid;
 		grid-template-columns: 24px 1fr;
 		height: 100%;
