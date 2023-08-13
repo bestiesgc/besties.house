@@ -14,7 +14,7 @@
 	<div class="banner" style:background-color={member.color} />
 	<Avatar {member} />
 	<div class="info">
-		<p class="member-name">{member.name}</p>
+		<p class="name">{member.name}</p>
 		{#if member.pronouns}
 			<p class="pronouns">{member.pronouns}</p>
 		{/if}
@@ -201,7 +201,7 @@
 		box-shadow: var(--shadow-big);
 		align-self: start;
 	}
-	.member-name {
+	.name {
 		font-weight: 700;
 		font-size: 20px;
 		margin: 0;
