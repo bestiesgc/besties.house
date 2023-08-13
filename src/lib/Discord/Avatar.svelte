@@ -86,6 +86,7 @@
 		width: 50%;
 		height: 50%;
 		z-index: 0;
+		pointer-events: none;
 	}
 	.cat :global(.img)::before {
 		left: -4px;
