@@ -250,7 +250,8 @@
 		display: inline-block;
 		font-size: 0.75rem;
 		font-weight: 400;
-		color: var(--violet-400);
+		color: var(--violet-100);
+		opacity: 0.4;
 	}
 	.bio {
 		font: inherit;
