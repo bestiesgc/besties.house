@@ -18,9 +18,9 @@
 		{#if member.pronouns}
 			<p class="pronouns">{member.pronouns}</p>
 		{/if}
-		<hr />
-		<p class="heading">about me</p>
 		{#if member.bio}
+			<hr />
+			<p class="heading">about me</p>
 			<p class="bio"><BasicMarkdown text={member.bio} /></p>
 		{/if}
 		<Listening {member} />
