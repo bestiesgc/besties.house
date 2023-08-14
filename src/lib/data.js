@@ -47,7 +47,7 @@ export const memberGroups = [
 				name: 'luna',
 				socials: {
 					twitter: '765711397820989440',
-					mastodon: 'https://fuckgov.org/@Luna'
+					mastodon: 'https://besties.house/@Luna'
 				},
 				avatar: '/avatars/luna.webp',
 				color: '#71368a',
@@ -97,7 +97,8 @@ export const memberGroups = [
 			{
 				name: 'ultra',
 				socials: {
-					twitter: '1580957316077215750'
+					twitter: '1580957316077215750',
+					mastodon: 'https://besties.house/@shoegayze'
 				},
 				avatar: '/avatars/ultra.webp',
 				color: '#206694',
