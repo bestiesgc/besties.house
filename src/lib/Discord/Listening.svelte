@@ -32,7 +32,7 @@
 	</div>
 {/if}
 
-<style>
+<style lang="postcss">
 	.listening {
 		display: grid;
 		grid-template-columns: 3rem 1fr;
@@ -41,6 +41,7 @@
 	}
 	.listening img {
 		width: 100%;
+		aspect-ratio: 1;
 		border-radius: 0.125rem;
 	}
 	.listening-meta {
@@ -56,5 +57,6 @@
 	}
 	.listening .track-name {
 		font-weight: 600;
+		color: var(--grey-400);
 	}
 </style>

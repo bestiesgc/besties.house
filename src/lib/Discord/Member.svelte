@@ -1,7 +1,7 @@
 <script>
 	import Avatar from '$lib/Discord/Avatar.svelte'
 	import Listening from '$lib/Discord/Listening.svelte'
-	import BasicMarkdown from '$lib/Discord/BasicMarkdown.svelte'
+	import BasicMarkdown from '$lib/BasicMarkdown.svelte'
 
 	export let member
 
@@ -14,13 +14,15 @@
 	<div class="banner" style:background-color={member.color} />
 	<Avatar {member} />
 	<div class="info">
-		<p class="name">{member.name}</p>
-		{#if member.pronouns}
-			<p class="pronouns">{member.pronouns}</p>
-		{/if}
-		<hr />
-		<p class="heading">about me</p>
+		<p class="name">
+			{member.name}
+			{#if member.pronouns}
+				<span class="pronouns">{member.pronouns}</span>
+			{/if}
+		</p>
 		{#if member.bio}
+			<hr />
+			<p class="heading">about me</p>
 			<p class="bio"><BasicMarkdown text={member.bio} /></p>
 		{/if}
 		<Listening {member} />
@@ -35,8 +37,8 @@
 								width="24px"
 								height="24px"
 								viewBox="0 0 24 24"
-								fill="#FFFFFF"
-								><path d="M0 0h24v24H0z" fill="none" /><path
+								fill="currentColor"
+								><path
 									d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
 								/></svg
 							>
@@ -188,28 +190,30 @@
 	</div>
 </div>
 
-<style>
+<style lang="postcss">
 	.member {
 		font-size: 0.8rem;
 		position: relative;
 		width: 100%;
-		--popout-bg: #110d1a;
-		color: white;
-		background-color: var(--popout-bg);
+		--background-color: var(--violet-800);
+		background-color: var(--background-color);
 		border-radius: 8px;
 		overflow: hidden;
-		box-shadow: var(--shadow-big);
 		align-self: start;
 	}
 	.name {
+		display: flex;
+		align-items: center;
+		gap: 0.25rem;
+		color: var(--grey-100);
 		font-weight: 700;
 		font-size: 20px;
 		margin: 0;
 	}
 	.member :global(.heading) {
+		color: var(--grey-100);
 		margin: 0.8em 0;
 		font-weight: 700;
-		color: inherit;
 		font-size: 12px;
 		text-transform: uppercase;
 		letter-spacing: 0.24px;
@@ -221,8 +225,8 @@
 		width: 80px;
 		height: 80px;
 		border-radius: 100%;
-		border: 6px solid var(--popout-bg);
-		background-color: var(--popout-bg);
+		border: 6px solid var(--background-color);
+		background-color: var(--background-color);
 		position: absolute;
 		top: 10px;
 		left: 16px;
@@ -233,18 +237,21 @@
 	}
 	.info {
 		margin: 38px 16px 16px;
-		background-color: #171222;
+		background-color: var(--violet-750);
 		padding: 12px 12px;
 		border-radius: 8px;
 	}
 	hr {
 		color: transparent;
 		border: none;
-		border-top: 1px solid hsl(258 40% 75% / 0.2);
+		border-top: 1px solid var(--violet-650);
 	}
 	.pronouns {
+		display: inline-block;
 		font-size: 0.75rem;
-		color: hsl(258 40% 75% / 0.6);
+		font-weight: 400;
+		color: var(--violet-100);
+		opacity: 0.4;
 	}
 	.bio {
 		font: inherit;
@@ -262,8 +269,9 @@
 		color: inherit;
 	}
 	.social {
+		color: var(--grey-100);
 		user-select: none;
-		border: 1px solid rgba(216, 204, 240, 0.25);
+		border: 1px solid var(--violet-650);
 		display: grid;
 		grid-template-columns: 24px 1fr;
 		height: 100%;

@@ -9,7 +9,7 @@
 	{/each}
 </div>
 
-<style>
+<style lang="postcss">
 	.project-list-wrapper {
 		display: grid;
 		gap: 1rem;
