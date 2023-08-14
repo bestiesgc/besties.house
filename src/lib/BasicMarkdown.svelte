@@ -1,8 +1,27 @@
 <script>
 	import { onMount } from 'svelte'
 	export let text
-	let htmlContent
-	let markdownEl
+	let markdownElement
+
+	const ATTR_REGEX = /[&"]/g
+	const CONTENT_REGEX = /[&<]/g
+	function escape(value, isAttribute = false) {
+		const str = String(value)
+		const pattern = isAttribute ? ATTR_REGEX : CONTENT_REGEX
+		pattern.lastIndex = 0
+		let escaped = ''
+		let last = 0
+		while (pattern.test(str)) {
+			const i = pattern.lastIndex - 1
+			const ch = str[i]
+			escaped +=
+				str.substring(last, i) +
+				(ch === '&' ? '&amp;' : ch === '"' ? '&quot;' : '&lt;')
+			last = i + 1
+		}
+		return escaped + str.substring(last)
+	}
+
 	function obscure(text) {
 		const chars =
 			'#$%()*+-/0123456789=?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[|]^_abcdefghijklmnopqrstuvwxyz{}~'
@@ -13,13 +32,12 @@
 		return newText
 			.join('')
 			.match(/.{1,3}/g)
-			.map(e => `<span>${e}</span>`)
+			.map(e => `<span>${escape(e)}</span>`)
 			.join('')
 	}
+
 	onMount(() => {
-		const textElem = document.createElement('span')
-		textElem.innerText = text
-		let html = textElem.innerHTML
+		let html = escape(text)
 		// minecraft's obscured text formatting, using &ktext to obscure&r syntax
 		html = html.replace(/&amp;k(.*?)&amp;r/gm, (e, html) => {
 			return `<span class="screen-reader-only">[REDACTED]</span><span class="glitchy-text" aria-hidden="true">${obscure(
@@ -30,38 +48,32 @@
 		html = html.replace(
 			/https?:\/\/.*?(\.[^./<>\s]{2,})+(\/[^\s<>]*)?/gm,
 			e => {
-				return `<a href="${e}">${e}</a>`
+				return `<a href="${escape(e, true)}">${escape(e)}</a>`
 			}
 		)
 		// **bold**
 		html = html.replace(/\*\*(.*?)\*\*/gm, (e, h) => {
-			return `<b>${h}</b>`
+			return `<b>${escape(h)}</b>`
 		})
 		// *italics*
 		html = html.replace(/\*(.*?)\*/gm, (e, h) => {
-			return `<i>${h}</i>`
+			return `<i>${escape(h)}</i>`
 		})
 		// _italics_
 		html = html.replace(/_(.*?)_/gm, (e, h) => {
-			return `<i>${h}</i>`
+			return `<i>${escape(h)}</i>`
 		})
-		markdownEl.innerHTML = html
-		const glitchyTexts = markdownEl.querySelectorAll('.glitchy-text')
+		markdownElement.innerHTML = html
+		const glitchyTexts = markdownElement.querySelectorAll('.glitchy-text')
 		const interval = setInterval(() => {
 			for (const el of glitchyTexts) {
 				el.innerHTML = obscure(el.innerText)
 			}
 		}, 50)
-		markdownEl.querySelectorAll('.glitchy-text')
 		return () => clearInterval(interval)
 	})
 </script>
 
-<span bind:this={markdownEl}>
-	{#if !htmlContent}
-		{text}
-	{:else}
-		<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-		{@html htmlContent}
-	{/if}
+<span bind:this={markdownElement}>
+	{text}
 </span>
