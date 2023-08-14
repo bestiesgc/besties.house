@@ -18,7 +18,7 @@
 	/>
 </div>
 
-<style>
+<style lang="postcss">
 	.hero {
 		position: relative;
 		padding: 0 2rem;

@@ -32,7 +32,7 @@
 	</div>
 {/if}
 
-<style>
+<style lang="postcss">
 	.listening {
 		display: grid;
 		grid-template-columns: 3rem 1fr;

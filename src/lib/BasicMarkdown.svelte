@@ -78,7 +78,7 @@
 	{text}
 </span>
 
-<style>
+<style lang="postcss">
 	.md :global(.glitchy-text) {
 		font-family: 'Monocraft', monospace;
 	}

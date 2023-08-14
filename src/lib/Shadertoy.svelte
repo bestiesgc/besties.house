@@ -188,7 +188,7 @@ void main()
 	/>
 {/if}
 
-<style>
+<style lang="postcss">
 	canvas {
 		opacity: 0;
 		transition: opacity 2s;

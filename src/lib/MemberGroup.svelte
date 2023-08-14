@@ -21,7 +21,7 @@
 	</div>
 </div>
 
-<style>
+<style lang="postcss">
 	.member-list {
 		display: grid;
 		gap: 1rem;

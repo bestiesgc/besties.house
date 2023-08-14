@@ -19,7 +19,7 @@
 	{/if}
 </div>
 
-<style>
+<style lang="postcss">
 	div:global(.avatar) {
 		user-select: none;
 	}

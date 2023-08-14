@@ -188,7 +188,7 @@
 	</div>
 </div>
 
-<style>
+<style lang="postcss">
 	.member {
 		font-size: 0.8rem;
 		position: relative;

@@ -88,7 +88,7 @@
 	</div>
 </div>
 
-<style>
+<style lang="postcss">
 	.page {
 		position: relative;
 		overflow-y: scroll;
