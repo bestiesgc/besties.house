@@ -19,14 +19,6 @@
 </a>
 
 <style lang="postcss">
-	@keyframes dot-bg-hover {
-		0% {
-			background-position-x: 0;
-		}
-		100% {
-			background-position-x: var(--dot-size);
-		}
-	}
 	@keyframes dot-bg-move {
 		0% {
 			background-position-y: 0;
@@ -38,10 +30,9 @@
 	.dot-bg {
 		z-index: 1;
 		position: relative;
-		--animation-duration: 4s;
 		--dot-size: 1rem;
-		--dot-color: var(--grey-300);
-		--bg-color: var(--violet-500);
+		--dot-color: var(--grey-900);
+		--bg-color: var(--violet-950);
 	}
 	.dot-bg::before {
 		content: '';
@@ -52,8 +43,7 @@
 		background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
 		background-size: var(--dot-size) var(--dot-size);
 		background-position: 0 0;
-		--animation: var(--animation-duration) dot-bg-move linear infinite;
-		animation: var(--animation);
+		animation: 4s dot-bg-move linear infinite;
 		transition: background-position-x 400ms;
 	}
 	.project-item:hover .dot-bg::before {
@@ -86,7 +76,7 @@
 		height: 1.5rem;
 	}
 	.project-meta {
-		background-color: var(--violet-300);
+		background-color: var(--violet-800);
 		padding: 0.5rem 0.5rem;
 		height: 100%;
 	}

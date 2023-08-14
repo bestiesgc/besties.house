@@ -56,5 +56,6 @@
 	}
 	.listening .track-name {
 		font-weight: 600;
+		color: var(--grey-400);
 	}
 </style>

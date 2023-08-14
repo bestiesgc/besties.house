@@ -32,7 +32,7 @@
 		--negative-bottom-margin: 0rem;
 		min-height: calc(100vh - var(--member-list-min-height));
 		color: #a39fb2;
-		background-color: var(--violet-300);
+		background-color: var(--violet-700);
 	}
 
 	.hero :global(canvas) {

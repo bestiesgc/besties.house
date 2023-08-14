@@ -95,8 +95,7 @@
 		overflow-y: overlay;
 		height: 100vh;
 		height: 100svh;
-
-		scrollbar-color: var(--violet-100) var(--violet-400);
+		scrollbar-color: var(--violet-100) var(--violet-600);
 		scrollbar-width: thin;
 	}
 	.main-wrapper {

@@ -57,8 +57,8 @@ vec3 warpGrid(vec2 fragCoord) {
     );
     col = clamp(col, 0.0, 1.0);
     
-    vec3 startCol = h(vec3(263.0/360.0, 0.9, 0.2));
-    vec3 endCol = h(vec3(263.0/360.0, 1.0, 0.07));
+    vec3 startCol = h(vec3(255.0/360.0, 0.63, 0.06));
+    vec3 endCol = h(vec3(255.0/360.0, 0.7, 0.2));
 
     // Output to screen
     return mix(startCol, endCol, col);
