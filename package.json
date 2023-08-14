@@ -11,18 +11,18 @@
 	},
 	"devDependencies": {
 		"@besties/eslint-config": "^0.2.2",
-		"@sveltejs/adapter-static": "^2.0.2",
-		"@sveltejs/kit": "^1.22.3",
-		"autoprefixer": "^10.4.14",
-		"eslint": "^8.45.0",
+		"@sveltejs/adapter-static": "^2.0.3",
+		"@sveltejs/kit": "^1.22.5",
+		"autoprefixer": "^10.4.15",
+		"eslint": "^8.47.0",
 		"eslint-plugin-svelte": "^2.32.4",
 		"postcss": "^8.4.27",
 		"postcss-scrollbar": "^0.5.1",
-		"prettier": "^3.0.0",
-		"prettier-plugin-svelte": "^3.0.0",
-		"svelte": "^4.1.1",
+		"prettier": "^3.0.1",
+		"prettier-plugin-svelte": "^3.0.3",
+		"svelte": "^4.2.0",
 		"svelte-preprocess": "^5.0.4",
-		"vite": "^4.4.7"
+		"vite": "^4.4.9"
 	},
 	"type": "module"
 }
