@@ -14,10 +14,12 @@
 	<div class="banner" style:background-color={member.color} />
 	<Avatar {member} />
 	<div class="info">
-		<p class="name">{member.name}</p>
-		{#if member.pronouns}
-			<p class="pronouns">{member.pronouns}</p>
-		{/if}
+		<p class="name">
+			{member.name}
+			{#if member.pronouns}
+				<span class="pronouns">{member.pronouns}</span>
+			{/if}
+		</p>
 		{#if member.bio}
 			<hr />
 			<p class="heading">about me</p>
@@ -200,6 +202,9 @@
 		align-self: start;
 	}
 	.name {
+		display: flex;
+		align-items: center;
+		gap: 0.25rem;
 		color: var(--grey-100);
 		font-weight: 700;
 		font-size: 20px;
@@ -242,8 +247,10 @@
 		border-top: 1px solid var(--violet-650);
 	}
 	.pronouns {
+		display: inline-block;
 		font-size: 0.75rem;
-		color: var(--grey-600);
+		font-weight: 400;
+		color: var(--violet-400);
 	}
 	.bio {
 		font: inherit;
