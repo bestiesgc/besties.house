@@ -1,5 +1,5 @@
 <script>
-	import BasicMarkdown from '$lib/Discord/BasicMarkdown.svelte'
+	import BasicMarkdown from '$lib/BasicMarkdown.svelte'
 	import { onMount, createEventDispatcher } from 'svelte'
 	import { slide } from 'svelte/transition'
 

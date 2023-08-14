@@ -1,7 +1,7 @@
 <script>
 	import Avatar from '$lib/Discord/Avatar.svelte'
 	import Listening from '$lib/Discord/Listening.svelte'
-	import BasicMarkdown from '$lib/Discord/BasicMarkdown.svelte'
+	import BasicMarkdown from '$lib/BasicMarkdown.svelte'
 
 	export let member
 
