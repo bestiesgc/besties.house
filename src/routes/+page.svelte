@@ -89,8 +89,47 @@
 </div>
 
 <style>
+	.page {
+		position: relative;
+		overflow-y: scroll;
+		overflow-y: overlay;
+		height: 100vh;
+		height: 100svh;
+
+		scrollbar-color: var(--violet-100) var(--violet-400);
+		scrollbar-width: thin;
+	}
+	.main-wrapper {
+		min-height: 100%;
+	}
+	.info {
+		padding: 1rem;
+	}
+	.info :first-child {
+		margin-top: 0;
+	}
 	.info > p {
 		margin: 0.5em 0;
+	}
+	.member-list-wrapper {
+		width: 100%;
+		min-height: var(--member-list-min-height);
+		display: grid;
+		gap: 2rem;
+		overflow-y: hidden;
+	}
+	@media screen and (min-width: 1050px) {
+		.main-wrapper {
+			display: grid;
+			grid-template-columns: 24rem 1fr;
+		}
+		.info {
+			grid-column: 2;
+			overflow-y: auto;
+
+			scrollbar-color: var(--violet-100) var(--violet-400);
+			scrollbar-width: thin;
+		}
 	}
 	.button-badges {
 		margin-top: 1rem;

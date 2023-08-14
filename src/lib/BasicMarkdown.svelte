@@ -40,7 +40,7 @@
 		let html = escape(text)
 		// minecraft's obscured text formatting, using &ktext to obscure&r syntax
 		html = html.replace(/&amp;k(.*?)&amp;r/gm, (e, html) => {
-			return `<span class="screen-reader-only">[REDACTED]</span><span class="glitchy-text" aria-hidden="true">${obscure(
+			return `<span class="sr-only">[REDACTED]</span><span class="glitchy-text" aria-hidden="true">${obscure(
 				html
 			)}</span>`
 		})
@@ -74,6 +74,16 @@
 	})
 </script>
 
-<span bind:this={markdownElement}>
+<span class="md" bind:this={markdownElement}>
 	{text}
 </span>
+
+<style>
+	.md :global(.glitchy-text) {
+		font-family: 'Monocraft', monospace;
+	}
+	.md :global(.glitchy-text > span) {
+		display: inline-block;
+		white-space: nowrap;
+	}
+</style>

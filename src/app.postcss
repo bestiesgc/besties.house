@@ -69,109 +69,6 @@ a:hover {
 	text-decoration: underline;
 }
 
-@keyframes dot-bg-hover {
-	0% {
-		background-position-x: 0;
-	}
-	100% {
-		background-position-x: var(--dot-size);
-	}
-}
-
-@keyframes dot-bg-move {
-	0% {
-		background-position-y: 0;
-	}
-	100% {
-		background-position-y: var(--dot-size);
-	}
-}
-
-.dot-bg {
-	z-index: 1;
-	position: relative;
-	--animation-duration: 4s;
-	--dot-size: 1rem;
-	--dot-color: var(--grey-300);
-	--bg-color: var(--violet-500);
-}
-
-.dot-bg::before {
-	content: '';
-	z-index: -1;
-	position: absolute;
-	inset: 0;
-	background-color: var(--bg-color);
-	background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
-	background-size: var(--dot-size) var(--dot-size);
-	background-position: 0 0;
-	--animation: var(--animation-duration) dot-bg-move linear infinite;
-	animation: var(--animation);
-	transition: background-position-x 400ms;
-}
-
-.material-icons {
-	vertical-align: middle;
-}
-
-nav {
-	display: flex;
-	justify-content: center;
-}
-.nav-inner {
-	display: flex;
-	width: 100%;
-	max-width: 1000px;
-	padding: 1rem 2rem;
-	font-size: 2rem;
-}
-nav a:hover {
-	text-decoration: none;
-}
-
-.page {
-	position: relative;
-	overflow-y: scroll;
-	overflow-y: overlay;
-	height: 100vh;
-	height: 100svh;
-
-	scrollbar-color: var(--violet-100) var(--violet-400);
-	scrollbar-width: thin;
-}
-
-.main-wrapper {
-	min-height: 100%;
-}
-
-.section {
-	display: flex;
-	justify-content: center;
-}
-
-.section-inner {
-	width: 100%;
-	max-width: 1000px;
-	padding: 1rem 2rem;
-}
-
-.info {
-	padding: 1rem;
-}
-
-.info :first-child {
-	margin-top: 0;
-}
-
-.member-list-wrapper {
-	background-color: var(--violet-400);
-	width: 100%;
-	min-height: var(--member-list-min-height);
-	display: grid;
-	gap: 2rem;
-	overflow-y: hidden;
-}
-
 @media (min-width: 500px) {
 	:root {
 		font-size: 16px;
@@ -184,17 +81,6 @@ nav a:hover {
 }
 
 @media (min-width: 1050px) {
-	.main-wrapper {
-		display: grid;
-		grid-template-columns: 24rem 1fr;
-	}
-	.info {
-		grid-column: 2;
-		overflow-y: auto;
-
-		scrollbar-color: var(--violet-100) var(--violet-400);
-		scrollbar-width: thin;
-	}
 	:root {
 		font-size: 20px;
 	}
@@ -254,7 +140,7 @@ nav a:hover {
 	}
 }
 
-.screen-reader-only {
+.sr-only {
 	position: absolute;
 	width: 1px;
 	height: 1px;
@@ -264,12 +150,4 @@ nav a:hover {
 	clip: rect(0, 0, 0, 0);
 	white-space: nowrap;
 	border-width: 0;
-}
-
-.glitchy-text {
-	font-family: 'Monocraft', monospace;
-}
-.glitchy-text > span {
-	display: inline-block;
-	white-space: nowrap;
 }
