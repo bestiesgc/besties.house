@@ -47,7 +47,26 @@
 		<Hero {splashes} />
 
 		<div class="info">
-			<h2>projects</h2>
+			<h2>about us</h2>
+			<p>
+				besties is a collective - Formally established March of 2021 but truly
+				beginning late 2020. Our goal is to provide spaces for queers like us to
+				socialise and make cool stuff.
+			</p>
+			<p>
+				We've been running <a href="https://git.gay">git.gay</a>, our Git forge
+				(running Forgejo), since January 2022, using it to host the source code
+				for our own projects, and opening it up to the public. We've since made
+				our own additions beyond what's built into Forgejo, including a static
+				site host available for anyone at
+				<a href="https://pages.gay">pages.gay</a>.
+			</p>
+			<p>
+				We're actively working on stuff all the time. Our projects are <a
+					href="https://git.gay/besties">all free and open source</a
+				>, and we'd love for others to help with their own contributions.
+			</p>
+			<h2>main projects</h2>
 			<ProjectList {projects} />
 			<h2>members</h2>
 			<div class="member-list-wrapper">
@@ -70,6 +89,9 @@
 </div>
 
 <style>
+	.info > p {
+		margin: 0.5em 0;
+	}
 	.button-badges {
 		margin-top: 1rem;
 		display: flex;
