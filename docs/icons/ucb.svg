@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="135.00002mm"
+   height="135.00002mm"
+   viewBox="0 0 135.00002 134.99999"
+   version="1.1"
+   id="svg20976"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs20973">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath33346">
+      <circle
+         style="fill:#ff00ff;fill-opacity:0.380603;stroke:none;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers;stop-color:#000000"
+         id="circle33348"
+         cx="87.500145"
+         cy="87.5"
+         r="57.5" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath41878">
+      <rect
+         style="fill:#ffffff;fill-opacity:0.994325;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:normal;stop-color:#000000"
+         id="rect41880"
+         width="60"
+         height="14.999999"
+         x="55.000118"
+         y="40" />
+    </clipPath>
+  </defs>
+  <circle
+     style="display:inline;fill:#ffffff;fill-opacity:0.994325;stroke:#000000;stroke-width:5.19231;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:normal;stop-color:#000000"
+     id="circle33344"
+     cx="67.5"
+     cy="67.5"
+     r="64.903847" />
+  <g
+     id="g33206"
+     transform="translate(-20.000116,-19.999998)"
+     style="stroke:none;stroke-width:3.1;stroke-dasharray:none;stroke-opacity:1"
+     mask="none"
+     clip-path="url(#clipPath33346)">
+    <path
+       id="path33200"
+       style="color:#000000;display:inline;fill:#000000;stroke:none;stroke-width:3.09999;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       d="m 95.000118,42.5 c -16.913828,0.298371 -24.979158,15 -42.499999,15 -9.948505,0 -16.350428,-0.9865 -22.499859,-5 v 50 c 7.759572,4.0122 15.935589,4.942 22.499859,5 19.339919,0 29.541284,-14.7803 42.499999,-15.0089 3.928046,0 7.495682,0.4747 9.999702,1.1555 V 162.5 h 7.50031 V 97.1658 87.5002 47.5 c -2.53512,-1.8208 -7.82568,-5 -17.500012,-5 z" />
+    <path
+       id="path33198"
+       style="display:inline;opacity:1;fill:#f9031b;fill-opacity:1;stroke:none;stroke-width:3.09999;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers;stop-color:#000000;stop-opacity:1"
+       d="M 57.499999,45.0002 C 67.302037,40.6178 77.910688,40.6408 87.500001,42.5 107.38489,47.8281 125,57.4768 125,80 c 0,12.6997 -4.87906,22.3791 -12.5,30 -8.59648,8.5965 -17.271481,14.7603 -30,15 H 77.500001 L 62.5,162.5 H 79.999999 L 85,132.5 h 5.000118 c 7.688377,0 12.823122,-2.28054 17.500002,-5 4.41859,-2.56928 9.25201,-5.44511 14.99988,-10 C 134.33172,108.12397 140.20371,92.9261 140,80 140,53.0207 122.62901,36.1767 95,35 85.720697,35 66.674644,36.3559 57.499999,45.0002 Z" />
+    <path
+       id="path41904"
+       style="font-variation-settings:normal;display:inline;opacity:1;fill:#f9031b;fill-opacity:1;stroke:none;stroke-width:3.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers;stop-color:#000000;stop-opacity:1"
+       d="m 47.500118,102.5 17.500001,17.5 17.500001,-17.5 60,60 12.5,-12.5 -60,-60 12.5,-12.5 -7.5,-7.5 H 80.000118 Z" />
+    <path
+       id="path41821"
+       style="color:#000000;display:inline;fill:#000000;stroke:none;stroke-width:3.09999;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       d="m 95.000118,42.5 c -16.913828,0.298371 -24.979158,15 -42.499999,15 -9.948505,0 -16.350428,-0.9865 -22.499859,-5 v 50 c 7.759572,4.0122 15.935589,4.942 22.499859,5 19.339919,0 29.541284,-14.7803 42.499999,-15.0089 3.928046,0 7.495682,0.4747 9.999702,1.1555 V 162.5 h 7.50031 V 97.1658 87.5002 47.5 c -2.53512,-1.8208 -7.82568,-5 -17.500012,-5 z"
+       clip-path="url(#clipPath41878)" />
+  </g>
+</svg>

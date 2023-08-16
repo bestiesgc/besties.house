@@ -1,0 +1,72 @@
+<svg
+	width="32"
+	height="32"
+	viewBox="0 0 60 60"
+	version="1.1"
+	id="svg232"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<defs id="defs229">
+		<clipPath clipPathUnits="userSpaceOnUse" id="clipPath2215">
+			<path
+				d="m -17.737706,-18.432405 h -6.614615 c -2.182814,0 -3.948911,1.785907 -3.948911,3.968685 l -0.01981,23.812095 c 0,2.18278 1.78594,3.968691 3.968754,3.968691 h 23.81250489 c 2.18282211,0 3.96875881,-1.785911 3.96875881,-3.968691 V -9.1721433 C 3.4289421,-11.354914 1.6430054,-13.140827 -0.53980691,-13.140827 H -12.446039 Z"
+				id="path2217"
+				style="display:inline;fill:#000000;fill-opacity:1;stroke-width:1.98437"
+			/>
+		</clipPath>
+	</defs>
+	<g
+		id="g484"
+		transform="matrix(1.8897638,0,0,1.5748294,53.520074,34.027894)"
+		clip-path="url(#clipPath2215)"
+	>
+		<rect
+			style="fill:#fe9494;fill-opacity:1;stroke-width:0.671764"
+			id="rect538"
+			width="31.75"
+			height="6.6673889"
+			x="-28.321039"
+			y="-18.432405"
+		/>
+		<rect
+			style="fill:#ffc783;fill-opacity:1;stroke-width:0.671764"
+			id="rect1217"
+			width="31.75"
+			height="6.6673889"
+			x="-28.321039"
+			y="-13.140827"
+		/>
+		<rect
+			style="fill:#fff683;fill-opacity:1;stroke-width:0.671764"
+			id="rect1292"
+			width="31.75"
+			height="6.6673889"
+			x="-28.321039"
+			y="-7.849072"
+		/>
+		<rect
+			style="fill:#69cb86;fill-opacity:1;stroke-width:0.671764"
+			id="rect1217-3"
+			width="31.75"
+			height="6.6673889"
+			x="-28.321039"
+			y="-2.5576701"
+		/>
+		<rect
+			style="fill:#83a8ff;fill-opacity:1;stroke-width:0.671764"
+			id="rect1217-3-6"
+			width="31.75"
+			height="6.6673889"
+			x="-28.321039"
+			y="2.7339082"
+		/>
+		<rect
+			style="fill:#c56ad4;fill-opacity:1;stroke-width:0.598455"
+			id="rect1217-3-6-7"
+			width="31.75"
+			height="5.2915783"
+			x="-28.321039"
+			y="8.0254869"
+		/>
+	</g>
+</svg>
