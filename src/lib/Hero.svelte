@@ -83,11 +83,12 @@
 
 	@media (min-width: 1050px) {
 		.hero {
-			position: fixed;
+			position: sticky;
 			left: 0;
 			top: 0;
-			bottom: 0;
 			width: 24rem;
+			height: 100vh;
+			height: 100svh;
 			pointer-events: none;
 		}
 	}

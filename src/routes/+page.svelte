@@ -91,10 +91,6 @@
 <style lang="postcss">
 	.page {
 		position: relative;
-		overflow-y: scroll;
-		overflow-y: overlay;
-		height: 100vh;
-		height: 100svh;
 		scrollbar-color: var(--violet-100) var(--violet-600);
 		scrollbar-width: thin;
 	}
