@@ -18,17 +18,6 @@ export const memberGroups = [
 				bio: 'im cute'
 			},
 			{
-				name: 'quinn',
-				socials: {
-					twitter: '1528596604940341250'
-				},
-				avatar: '/avatars/quinn.webp',
-				color: '#2ecc71',
-				pronouns: 'she/they',
-				email: 'quinn@besties.house',
-				bio: 'you have little pencil arms LOSER'
-			},
-			{
 				name: 'aria',
 				socials: {
 					twitter: '1450703231642972161',
