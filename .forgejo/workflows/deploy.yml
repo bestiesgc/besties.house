@@ -5,7 +5,7 @@ on:
     branches: 'main'
 
 env:
-  SSH_KEY: ${{ secrets.SSH_KEY }}
+  SSH_KEY: "${{ secrets.SSH_KEY }}"
 
 jobs:
   build_site:
@@ -13,12 +13,15 @@ jobs:
     steps:
       - name: Deploy
         run: |
-          echo "$SSH_KEY" > /tmp/ssh_key
-          chmod 600 /tmp/ssh_key
+          TEMP_PATH="$(mktemp -d)"
+          SSH_KEY_PATH="$TEMP_PATH/ssh_key"
+          echo "$SSH_KEY" > "$SSH_KEY_PATH"
+          chmod 600 "$SSH_KEY_PATH"
           cat > deploy.sh << EOF
           cd /var/www/html/besties.house
           git pull
           pnpm i
           pnpm run build
           EOF
-          ssh -o "StrictHostKeyChecking no" ${{ secrets.SSH_HOST }} -p ${{ secrets.SSH_PORT || 22 }} -l ${{ secrets.SSH_USER }} -i /tmp/ssh_key 'bash -s' < deploy.sh
+          ssh -o "StrictHostKeyChecking no" "${{ secrets.SSH_HOST }}" -p "${{ secrets.SSH_PORT || 22 }}" -l "${{ secrets.SSH_USER }}" -i "$SSH_KEY_PATH" 'bash -s' < deploy.sh
+          rm -rf $TEMP_PATH
