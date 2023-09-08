@@ -34,6 +34,31 @@
 		property="twitter:image"
 		content="https://besties.house/besties-thumb.png"
 	/>
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Organization",
+			"name": "Besties",
+			"legalName" : "Besties",
+			"url": "https://besties.house",
+			"logo": "https://besties.house/icons/ucb.png",
+			"foundingDate": "2021",
+			"founders": [
+				{
+				"@type": "Person",
+				"name": "Hazel Cora"
+				},
+				{
+				"@type": "Person",
+				"name": "Aria Blue"
+				}
+			],
+			"sameAs": [ 
+				"https://social.besties.house/@besties",
+				"https://twitter.com/bestiesgc"
+			]
+	}
+	</script>
 </svelte:head>
 <div style:display="none">
 	<!-- For fediverse link verification -->
