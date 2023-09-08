@@ -55,7 +55,8 @@
 			],
 			"sameAs": [ 
 				"https://social.besties.house/@besties",
-				"https://twitter.com/bestiesgc"
+				"https://twitter.com/bestiesgc",
+				"https://github.com/bestiesgc"
 			]
 	}
 	</script>
