@@ -5,7 +5,7 @@ on:
     branches: 'main'
 
 env:
-  SSH_KEY: "${{ secrets.SSH_KEY }}"
+  SSH_KEY: '${{ secrets.SSH_KEY }}'
 
 jobs:
   build_site:
