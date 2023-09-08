@@ -2,6 +2,7 @@
 	font-family: 'Figtree';
 	src: url('/figtree/Figtree.woff2') format('woff2-variations');
 	font-weight: 300 900;
+	font-display: swap;
 	font-style: normal;
 }
 
@@ -9,5 +10,6 @@
 	font-family: 'Figtree';
 	src: url('/figtree/Figtree-Italic.woff2') format('woff2-variations');
 	font-weight: 300 900;
+	font-display: swap;
 	font-style: italic;
 }

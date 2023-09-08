@@ -221,20 +221,6 @@
 	.banner {
 		height: 60px;
 	}
-	.member :global(.avatar) {
-		width: 80px;
-		height: 80px;
-		border-radius: 100%;
-		border: 6px solid var(--background-color);
-		background-color: var(--background-color);
-		position: absolute;
-		top: 10px;
-		left: 16px;
-	}
-	.member :global(.avatar-img) {
-		width: 100%;
-		border-radius: 100%;
-	}
 	.info {
 		margin: 38px 16px 16px;
 		background-color: var(--violet-750);

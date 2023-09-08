@@ -46,7 +46,7 @@
 	<div class="main-wrapper">
 		<Hero {splashes} />
 
-		<div class="info">
+		<main class="info">
 			<h2>about us</h2>
 			<p>
 				besties is a collective - Formally established March of 2021 but truly
@@ -85,15 +85,35 @@
 			</div>
 			<div class="button-badges">
 				<img
+					width="88"
+					height="31"
 					class="button-badge"
 					src="/badges/besties.gif"
 					alt="besties - first unionised group chat"
 				/>
-				<img class="button-badge" src="/badges/trans.png" alt="trans flag" />
-				<img class="button-badge" src="/badges/piracy.gif" alt="piracy now" />
-				<img class="button-badge" src="/badges/acab.gif" alt="acab" />
+				<img
+					width="88"
+					height="31"
+					class="button-badge"
+					src="/badges/trans.png"
+					alt="trans flag"
+				/>
+				<img
+					width="88"
+					height="31"
+					class="button-badge"
+					src="/badges/piracy.gif"
+					alt="piracy now"
+				/>
+				<img
+					width="88"
+					height="31"
+					class="button-badge"
+					src="/badges/acab.gif"
+					alt="acab"
+				/>
 			</div>
-		</div>
+		</main>
 	</div>
 </div>
 

@@ -6,6 +6,8 @@
 	let classList
 	export let src
 	export let alt
+	export let width
+	export let height
 	export { classList as class }
 	onMount(async () => {
 		if (loaded) return
@@ -24,6 +26,8 @@
 	<img
 		bind:this={imgElem}
 		src={blobUrl || src}
+		{width}
+		{height}
 		{alt}
 		class={classList}
 		class:unloaded={!loaded}

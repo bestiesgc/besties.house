@@ -10,7 +10,8 @@ const config = {
 			fallback: null,
 			precompress: true,
 			strict: true
-		})
+		}),
+		inlineStyleThreshold: 9000
 	},
 
 	preprocess: [

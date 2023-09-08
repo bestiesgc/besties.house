@@ -7,7 +7,7 @@
 	}
 </script>
 
-<div class="hero">
+<div class="hero" data-nosnippet>
 	<GlitchyBg />
 	<h1 class="besties-heading">besties</h1>
 	<slot />

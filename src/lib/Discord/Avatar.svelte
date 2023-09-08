@@ -10,7 +10,13 @@
 	aria-hidden="true"
 >
 	{#if member.avatar}
-		<ImgAndFallback class="avatar-img" src={member.avatar} alt="">
+		<ImgAndFallback
+			width="68"
+			height="68"
+			class="avatar-img"
+			src={member.avatar}
+			alt=""
+		>
 			<div
 				class="avatar-img"
 				style="background-color: var(--member-color); position: absolute; top: 0; bottom: 0; left: 0; right: 0;"
@@ -20,10 +26,21 @@
 </div>
 
 <style lang="postcss">
-	div:global(.avatar) {
+	.avatar {
 		user-select: none;
+		width: 80px;
+		height: 80px;
+		border-radius: 100%;
+		border: 6px solid var(--background-color);
+		background-color: var(--background-color);
+		position: absolute;
+		top: 10px;
+		left: 16px;
 	}
-
+	.avatar :global(.avatar-img) {
+		width: 100%;
+		border-radius: 100%;
+	}
 	.cat {
 		color: white;
 		overflow: unset;
