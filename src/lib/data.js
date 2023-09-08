@@ -144,7 +144,20 @@ export const splashes = [
 	'hyperpop on soundcloud',
 	'talking to strangers online was the best decision i ever made',
 	'comic sans is aweosme',
-	'my clique got me for life'
+	'my clique got me for life',
+	'the entire circus',
+	'we stay silly we stay silly we stay silly',
+	'sillyposting',
+	'24/7 mental breakdown livestream',
+	'no way you just said that',
+	'you cannot be serious',
+	"you're objectively the worst",
+	'internationally renowned sillyposter',
+	'is that a threat',
+	'you may join but only if you know the password',
+	'anyone wanna play minecraft',
+	'no cops allowed',
+	'brainrot commune'
 ]
 export const projects = [
 	{
