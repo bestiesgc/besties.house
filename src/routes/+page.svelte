@@ -56,15 +56,24 @@
 			<p>
 				We've been running <a href="https://git.gay">git.gay</a>, our Git forge
 				(running Forgejo), since January 2022, using it to host the source code
-				for our own projects, and opening it up to the public. We've since made
-				our own additions beyond what's built into Forgejo, including a static
-				site host available for anyone at
+				for our own projects, and opening it up to the public for others to use
+				for theirs. We've made our own additions beyond what's built into
+				Forgejo, including a static site host available for anyone at
 				<a href="https://pages.gay">pages.gay</a>.
 			</p>
 			<p>
-				We're actively working on stuff all the time. Our projects are <a
+				We're actively working on new stuff all of the time. Our projects are <a
 					href="https://git.gay/besties">all free and open source</a
-				>, and we'd love for others to help with their own contributions.
+				>, and we'd love for others to contribute!
+				<img
+					width="24"
+					height="24"
+					draggable="false"
+					style="display: inline-block;vertical-align: middle;"
+					src="/icons/pleadingcat.png"
+					title=":pleadingcat:"
+					alt="🥺🐱"
+				/>
 			</p>
 			<h2>main projects</h2>
 			<ProjectList {projects} />
