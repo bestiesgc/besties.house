@@ -1,0 +1,24 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches: 'main'
+
+env:
+  SSH_KEY: ${{ secrets.SSH_KEY }}
+
+jobs:
+  build_site:
+    runs-on: docker
+    steps:
+      - name: Deploy
+        run: |
+          echo "$SSH_KEY" > /tmp/ssh_key
+          chmod 600 /tmp/ssh_key
+          cat > deploy.sh << EOF
+          cd /var/www/html/besties.house
+          git pull
+          pnpm i
+          pnpm run build
+          EOF
+          ssh -o "StrictHostKeyChecking no" ${{ secrets.SSH_HOST }} -p ${{ secrets.SSH_PORT || 22 }} -l ${{ secrets.SSH_USER }} -i /tmp/ssh_key 'bash -s' < deploy.sh
