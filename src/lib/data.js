@@ -117,7 +117,7 @@ export const memberGroups = [
 				avatar: '/avatars/trixie.webp',
 				email: 'izzy@besties.house',
 				color: '#2f0a4f',
-				pronouns: 'she/they/pony',
+				pronouns: 'she/her',
 				bio: 'silly pony doing silly things on her puter'
 			}
 		]
