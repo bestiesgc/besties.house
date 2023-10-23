@@ -93,6 +93,16 @@ export const memberGroups = [
 				color: '#206694',
 				pronouns: 'they/them',
 				bio: '(probably) breathing right now'
+			},
+			{
+				name: 'astro',
+				socials: {
+					firefish: 'https://firefish.intragon.org/@astro'
+				},
+				avatar: '/avatars/astro.webp',
+				color: '#33AEF6',
+				pronouns: 'she/they',
+				bio: 'e'
 			}
 		]
 	},
