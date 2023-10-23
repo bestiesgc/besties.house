@@ -102,7 +102,7 @@ export const memberGroups = [
 				avatar: '/avatars/astro.webp',
 				color: '#33AEF6',
 				pronouns: 'she/they',
-				bio: 'e'
+				bio: 'per aspera ad astra'
 			}
 		]
 	},
