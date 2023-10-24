@@ -95,7 +95,7 @@ export const memberGroups = [
 				bio: '(probably) breathing right now'
 			},
 			{
-				name: 'astro',
+				name: '/astr(a|o|e|x)/',
 				socials: {
 					firefish: 'https://firefish.intragon.org/@astro'
 				},
