@@ -1,4 +1,5 @@
 <script>
+	import { roles } from '$lib/data.js'
 	import Avatar from '$lib/Discord/Avatar.svelte'
 	import Listening from '$lib/Discord/Listening.svelte'
 	import BasicMarkdown from '$lib/BasicMarkdown.svelte'
@@ -26,6 +27,14 @@
 			<p class="bio"><BasicMarkdown text={member.bio} /></p>
 		{/if}
 		<Listening {member} />
+		<p class="heading">roles</p>
+		<ul class="roles">
+			{#each member.roles as role}
+				<span class="role" style:--role-color={roles[role]?.color}
+					>{roles[role]?.name ?? role}</span
+				>
+			{/each}
+		</ul>
 		{#if member.socials || member.email}
 			<hr />
 			<div class="social-list">
@@ -274,6 +283,24 @@
 		white-space: pre-line;
 		margin: 0;
 		margin-top: 6px;
+	}
+	.roles {
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.25rem;
+	}
+	.role {
+		font-size: 0.5rem;
+		background-color: var(--violet-800);
+		border: 1px solid var(--grey-600);
+		padding: 0.25em 0.5em;
+		border-radius: 0.25rem;
+	}
+	.roles :global(.role[style*='--role-color']) {
+		color: var(--role-color);
+		border-color: var(--role-color);
 	}
 	.social-list {
 		display: grid;

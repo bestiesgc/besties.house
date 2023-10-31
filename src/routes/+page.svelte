@@ -1,8 +1,8 @@
 <script>
 	import Hero from '$lib/Hero.svelte'
-	import MemberGroup from '$lib/MemberGroup.svelte'
+	import Groups from '$lib/Groups.svelte'
 	import ProjectList from '$lib/Project/ProjectList.svelte'
-	import { memberGroups, splashes, projects } from '$lib/data.js'
+	import { splashes, projects } from '$lib/data.js'
 </script>
 
 <svelte:head>
@@ -104,11 +104,7 @@
 			<h2>main projects</h2>
 			<ProjectList {projects} />
 			<h2>members</h2>
-			<div class="member-list-wrapper">
-				{#each memberGroups as group}
-					<MemberGroup {group} />
-				{/each}
-			</div>
+			<Groups />
 			<div class="button-badges">
 				<img
 					width="88"
@@ -164,13 +160,6 @@
 	}
 	.info > p {
 		margin: 0.5em 0;
-	}
-	.member-list-wrapper {
-		width: 100%;
-		min-height: var(--member-list-min-height);
-		display: grid;
-		gap: 2rem;
-		overflow-y: hidden;
 	}
 	@media screen and (min-width: 1050px) {
 		.main-wrapper {

@@ -1,51 +1,16 @@
-export const memberGroups = [
-	{
+export const roles = {
+	'teen-bible-study': {
 		name: 'teen bible study',
-		members: [
-			{
-				name: 'hazycora',
-				socials: {
-					twitter: '1021804959703212034',
-					mastodon: 'https://besties.house/@h',
-					lastfm: 'hazycora'
-				},
-				isCat: true,
-				avatar: '/avatars/hazycora.webp',
-				color: '#ff36ed',
-				pronouns: 'she/her',
-				email: 'h@besties.house',
-				url: 'https://hazy.gay',
-				bio: 'im cute'
-			},
-			{
-				name: 'aria',
-				socials: {
-					twitter: '1450703231642972161',
-					mastodon: 'https://besties.house/@a',
-					lastfm: 'tacohitbox'
-				},
-				isCat: true,
-				avatar: '/avatars/aria.webp',
-				color: '#33b2e7',
-				pronouns: 'she/it',
-				email: 'aria@besties.house',
-				url: 'https://tacohitbox.com',
-				bio: 'weezer enjoyer, bad webdev'
-			},
-			{
-				name: 'luna',
-				socials: {
-					twitter: '765711397820989440',
-					mastodon: 'https://besties.house/@Luna'
-				},
-				avatar: '/avatars/luna.webp',
-				color: '#71368a',
-				pronouns: 'hamburger'
-			}
-		]
+		showSeparately: true
 	},
-	{
+	'pre-ucb': {
+		name: 'pre-UCB',
+		showSeparately: true
+	},
+	'childrens-church': {
 		name: 'childrens church',
+		color: '#206694',
+		showSeparately: true,
 		subtitles: [
 			'Hazy is a Dictator please help',
 			"Jesus isn't real",
@@ -81,33 +46,12 @@ export const memberGroups = [
 			'“Straight” /neg',
 			'i love taking advantage of my drunken father',
 			'My parents hide the weed from me'
-		],
-		members: [
-			{
-				name: 'ultra',
-				socials: {
-					twitter: '1580957316077215750',
-					mastodon: 'https://besties.house/@shoegayze'
-				},
-				avatar: '/avatars/ultra.webp',
-				color: '#206694',
-				pronouns: 'they/them',
-				bio: '(probably) breathing right now'
-			},
-			{
-				name: '/astr(a|o|e|x)/',
-				socials: {
-					firefish: 'https://firefish.intragon.org/@astro'
-				},
-				avatar: '/avatars/astro.webp',
-				color: '#33AEF6',
-				pronouns: 'she/they',
-				bio: 'per aspera ad astra'
-			}
 		]
 	},
-	{
+	pone: {
 		name: 'poneeee :3',
+		color: '#6CB2EA',
+		showSeparately: true,
 		subtitles: [
 			'&kaaaaaaaaa&r is the best pony!',
 			'startrix 4 life!!!',
@@ -116,23 +60,103 @@ export const memberGroups = [
 			'i bite!',
 			'pls give me a free laptop',
 			'neigh'
-		],
-		members: [
-			{
-				name: 'Trixie',
-				socials: {
-					mastodon: 'https://besties.house/@t',
-					lastfm: 'twilightemi'
-				},
-				avatar: '/avatars/trixie.webp',
-				email: 'izzy@besties.house',
-				color: '#2f0a4f',
-				pronouns: 'she/her',
-				bio: 'silly pony doing silly things on her puter'
-			}
 		]
+	},
+	leaders: {
+		name: 'democratically elected leaders'
+	},
+	'code-nerd-idot': {
+		name: 'code nerd idot',
+		color: '#FF5981'
+	},
+	honorary: {
+		name: 'honorary members',
+		showSeparately: true
+	}
+}
+
+export const members = [
+	{
+		name: 'hazycora',
+		socials: {
+			twitter: '1021804959703212034',
+			mastodon: 'https://besties.house/@h',
+			lastfm: 'hazycora'
+		},
+		isCat: true,
+		avatar: '/avatars/hazycora.webp',
+		color: '#ff36ed',
+		pronouns: 'she/her',
+		email: 'h@besties.house',
+		roles: ['leaders', 'teen-bible-study', 'code-nerd-idot'],
+		url: 'https://hazy.gay',
+		bio: 'im cute'
+	},
+	{
+		name: 'aria',
+		socials: {
+			twitter: '1450703231642972161',
+			mastodon: 'https://besties.house/@a',
+			lastfm: 'tacohitbox'
+		},
+		isCat: true,
+		avatar: '/avatars/aria.webp',
+		color: '#33b2e7',
+		pronouns: 'she/it',
+		email: 'aria@besties.house',
+		roles: ['pre-ucb'],
+		url: 'https://tacohitbox.com',
+		bio: 'weezer enjoyer, bad webdev'
+	},
+	{
+		name: 'luna',
+		socials: {
+			twitter: '765711397820989440',
+			mastodon: 'https://besties.house/@Luna'
+		},
+		avatar: '/avatars/luna.webp',
+		color: '#71368a',
+		pronouns: 'hamburger',
+		roles: ['honorary']
+	},
+	{
+		name: 'ultra',
+		socials: {
+			twitter: '1580957316077215750',
+			mastodon: 'https://besties.house/@shoegayze'
+		},
+		avatar: '/avatars/ultra.webp',
+		color: '#206694',
+		pronouns: 'they/them',
+		roles: ['childrens-church'],
+		bio: '(probably) breathing right now'
+	},
+	{
+		name: '/astr(a|o|e|x)/',
+		socials: {
+			firefish: 'https://firefish.intragon.org/@astro'
+		},
+		avatar: '/avatars/astro.webp',
+		color: '#33AEF6',
+		pronouns: 'she/they',
+		bio: 'per aspera ad astra',
+		roles: ['childrens-church']
+	},
+	{
+		name: 'Trixie',
+		socials: {
+			mastodon: 'https://besties.house/@t',
+			lastfm: 'twilightemi'
+		},
+		avatar: '/avatars/trixie.webp',
+		email: 'izzy@besties.house',
+		roles: ['pone'],
+		color: '#2f0a4f',
+		pronouns: 'she/her',
+		bio: 'silly pony doing silly things on her puter'
 	}
 ]
+
 export const splashes = [
 	'first unionised group chat of all time',
 	'x3',
@@ -169,6 +193,7 @@ export const splashes = [
 	'no cops allowed',
 	'brainrot commune'
 ]
+
 export const projects = [
 	{
 		name: 'git.gay',
