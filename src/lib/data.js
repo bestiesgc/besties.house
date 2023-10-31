@@ -125,6 +125,7 @@ export const members = [
 			twitter: '1580957316077215750',
 			mastodon: 'https://besties.house/@shoegayze'
 		},
+		isCat: true,
 		avatar: '/avatars/ultra.webp',
 		color: '#206694',
 		pronouns: 'they/them',
@@ -136,6 +137,7 @@ export const members = [
 		socials: {
 			firefish: 'https://firefish.intragon.org/@astro'
 		},
+		isCat: true,
 		avatar: '/avatars/astro.webp',
 		color: '#33AEF6',
 		pronouns: 'she/they',
