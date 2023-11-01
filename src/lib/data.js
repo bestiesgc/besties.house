@@ -104,7 +104,7 @@ export const members = [
 		color: '#33b2e7',
 		pronouns: 'she/it',
 		email: 'aria@besties.house',
-		roles: ['pre-ucb'],
+		roles: ['pre-ucb', 'weezer enjoyer (distance yourself)', 'punching bag'],
 		url: 'https://tacohitbox.com',
 		bio: 'weezer enjoyer, bad webdev'
 	},
