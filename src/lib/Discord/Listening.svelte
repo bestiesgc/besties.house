@@ -83,7 +83,8 @@
 	.track-name {
 		font-weight: 600;
 	}
-	.artist-name {
+	.artist-name,
+	.album-name {
 		opacity: 0.6;
 	}
 </style>
