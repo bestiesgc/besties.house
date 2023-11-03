@@ -55,7 +55,7 @@
 		grid-template-columns: 3rem 1fr;
 		gap: 0.25rem;
 		font-size: 0.75rem;
-		color: var(--grey-400);
+		color: var(--grey-600);
 	}
 	.cover {
 		width: 100%;
@@ -81,10 +81,7 @@
 		text-overflow: ellipsis;
 	}
 	.track-name {
+		color: var(--grey-400);
 		font-weight: 600;
-	}
-	.artist-name,
-	.album-name {
-		opacity: 0.6;
 	}
 </style>
