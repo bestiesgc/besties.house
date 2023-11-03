@@ -193,7 +193,8 @@ export const splashes = [
 	'you may join but only if you know the password',
 	'anyone wanna play minecraft',
 	'no cops allowed',
-	'brainrot commune'
+	'brainrot commune',
+	'need myself some zloty'
 ]
 
 export const projects = [
