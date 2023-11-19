@@ -123,7 +123,8 @@ export const members = [
 		name: 'ultra',
 		socials: {
 			twitter: '1580957316077215750',
-			mastodon: 'https://besties.house/@shoegayze'
+			mastodon: 'https://besties.house/@shoegayze',
+			lastfm: 'alexdrownz'
 		},
 		isCat: true,
 		avatar: '/avatars/ultra.webp',
