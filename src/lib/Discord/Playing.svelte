@@ -1,20 +1,27 @@
 <script>
 	export let activity
+
+	let cover
+	$: {
+		const coverValue = activity?.assets?.large_image
+		if (coverValue && coverValue != '') {
+			if (coverValue.startsWith('mp:')) {
+				cover = activity.assets.large_image.replace(
+					'mp:',
+					'https://media.discordapp.net/'
+				)
+			} else {
+				cover = `https://cdn.discordapp.com/app-assets/${activity.application_id}/${activity.assets.large_image}.png`
+			}
+		}
+	}
 </script>
 
 {#if activity}
 	<p class="heading">playing a game</p>
 	<div class="listening">
-		{#if activity.assets?.large_image}
-			<img
-				class="cover"
-				aria-hidden="true"
-				src={activity.assets.large_image.replace(
-					'mp:',
-					'https://media.discordapp.net/'
-				)}
-				alt=""
-			/>
+		{#if cover}
+			<img class="cover" aria-hidden="true" src={cover} alt="" />
 		{:else}
 			<div class="cover fallback" aria-hidden="true">
 				<svg
