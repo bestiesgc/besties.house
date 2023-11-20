@@ -9,11 +9,18 @@
 	setContext('member-details', memberDetails)
 
 	onMount(async () => {
-		const memberDetailsResponse = await fetch(
-			'https://3000.besties.house/users'
-		)
-		const data = await memberDetailsResponse.json()
-		$memberDetails = data
+		const connection = new WebSocket('wss://3000.besties.house/users')
+		connection.addEventListener('message', event => {
+			const message = JSON.parse(event.data)
+			switch (message.type) {
+				case 'INITIAL':
+					$memberDetails = message.members
+					break
+				case 'UPDATE':
+					$memberDetails[message.userId] = message
+					break
+			}
+		})
 	})
 </script>
 
