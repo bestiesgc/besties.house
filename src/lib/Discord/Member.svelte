@@ -12,6 +12,7 @@
 		member.bio = member.bio[Math.round(Math.random() * (member.bio.length - 1))]
 	}
 	const allMemberDetails = getContext('member-details')
+	let status = null
 	let customStatus = null
 	let gameActivity = null
 	$: {
@@ -19,6 +20,7 @@
 			? $allMemberDetails[member.socials.discord]
 			: null
 		if (memberDetails) {
+			status = memberDetails.status != '' ? memberDetails.status : null
 			customStatus = memberDetails.activities?.find(
 				activity => activity.type === 4
 			)
@@ -31,7 +33,7 @@
 
 <div class="member" style={member.style || null}>
 	<div class="banner" style:background-color={member.color} />
-	<Avatar {member} />
+	<Avatar {member} {status} />
 	<div class="info">
 		<p class="name">
 			{member.name}

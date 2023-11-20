@@ -1,6 +1,9 @@
 <script>
+	import { fade } from 'svelte/transition'
+	import { expoOut } from 'svelte/easing'
 	import ImgAndFallback from '$lib/Discord/ImgAndFallback.svelte'
 	export let member
+	export let status
 </script>
 
 <div
@@ -23,6 +26,13 @@
 			/>
 		</ImgAndFallback>
 	{/if}
+	{#if status && status != 'offline' && status != 'invisible'}
+		<div
+			class="status"
+			data-status={status}
+			in:fade={{ duration: 800, easing: expoOut }}
+		/>
+	{/if}
 </div>
 
 <style lang="postcss">
@@ -40,6 +50,45 @@
 	.avatar :global(.avatar-img) {
 		width: 100%;
 		border-radius: 100%;
+	}
+	.status {
+		position: absolute;
+		width: 1.25rem;
+		height: 1.25rem;
+		z-index: 10;
+		right: -0.125rem;
+		bottom: -0.125rem;
+		border-radius: 100%;
+		border: 0.25rem solid var(--violet-800);
+		&[data-status='online'] {
+			background-color: #23a55a;
+		}
+		&[data-status='idle'] {
+			background-color: #f0b132;
+			&::before {
+				position: absolute;
+				content: '';
+				left: -0.125rem;
+				top: -0.125rem;
+				width: 0.625rem;
+				height: 0.625rem;
+				border-radius: 100%;
+				background-color: var(--violet-800);
+			}
+		}
+		&[data-status='dnd'] {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: #f23f43;
+			&::before {
+				content: '';
+				background-color: var(--violet-800);
+				border-radius: 1rem;
+				width: 0.625rem;
+				height: 0.1875rem;
+			}
+		}
 	}
 	.cat {
 		color: white;
