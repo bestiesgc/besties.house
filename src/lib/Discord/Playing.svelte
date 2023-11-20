@@ -31,7 +31,9 @@
 		{/if}
 		<div class="meta">
 			<p class="track-name">{activity.name}</p>
-			<p class="artist-name">{activity.state}</p>
+			{#if activity.state}
+				<p class="artist-name">{activity.state}</p>
+			{/if}
 		</div>
 	</div>
 {/if}
