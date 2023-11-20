@@ -24,9 +24,9 @@
 			customStatus = memberDetails.activities?.find(
 				activity => activity.type === 4
 			)
-			gameActivity = memberDetails.activities?.find(
-				activity => activity.type === 0
-			)
+			gameActivity = memberDetails.activities
+				?.reverse()
+				.find(activity => activity.type === 0)
 		}
 	}
 </script>
