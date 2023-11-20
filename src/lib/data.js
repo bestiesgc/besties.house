@@ -140,7 +140,8 @@ export const members = [
 		name: '/astr(a|o|e|x)/',
 		socials: {
 			firefish: 'https://firefish.intragon.org/@astro',
-			discord: '846357388607881226'
+			discord: '846357388607881226',
+			lastfm: 'astroorbis'
 		},
 		isCat: true,
 		avatar: '/avatars/astro.webp',
