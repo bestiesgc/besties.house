@@ -155,7 +155,8 @@ export const members = [
 		name: 'Trixie',
 		socials: {
 			mastodon: 'https://besties.house/@t',
-			lastfm: 'twilightemi'
+			lastfm: 'twilightemi',
+			discord: '389440708399988736'
 		},
 		avatar: '/avatars/trixie.webp',
 		email: 'izzy@besties.house',
