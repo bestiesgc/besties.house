@@ -3,11 +3,22 @@
 	import Avatar from '$lib/Discord/Avatar.svelte'
 	import Listening from '$lib/Discord/Listening.svelte'
 	import BasicMarkdown from '$lib/BasicMarkdown.svelte'
+	import { getContext } from 'svelte'
 
 	export let member
 
 	if (member.bio && Array.isArray(member.bio)) {
 		member.bio = member.bio[Math.round(Math.random() * (member.bio.length - 1))]
+	}
+	const presences = getContext('presences')
+	let presence = null
+	let customStatus = null
+	$: {
+		presence = member.socials.discord
+			? $presences[member.socials.discord]
+			: null
+		customStatus = presence?.find(activity => activity.type === 4)
+		console.log(presence, $presences)
 	}
 </script>
 
@@ -21,6 +32,25 @@
 				<span class="pronouns">{member.pronouns}</span>
 			{/if}
 		</p>
+		{#if customStatus}
+			<p>
+				{#if customStatus.emoji?.id == ''}
+					{customStatus.emoji.name}
+				{:else if customStatus.emoji?.id}
+					<img
+						class="status-emoji"
+						width="21"
+						height="21"
+						src="https://cdn.discordapp.com/emojis/{customStatus.emoji
+							.id}.{customStatus.emoji.animated
+							? 'gif'
+							: 'png'}?size=44&quality=lossless"
+						alt=":{customStatus.emoji.name}:"
+					/>
+				{/if}
+				{customStatus.state}
+			</p>
+		{/if}
 		{#if member.bio}
 			<hr />
 			<p class="heading">about me</p>
@@ -277,6 +307,11 @@
 		font-weight: 400;
 		color: var(--grey-300);
 		opacity: 0.75;
+	}
+	.status-emoji {
+		width: 1lh;
+		height: 1lh;
+		vertical-align: bottom;
 	}
 	.bio {
 		font: inherit;

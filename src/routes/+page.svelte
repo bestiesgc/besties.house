@@ -1,8 +1,18 @@
 <script>
+	import { onMount, setContext } from 'svelte'
 	import Hero from '$lib/Hero.svelte'
 	import Groups from '$lib/Groups.svelte'
 	import ProjectList from '$lib/Project/ProjectList.svelte'
 	import { splashes, projects } from '$lib/data.js'
+	import { writable } from 'svelte/store'
+	const presences = writable([])
+	setContext('presences', presences)
+
+	onMount(async () => {
+		const currentPresences = await fetch('https://3000.besties.house/presences')
+		const data = await currentPresences.json()
+		$presences = data
+	})
 </script>
 
 <svelte:head>
