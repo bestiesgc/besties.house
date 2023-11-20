@@ -2,6 +2,7 @@
 	import { roles } from '$lib/data.js'
 	import Avatar from '$lib/Discord/Avatar.svelte'
 	import Listening from '$lib/Discord/Listening.svelte'
+	import Playing from '$lib/Discord/Playing.svelte'
 	import BasicMarkdown from '$lib/BasicMarkdown.svelte'
 	import { getContext } from 'svelte'
 
@@ -13,12 +14,13 @@
 	const presences = getContext('presences')
 	let presence = null
 	let customStatus = null
+	let gameActivity = null
 	$: {
 		presence = member.socials.discord
 			? $presences[member.socials.discord]
 			: null
 		customStatus = presence?.find(activity => activity.type === 4)
-		console.log(presence, $presences)
+		gameActivity = presence?.find(activity => activity.type === 0)
 	}
 </script>
 
@@ -55,6 +57,9 @@
 			<hr />
 			<p class="heading">about me</p>
 			<p class="bio"><BasicMarkdown text={member.bio} /></p>
+		{/if}
+		{#if gameActivity}
+			<Playing activity={gameActivity} />
 		{/if}
 		<Listening {member} />
 		<p class="heading">roles</p>
