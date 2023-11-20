@@ -1,11 +1,9 @@
 export const roles = {
 	'teen-bible-study': {
-		name: 'teen bible study',
-		showSeparately: true
+		name: 'teen bible study'
 	},
 	'pre-ucb': {
-		name: 'pre-UCB',
-		showSeparately: true
+		name: 'pre-UCB'
 	},
 	'childrens-church': {
 		name: 'childrens church',
