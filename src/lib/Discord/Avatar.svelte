@@ -60,6 +60,7 @@
 		bottom: -0.125rem;
 		border-radius: 100%;
 		border: 0.25rem solid var(--violet-800);
+		pointer-events: none;
 		&[data-status='online'] {
 			background-color: #23a55a;
 		}
