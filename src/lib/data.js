@@ -67,6 +67,9 @@ export const roles = {
 		name: 'code nerd idot',
 		color: '#FF5981'
 	},
+	sweetheart: {
+		color: '#AA00FF'
+	},
 	honorary: {
 		name: 'honorary members',
 		showSeparately: true
@@ -160,6 +163,18 @@ export const members = [
 		color: '#2f0a4f',
 		pronouns: 'she/her',
 		bio: 'silly pony doing silly things on her puter'
+	},
+	{
+		name: 'Rosalinya',
+		socials: {
+			firefish: 'https://fedi.catgirlin.space/@catgirl',
+			discord: '263819308528828416'
+		},
+		avatar: '/avatars/rosalinya.webp',
+		roles: ['sweetheart'],
+		color: '#AA00FF',
+		pronouns: 'she/her',
+		bio: 'mrowww meow'
 	}
 ]
 
