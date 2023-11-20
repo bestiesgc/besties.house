@@ -81,7 +81,8 @@ export const members = [
 		socials: {
 			twitter: '1021804959703212034',
 			mastodon: 'https://besties.house/@h',
-			lastfm: 'hazycora'
+			lastfm: 'hazycora',
+			discord: '728131016392441916'
 		},
 		isCat: true,
 		avatar: '/avatars/hazycora.webp',
@@ -97,7 +98,8 @@ export const members = [
 		socials: {
 			twitter: '1450703231642972161',
 			mastodon: 'https://besties.house/@a',
-			lastfm: 'tacohitbox'
+			lastfm: 'tacohitbox',
+			discord: '872868956585742337'
 		},
 		isCat: true,
 		avatar: '/avatars/aria.webp',
@@ -124,7 +126,8 @@ export const members = [
 		socials: {
 			twitter: '1580957316077215750',
 			mastodon: 'https://besties.house/@shoegayze',
-			lastfm: 'alexdrownz'
+			lastfm: 'alexdrownz',
+			discord: '616430038694363146'
 		},
 		isCat: true,
 		avatar: '/avatars/ultra.webp',
@@ -136,7 +139,8 @@ export const members = [
 	{
 		name: '/astr(a|o|e|x)/',
 		socials: {
-			firefish: 'https://firefish.intragon.org/@astro'
+			firefish: 'https://firefish.intragon.org/@astro',
+			discord: '846357388607881226'
 		},
 		isCat: true,
 		avatar: '/avatars/astro.webp',
