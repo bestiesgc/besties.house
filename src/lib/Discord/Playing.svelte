@@ -5,7 +5,7 @@
 {#if activity}
 	<p class="heading">playing a game</p>
 	<div class="listening">
-		{#if false}
+		{#if activity.assets?.large_image}
 			<img
 				class="cover"
 				aria-hidden="true"
