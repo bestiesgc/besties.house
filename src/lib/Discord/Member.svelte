@@ -11,16 +11,21 @@
 	if (member.bio && Array.isArray(member.bio)) {
 		member.bio = member.bio[Math.round(Math.random() * (member.bio.length - 1))]
 	}
-	const presences = getContext('presences')
-	let presence = null
+	const allMemberDetails = getContext('member-details')
 	let customStatus = null
 	let gameActivity = null
 	$: {
-		presence = member.socials.discord
-			? $presences[member.socials.discord]
+		let memberDetails = member.socials.discord
+			? $allMemberDetails[member.socials.discord]
 			: null
-		customStatus = presence?.find(activity => activity.type === 4)
-		gameActivity = presence?.find(activity => activity.type === 0)
+		if (memberDetails) {
+			customStatus = memberDetails.activities?.find(
+				activity => activity.type === 4
+			)
+			gameActivity = memberDetails.activities?.find(
+				activity => activity.type === 0
+			)
+		}
 	}
 </script>
 

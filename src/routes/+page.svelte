@@ -5,13 +5,15 @@
 	import ProjectList from '$lib/Project/ProjectList.svelte'
 	import { splashes, projects } from '$lib/data.js'
 	import { writable } from 'svelte/store'
-	const presences = writable([])
-	setContext('presences', presences)
+	const memberDetails = writable([])
+	setContext('member-details', memberDetails)
 
 	onMount(async () => {
-		const currentPresences = await fetch('https://3000.besties.house/presences')
-		const data = await currentPresences.json()
-		$presences = data
+		const memberDetailsResponse = await fetch(
+			'https://3000.besties.house/users'
+		)
+		const data = await memberDetailsResponse.json()
+		$memberDetails = data
 	})
 </script>
 
