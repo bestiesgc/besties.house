@@ -213,7 +213,8 @@ export const splashes = [
 	'anyone wanna play minecraft',
 	'no cops allowed',
 	'brainrot commune',
-	'need myself some zloty'
+	'need myself some zloty',
+	'no lies....'
 ]
 
 export const projects = [
