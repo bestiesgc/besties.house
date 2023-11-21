@@ -1,9 +1,25 @@
 <script>
+	import { getActivityCover } from '$lib/Discord/activity.js'
 	import { browser } from '$app/environment'
 	let listening = null
 	export let member
+	export let activity
 	$: {
-		if (browser) loadYellowcab(member.socials.lastfm)
+		if (browser && !activity) loadYellowcab(member.socials.lastfm)
+	}
+	$: if (activity) {
+		listening = {
+			cover: getActivityCover(activity),
+			track: {
+				name: activity.details
+			},
+			album: {
+				name: activity.assets.large_text
+			},
+			artist: {
+				name: activity.state
+			}
+		}
 	}
 	async function loadYellowcab(user, platform = 'last') {
 		if (!user) return

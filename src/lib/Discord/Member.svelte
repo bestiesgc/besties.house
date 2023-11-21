@@ -1,4 +1,5 @@
 <script>
+	import { getSpecialActivities } from '$lib/Discord/activity.js'
 	import { roles } from '$lib/data.js'
 	import Avatar from '$lib/Discord/Avatar.svelte'
 	import Listening from '$lib/Discord/Listening.svelte'
@@ -15,18 +16,17 @@
 	let status = null
 	let customStatus = null
 	let gameActivity = null
+	let musicActivity = null
 	$: {
 		let memberDetails = member.socials.discord
 			? $allMemberDetails[member.socials.discord]
 			: null
 		if (memberDetails) {
 			status = memberDetails.status != '' ? memberDetails.status : null
-			customStatus = memberDetails.activities?.find(
-				activity => activity.type === 4
-			)
-			gameActivity = memberDetails.activities
-				?.reverse()
-				.find(activity => activity.type === 0)
+			const specialActivities = getSpecialActivities(memberDetails.activities)
+			customStatus = specialActivities.customStatus
+			gameActivity = specialActivities.gameActivity
+			musicActivity = specialActivities.musicActivity
 		}
 	}
 </script>
@@ -84,7 +84,11 @@
 		{#if gameActivity}
 			<Playing activity={gameActivity} />
 		{/if}
-		<Listening {member} />
+		{#if musicActivity}
+			<Listening activity={musicActivity} />
+		{:else}
+			<Listening {member} />
+		{/if}
 		<p class="heading">roles</p>
 		<ul class="roles">
 			{#each member.roles as role}

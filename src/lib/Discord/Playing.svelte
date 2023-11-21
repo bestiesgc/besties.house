@@ -1,22 +1,8 @@
 <script>
+	import { getActivityCover } from '$lib/Discord/activity.js'
 	export let activity
 
-	let cover
-	$: {
-		const coverValue = activity?.assets?.large_image
-		if (coverValue && coverValue != '') {
-			if (coverValue.startsWith('mp:')) {
-				cover = activity.assets.large_image.replace(
-					'mp:',
-					'https://media.discordapp.net/'
-				)
-			} else {
-				cover = `https://cdn.discordapp.com/app-assets/${activity.application_id}/${activity.assets.large_image}.png`
-			}
-		} else if (activity.application_id != '') {
-			cover = `https://3000.besties.house/applications/${activity.application_id}/icon.png`
-		}
-	}
+	$: cover = getActivityCover(activity)
 </script>
 
 {#if activity}
