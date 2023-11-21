@@ -13,6 +13,8 @@
 			} else {
 				cover = `https://cdn.discordapp.com/app-assets/${activity.application_id}/${activity.assets.large_image}.png`
 			}
+		} else if (activity.application_id != '') {
+			cover = `https://3000.besties.house/applications/${activity.application_id}/icon.png`
 		}
 	}
 </script>
