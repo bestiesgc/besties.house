@@ -26,7 +26,7 @@
 			/>
 		</ImgAndFallback>
 	{/if}
-	{#if status && status != 'offline' && status != 'invisible'}
+	{#if status}
 		<div
 			class="status"
 			data-status={status}
@@ -77,10 +77,25 @@
 				background-color: var(--violet-800);
 			}
 		}
-		&[data-status='dnd'] {
+		&[data-status='dnd'],
+		&[data-status='offline'],
+		&[data-status='invisible'] {
 			display: flex;
 			justify-content: center;
 			align-items: center;
+		}
+		&[data-status='offline'],
+		&[data-status='invisible'] {
+			background-color: #80848e;
+			&::before {
+				content: '';
+				background-color: var(--violet-800);
+				border-radius: 100%;
+				width: 0.425rem;
+				height: 0.425rem;
+			}
+		}
+		&[data-status='dnd'] {
 			background-color: #f23f43;
 			&::before {
 				content: '';
