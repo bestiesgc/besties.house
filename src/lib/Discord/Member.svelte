@@ -41,20 +41,22 @@
 				<span class="pronouns">{member.pronouns}</span>
 			{/if}
 		</p>
-		<span class="sr-only">
-			Status:
-			{#if status == 'online'}
-				online
-			{:else if status == 'idle'}
-				idle
-			{:else if status == 'dnd'}
-				do not disturb
-			{:else if status == 'offline'}
-				offline
-			{:else}
-				unknown
-			{/if}
-		</span>
+		{#if status}
+			<span class="sr-only">
+				Status:
+				{#if status == 'online'}
+					online
+				{:else if status == 'idle'}
+					idle
+				{:else if status == 'dnd'}
+					do not disturb
+				{:else if status == 'offline' || status == 'invisible'}
+					offline
+				{:else}
+					unknown
+				{/if}
+			</span>
+		{/if}
 		{#if customStatus}
 			<p>
 				{#if customStatus.emoji?.id == ''}
