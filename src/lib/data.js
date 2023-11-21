@@ -15,7 +15,6 @@ export const roles = {
 			"i'm silly i'm silly i'm silly",
 			'my head hurts',
 			'oh my god just shut the fuck up',
-			'Middle Schoolers',
 			'7th graders are dumb',
 			'IM NORMAL IM NORMAL IM NORMAL IM NORMAL IM NORMAL IM NORMAL IM NORMAL ',
 			':( ',
