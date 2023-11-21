@@ -26,8 +26,11 @@
 		{/if}
 		<div class="meta">
 			<p class="track-name">{activity.name}</p>
+			{#if activity.details}
+                                <p class="artist-name">{activity.details}</p>
+                        {/if}
 			{#if activity.state}
-				<p class="artist-name">{activity.state}</p>
+				<p class="album-name">{activity.state}</p>
 			{/if}
 		</div>
 	</div>
