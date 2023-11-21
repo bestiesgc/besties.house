@@ -101,8 +101,6 @@
 						<div class="social">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
-								width="24px"
-								height="24px"
 								viewBox="0 0 24 24"
 								fill="currentColor"
 								><path
@@ -122,8 +120,6 @@
 							<svg
 								aria-hidden="true"
 								xmlns="http://www.w3.org/2000/svg"
-								width="24px"
-								height="24px"
 								xml:space="preserve"
 								viewBox="0 0 248 204"
 								><path
@@ -140,8 +136,6 @@
 						<div class="social">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
-								width="24px"
-								height="24px"
 								xml:space="preserve"
 								id="Layer_1"
 								x="0"
@@ -165,11 +159,7 @@
 				{#if member.socials.tumblr}
 					<a href="https://{member.socials.tumblr}.tumblr.com">
 						<div class="social">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								width="24px"
-								height="24px"
-								viewBox="0 0 320 512"
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
 								><path
 									d="M309.8 480.3c-13.6 14.5-50 31.7-97.4 31.7-120.8 0-147-88.8-147-140.6v-144H17.9c-5.5 0-10-4.5-10-10v-68c0-7.2 4.5-13.6 11.3-16 62-21.8 81.5-76 84.3-117.1.8-11 6.5-16.3 16.1-16.3h70.9c5.5 0 10 4.5 10 10v115.2h83c5.5 0 10 4.4 10 9.9v81.7c0 5.5-4.5 10-10 10h-83.4V360c0 34.2 23.7 53.6 68 35.8 4.8-1.9 9-3.2 12.7-2.2 3.5.9 5.8 3.4 7.4 7.9l22 64.3c1.8 5 3.3 10.6-.4 14.5z"
 									fill="currentColor"
@@ -186,8 +176,6 @@
 								aria-hidden="true"
 								version="1.1"
 								xmlns="http://www.w3.org/2000/svg"
-								width="24px"
-								height="24px"
 								viewBox="0 0 216.4144 232.00976"
 							>
 								<mask id="m-mask">
@@ -211,8 +199,6 @@
 					<a href={member.socials.firefish}>
 						<div class="social">
 							<svg
-								width="24px"
-								height="24px"
 								viewBox="0 0 1024 1024"
 								fill="currentColor"
 								xmlns="http://www.w3.org/2000/svg"
@@ -244,8 +230,6 @@
 								aria-hidden="true"
 								version="1.1"
 								xmlns="http://www.w3.org/2000/svg"
-								width="24px"
-								height="24px"
 								xmlns:xlink="http://www.w3.org/1999/xlink"
 								viewBox="1.4 1.4 33.2 33.2"
 								enable-background="new 0 0 36 36"
@@ -270,8 +254,6 @@
 								aria-label="Last.fm"
 								role="img"
 								xmlns="http://www.w3.org/2000/svg"
-								width="24px"
-								height="24px"
 								viewBox="0 0 512 512"
 								><path
 									fill="currentColor"
@@ -289,12 +271,12 @@
 
 <style lang="postcss">
 	.member {
-		font-size: 0.8rem;
+		font-size: 0.75rem;
 		position: relative;
 		width: 100%;
 		--background-color: var(--violet-800);
 		background-color: var(--background-color);
-		border-radius: 8px;
+		border-radius: 0.5rem;
 		overflow: hidden;
 		align-self: start;
 	}
@@ -304,25 +286,25 @@
 		gap: 0.25rem;
 		color: var(--grey-100);
 		font-weight: 700;
-		font-size: 20px;
+		font-size: 1rem;
 		margin: 0;
 	}
 	.member :global(.heading) {
 		color: var(--grey-100);
-		margin: 0.8em 0;
+		margin: 0.5em 0;
 		font-weight: 700;
-		font-size: 12px;
+		font-size: 0.75rem;
 		text-transform: uppercase;
-		letter-spacing: 0.24px;
+		letter-spacing: 0.015rem;
 	}
 	.banner {
-		height: 60px;
+		height: 3.75rem;
 	}
 	.info {
-		margin: 38px 16px 16px;
+		margin: 1.5rem 0.75rem 0.75rem;
 		background-color: var(--violet-750);
-		padding: 12px 12px;
-		border-radius: 8px;
+		padding: 0.75rem;
+		border-radius: 0.5rem;
 	}
 	hr {
 		color: transparent;
@@ -345,7 +327,6 @@
 		font: inherit;
 		white-space: pre-line;
 		margin: 0;
-		margin-top: 6px;
 	}
 	.roles {
 		padding: 0;
@@ -355,7 +336,7 @@
 		gap: 0.25rem;
 	}
 	.role {
-		font-size: 0.5rem;
+		font-size: 0.625rem;
 		background-color: var(--violet-800);
 		border: 1px solid var(--grey-600);
 		padding: 0.25em 0.5em;
@@ -367,9 +348,8 @@
 	}
 	.social-list {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-		grid-auto-rows: 50px;
-		gap: 16px;
+		grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+		gap: 0.5rem;
 	}
 	.social-list > a {
 		color: inherit;
@@ -379,17 +359,17 @@
 		user-select: none;
 		border: 1px solid var(--violet-650);
 		display: grid;
-		grid-template-columns: 24px 1fr;
+		grid-template-columns: 1.25rem 1fr;
 		height: 100%;
-		border-radius: 4px;
-		padding: 12px 8px;
+		border-radius: 0.25rem;
+		padding: 0.5rem;
 		align-items: center;
-		gap: 8px;
+		gap: 0.5rem;
 		font-weight: 600;
 	}
 	.social svg {
-		width: 24px;
-		height: 24px;
+		width: 1.25rem;
+		height: 1.25rem;
 	}
 	.social-label {
 		min-width: 0;

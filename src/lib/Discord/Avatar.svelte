@@ -38,17 +38,18 @@
 <style lang="postcss">
 	.avatar {
 		user-select: none;
-		width: 80px;
-		height: 80px;
+		width: 4rem;
+		height: 4rem;
 		border-radius: 100%;
-		border: 6px solid var(--background-color);
+		border: 0.25rem solid var(--background-color);
 		background-color: var(--background-color);
 		position: absolute;
-		top: 10px;
-		left: 16px;
+		top: 0.75rem;
+		left: 0.75rem;
 	}
 	.avatar :global(.avatar-img) {
 		width: 100%;
+		height: 100%;
 		border-radius: 100%;
 	}
 	.status {
@@ -109,7 +110,6 @@
 	.cat {
 		color: white;
 		overflow: unset;
-		background-color: unset !important;
 	}
 	.cat :global(.avatar-img) {
 		border-radius: 100%;
@@ -161,7 +161,7 @@
 	.cat :global(.img)::after {
 		position: absolute;
 		background: #df548f;
-		border: solid 4px currentColor;
+		border: solid 0.25rem currentColor;
 		box-sizing: border-box;
 		content: '';
 		display: inline-block;
@@ -171,12 +171,12 @@
 		pointer-events: none;
 	}
 	.cat :global(.img)::before {
-		left: -4px;
+		left: -0.25rem;
 		border-radius: 0 75% 75%;
 		transform: rotate(37.5deg) skew(30deg);
 	}
 	.cat :global(.img)::after {
-		right: -4px;
+		right: -0.25rem;
 		border-radius: 75% 0 75% 75%;
 		transform: rotate(-37.5deg) skew(-30deg);
 	}
