@@ -1,4 +1,5 @@
 export function assetURL(url, applicationId) {
+	if (!url) return null
 	if (url.startsWith('mp:')) {
 		return url.replace('mp:', 'https://media.discordapp.net/')
 	} else if (url.startsWith('spotify:')) {
