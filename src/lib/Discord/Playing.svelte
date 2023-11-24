@@ -14,9 +14,21 @@
 	<div class="listening">
 		{#if cover}
 			<div class="cover" class:has-small={smallCover}>
-				<img class="cover" aria-hidden="true" src={cover} alt="" />
+				<img
+					class="cover"
+					aria-hidden="true"
+					draggable="false"
+					src={cover}
+					alt=""
+				/>
 				{#if smallCover}
-					<img class="small" aria-hidden="true" src={smallCover} alt="" />
+					<img
+						class="small"
+						aria-hidden="true"
+						draggable="false"
+						src={smallCover}
+						alt=""
+					/>
 				{/if}
 			</div>
 		{:else}
@@ -54,6 +66,7 @@
 		color: var(--grey-600);
 	}
 	.cover {
+		user-select: none;
 		display: block;
 		position: relative;
 		width: 100%;

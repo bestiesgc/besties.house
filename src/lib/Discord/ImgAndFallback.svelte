@@ -29,6 +29,7 @@
 		{width}
 		{height}
 		{alt}
+		draggable="false"
 		class={classList}
 		class:unloaded={!loaded}
 		on:load={() => (loaded = true)}

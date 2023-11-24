@@ -62,6 +62,7 @@
 			<img
 				class="cover"
 				aria-hidden="true"
+				draggable="false"
 				src={listening.cover.replace('/200s/', '/avatar300s/')}
 				alt=""
 			/>
@@ -122,6 +123,7 @@
 		color: var(--grey-600);
 	}
 	.cover {
+		user-select: none;
 		width: 100%;
 		aspect-ratio: 1;
 		border-radius: 0.25rem;
