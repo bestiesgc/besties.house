@@ -2,8 +2,12 @@ export function assetURL(url, applicationId) {
 	if (!url) return null
 	if (url.startsWith('mp:')) {
 		return url.replace('mp:', 'https://media.discordapp.net/')
-	} else if (url.startsWith('spotify:')) {
+	}
+	if (url.startsWith('spotify:')) {
 		return url.replace('spotify:', 'https://i.scdn.co/image/')
+	}
+	if (url.startsWith('https://') || url.startsWith('http://')) {
+		return url
 	}
 	return `https://cdn.discordapp.com/app-assets/${applicationId}/${url}.png`
 }

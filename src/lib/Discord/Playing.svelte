@@ -1,6 +1,7 @@
 <script>
 	import { getActivityCover, assetURL } from '$lib/Discord/activity.js'
 	export let activity
+	export let heading = 'playing a game'
 
 	$: cover = getActivityCover(activity)
 	$: smallCover = assetURL(
@@ -10,7 +11,7 @@
 </script>
 
 {#if activity}
-	<p class="heading">playing a game</p>
+	<p class="heading">{heading}</p>
 	<div class="listening">
 		{#if cover}
 			<div class="cover" class:has-small={smallCover}>

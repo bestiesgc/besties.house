@@ -2,6 +2,7 @@
 	import { getActivityCover } from '$lib/Discord/activity.js'
 	import { browser } from '$app/environment'
 	import { onMount } from 'svelte'
+	import Playing from '$lib/Discord/Playing.svelte'
 	import Duration from '$lib/Duration.svelte'
 	let listening = null
 	export let member = null
@@ -10,6 +11,7 @@
 		if (browser && !activity) loadYellowcab(member.socials.lastfm)
 	}
 	$: if (activity) {
+		now = Date.now()
 		let start, end, duration
 		if (activity.timestamps.start) {
 			start = new Date(activity.timestamps.start)
@@ -20,7 +22,7 @@
 		if (start && end) {
 			duration = end - start
 		}
-		listening = {
+		listening = yellowcabToDiscord({
 			cover: getActivityCover(activity),
 			track: {
 				name: activity.details
@@ -34,14 +36,32 @@
 			start,
 			end,
 			duration
+		})
+	}
+	function yellowcabToDiscord(listening) {
+		if (!listening) return
+		const discordPresence = {
+			name: listening.track.name,
+			details: `by ${listening.artist.name}`,
+			assets: {
+				large_image: listening.cover.replace('/200s/', '/avatar300s/'),
+				large_text: listening.album.name
+			},
+			start: listening.start,
+			end: listening.end,
+			duration: listening.duration
 		}
+		if (listening.album.name && listening.album.name != listening.track.name) {
+			discordPresence.state = `on ${listening.album.name}`
+		}
+		return discordPresence
 	}
 	async function loadYellowcab(user, platform = 'last') {
 		if (!user) return
 		const resp = await fetch(`https://yc.besties.house/api/${platform}/${user}`)
 		const data = await resp.json()
 		if (data.success && data.response['est-timestamp'] == 'live') {
-			listening = data.response
+			listening = yellowcabToDiscord(data.response)
 		}
 	}
 	let now = Date.now()
@@ -56,100 +76,33 @@
 </script>
 
 {#if listening}
-	<p class="heading">listening to music</p>
-	<div class="listening">
-		{#if listening.cover}
-			<img
-				class="cover"
-				aria-hidden="true"
-				draggable="false"
-				src={listening.cover.replace('/200s/', '/avatar300s/')}
-				alt=""
-			/>
-		{:else}
-			<div class="cover fallback" aria-hidden="true">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					height="24"
-					viewBox="0 0 24 24"
-					width="24"
-					fill="currentColor"
-					><path d="M0 0h24v24H0z" fill="none" /><path
-						d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"
-					/></svg
-				>
+	<Playing heading="listening to music" activity={listening}></Playing>
+	{#if listening.start && listening.duration}
+		<div class="progress">
+			<span class="sr-only">Progress</span>
+			<div class="track">
+				<div
+					class="bar"
+					style="width: {((now - listening.start) / listening.duration) * 100}%"
+				></div>
 			</div>
-		{/if}
-		<div class="meta">
-			<p class="track-name">{listening.track.name}</p>
-			<p class="artist-name">by {listening.artist.name}</p>
-			{#if listening.album && listening.album.name && listening.album.name != listening.track.name}
-				<p class="album-name">on {listening.album.name}</p>
-			{/if}
+			<div class="timestamps">
+				<span>
+					<span class="sr-only">Timestamp: </span>
+					<Duration ms={Math.min(now - listening.start, listening.duration)} />
+				</span>
+				<span>
+					<span class="sr-only">Duration: </span>
+					<Duration ms={listening.duration} />
+				</span>
+			</div>
 		</div>
-		{#if listening.start && listening.duration}
-			<div class="progress">
-				<span class="sr-only">Progress</span>
-				<div class="track">
-					<div
-						class="bar"
-						style="width: {((now - listening.start) / listening.duration) *
-							100}%"
-					></div>
-				</div>
-				<div class="timestamps">
-					<span>
-						<span class="sr-only">Timestamp: </span>
-						<Duration
-							ms={Math.min(now - listening.start, listening.duration)}
-						/>
-					</span>
-					<span>
-						<span class="sr-only">Duration: </span>
-						<Duration ms={listening.duration} />
-					</span>
-				</div>
-			</div>
-		{/if}
-	</div>
+	{/if}
 {/if}
 
 <style lang="postcss">
-	.listening {
-		display: grid;
-		grid-template-columns: 3rem 1fr;
-		gap: 0.25rem;
-		font-size: 0.75rem;
-		color: var(--grey-600);
-	}
-	.cover {
-		user-select: none;
-		width: 100%;
-		aspect-ratio: 1;
-		border-radius: 0.25rem;
-	}
-	.cover.fallback {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background: var(--violet-900);
-	}
-	.meta {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		min-width: 0;
-	}
-	.meta p {
-		overflow: hidden;
-		white-space: nowrap;
-		text-overflow: ellipsis;
-	}
-	.track-name {
-		color: var(--grey-400);
-		font-weight: 600;
-	}
 	.progress {
+		margin-top: 0.25rem;
 		grid-column: 1 / -1;
 	}
 	.progress .track {
@@ -164,6 +117,7 @@
 		transition: width 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
 	}
 	.timestamps {
+		user-select: none;
 		display: flex;
 		justify-content: space-between;
 		font-size: 0.625rem;
