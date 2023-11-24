@@ -80,7 +80,7 @@
 		position: absolute;
 		bottom: -0.125rem;
 		right: -0.125rem;
-		width: 1.25rem;
+		width: 1rem;
 		height: auto;
 	}
 	.cover.fallback {
