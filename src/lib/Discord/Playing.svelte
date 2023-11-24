@@ -61,6 +61,7 @@
 		border-radius: 0.25rem;
 	}
 	.cover .small {
+		background-color: var(--violet-750);
 		border: 0.125rem solid var(--violet-750);
 		border-radius: 100%;
 		position: absolute;
