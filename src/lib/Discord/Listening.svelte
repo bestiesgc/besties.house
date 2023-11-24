@@ -124,14 +124,13 @@
 	.cover {
 		width: 100%;
 		aspect-ratio: 1;
-		border-radius: 0.125rem;
+		border-radius: 0.25rem;
 	}
 	.cover.fallback {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		background: var(--violet-900);
-		border-radius: 0.125rem;
 	}
 	.meta {
 		display: flex;

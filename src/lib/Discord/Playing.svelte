@@ -1,15 +1,24 @@
 <script>
-	import { getActivityCover } from '$lib/Discord/activity.js'
+	import { getActivityCover, assetURL } from '$lib/Discord/activity.js'
 	export let activity
 
 	$: cover = getActivityCover(activity)
+	$: smallCover = assetURL(
+		activity?.assets?.small_image,
+		activity?.application_id
+	)
 </script>
 
 {#if activity}
 	<p class="heading">playing a game</p>
 	<div class="listening">
 		{#if cover}
-			<img class="cover" aria-hidden="true" src={cover} alt="" />
+			<div class="cover" class:has-small={smallCover}>
+				<img class="cover" aria-hidden="true" src={cover} alt="" />
+				{#if smallCover}
+					<img class="small" aria-hidden="true" src={smallCover} alt="" />
+				{/if}
+			</div>
 		{:else}
 			<div class="cover fallback" aria-hidden="true">
 				<svg
@@ -27,8 +36,8 @@
 		<div class="meta">
 			<p class="track-name">{activity.name}</p>
 			{#if activity.details}
-                                <p class="artist-name">{activity.details}</p>
-                        {/if}
+				<p class="artist-name">{activity.details}</p>
+			{/if}
 			{#if activity.state}
 				<p class="album-name">{activity.state}</p>
 			{/if}
@@ -45,16 +54,26 @@
 		color: var(--grey-600);
 	}
 	.cover {
+		display: block;
+		position: relative;
 		width: 100%;
 		aspect-ratio: 1;
-		border-radius: 0.125rem;
+		border-radius: 0.25rem;
+	}
+	.cover .small {
+		border: 0.125rem solid var(--violet-750);
+		border-radius: 100%;
+		position: absolute;
+		bottom: -0.125rem;
+		right: -0.125rem;
+		width: 1.25rem;
+		height: auto;
 	}
 	.cover.fallback {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		background: var(--violet-900);
-		border-radius: 0.125rem;
 	}
 	.meta {
 		display: flex;

@@ -1,16 +1,16 @@
+export function assetURL(url, applicationId) {
+	if (url.startsWith('mp:')) {
+		return url.replace('mp:', 'https://media.discordapp.net/')
+	} else if (url.startsWith('spotify:')) {
+		return url.replace('spotify:', 'https://i.scdn.co/image/')
+	}
+	return `https://cdn.discordapp.com/app-assets/${applicationId}/${url}.png`
+}
+
 export function getActivityCover(activity) {
 	const coverValue = activity?.assets?.large_image
 	if (coverValue && coverValue != '') {
-		if (coverValue.startsWith('mp:')) {
-			return activity.assets.large_image.replace(
-				'mp:',
-				'https://media.discordapp.net/'
-			)
-		} else if (coverValue.startsWith('spotify:')) {
-			return coverValue.replace('spotify:', 'https://i.scdn.co/image/')
-		} else {
-			return `https://cdn.discordapp.com/app-assets/${activity.application_id}/${activity.assets.large_image}.png`
-		}
+		return assetURL(coverValue, activity.application_id)
 	} else if (activity.application_id != '') {
 		return `https://3000.besties.house/applications/${activity.application_id}/icon.png`
 	}
