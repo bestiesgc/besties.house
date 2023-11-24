@@ -172,6 +172,7 @@ export const members = [
 		},
 		avatar: '/avatars/rosalinya.webp',
 		roles: ['sweetheart'],
+		isCat: true,
 		color: '#AA00FF',
 		pronouns: 'she/her',
 		bio: 'mrowww meow'
