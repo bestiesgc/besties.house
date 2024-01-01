@@ -139,14 +139,16 @@ export const members = [
 	{
 		name: '/astr(a|o|e|x)/',
 		socials: {
-			firefish: 'https://firefish.intragon.org/@astro',
+			sharkey: 'https://fedi.intragon.org/@astra',
 			discord: '846357388607881226',
-			lastfm: 'astroorbis'
+			lastfm: 'astroorbis',
+			youtube: 'astroorbis'
 		},
 		isCat: true,
 		avatar: '/avatars/astro.webp',
 		color: '#33AEF6',
 		pronouns: 'she/they',
+		email: 'astroorbis@gmail.com',
 		bio: 'per aspera ad astra',
 		roles: ['childrens-church']
 	},
