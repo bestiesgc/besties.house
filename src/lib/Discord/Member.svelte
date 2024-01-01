@@ -143,7 +143,7 @@
 								xml:space="preserve"
 								id="Layer_1"
 								x="0"
-			y="0"
+								y="0"
 								version="1.1"
 								viewBox="0 0 71.412065 50"
 								><g id="g5" transform="scale(.58824)"
