@@ -227,6 +227,28 @@
 						</div>
 					</a>
 				{/if}
+				{#if member.socials.sharkey}
+					<a href={member.socials.sharkey}>
+						<div class="social">
+							<svg 
+								xmlns="http://www.w3.org/2000/svg" 
+								xmlns:xlink="http://www.w3.org/1999/xlink" 
+								version="1.1" 
+								x="0px" 
+								y="0px" 
+								viewBox="0 0 100 100" 
+								enable-background="new 0 0 100 100" 
+								xml:space="preserve"
+							>
+								<path fill="#FFFFFF" d="M33.649,93.08l-2.191,3.652h38.063l-2.389-3.575C81.623,87.588,92.611,74.97,95.9,59.501H5.08  C8.353,74.9,19.256,87.475,33.649,93.08z"/>
+								<path fill="#FFFFFF"d="M96.922,49.811H4.059c0,2.273,0.17,4.505,0.486,6.69h91.891C96.751,54.314,96.922,52.084,96.922,49.811z"/>
+								<path fill="#FFFFFF" d="M28.615,49.811c0,0,18.547-32.148,45.75-30.294c-6.183,12.365-4.265,30.294-4.265,30.294"/>
+
+							</svg>
+							<p class="social-label">Sharkey</p>
+						</div>
+					</a>
+				{/if}
 				{#if member.socials.github}
 					<a href="https://github.com/{member.socials.github}">
 						<div class="social">

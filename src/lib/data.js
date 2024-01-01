@@ -139,7 +139,7 @@ export const members = [
 	{
 		name: '/astr(a|o|e|x)/',
 		socials: {
-			firefish: 'https://firefish.intragon.org/@astro',
+			sharkey: 'https://fedi.intragon.org/@astra',
 			discord: '846357388607881226',
 			lastfm: 'astroorbis'
 		},
