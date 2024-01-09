@@ -82,13 +82,13 @@ export const members = [
 			twitter: '1021804959703212034',
 			mastodon: 'https://besties.house/@h',
 			lastfm: 'hazycora',
-			discord: '728131016392441916'
+			email: 'h@besties.house'
 		},
+		discord: '728131016392441916',
 		isCat: true,
 		avatar: '/avatars/hazycora.webp',
 		color: '#ff36ed',
 		pronouns: 'she/her',
-		email: 'h@besties.house',
 		roles: ['leaders', 'teen-bible-study', 'code-nerd-idot'],
 		url: 'https://hazy.gay',
 		bio: 'im cute'
@@ -99,13 +99,13 @@ export const members = [
 			twitter: '1450703231642972161',
 			mastodon: 'https://besties.house/@a',
 			lastfm: 'tacohitbox',
-			discord: '872868956585742337'
+			email: 'aria@besties.house'
 		},
+		discord: '872868956585742337',
 		isCat: true,
 		avatar: '/avatars/aria.webp',
 		color: '#33b2e7',
 		pronouns: 'she/it',
-		email: 'aria@besties.house',
 		roles: ['pre-ucb', 'weezer enjoyer (distance yourself)', 'punching bag'],
 		url: 'https://tacohitbox.com',
 		bio: 'weezer enjoyer, bad webdev'
@@ -126,9 +126,9 @@ export const members = [
 		socials: {
 			twitter: '1580957316077215750',
 			mastodon: 'https://besties.house/@shoegayze',
-			lastfm: 'alexdrownz',
-			discord: '616430038694363146'
+			lastfm: 'alexdrownz'
 		},
+		discord: '616430038694363146',
 		isCat: true,
 		avatar: '/avatars/ultra.webp',
 		color: '#206694',
@@ -140,15 +140,15 @@ export const members = [
 		name: '/astr(a|o|e|x)/',
 		socials: {
 			sharkey: 'https://fedi.intragon.org/@astra',
-			discord: '846357388607881226',
 			lastfm: 'astroorbis',
-			youtube: 'astroorbis'
+			youtube: 'astroorbis',
+			email: 'astroorbis@gmail.com'
 		},
+		discord: '846357388607881226',
 		isCat: true,
 		avatar: '/avatars/astro.webp',
 		color: '#33AEF6',
 		pronouns: 'she/they',
-		email: 'astroorbis@gmail.com',
 		bio: 'per aspera ad astra',
 		roles: ['childrens-church']
 	},
@@ -157,10 +157,10 @@ export const members = [
 		socials: {
 			mastodon: 'https://besties.house/@t',
 			lastfm: 'twilightemi',
-			discord: '389440708399988736'
+			email: 'izzy@besties.house'
 		},
+		discord: '389440708399988736',
 		avatar: '/avatars/trixie.webp',
-		email: 'izzy@besties.house',
 		roles: ['pone'],
 		color: '#2f0a4f',
 		pronouns: 'she/her',
@@ -169,9 +169,9 @@ export const members = [
 	{
 		name: 'Rosalinya',
 		socials: {
-			firefish: 'https://fedi.catgirlin.space/@catgirl',
-			discord: '263819308528828416'
+			firefish: 'https://fedi.catgirlin.space/@catgirl'
 		},
+		discord: '263819308528828416',
 		avatar: '/avatars/rosalinya.webp',
 		roles: ['sweetheart'],
 		isCat: true,

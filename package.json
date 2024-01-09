@@ -23,7 +23,8 @@
 		"prettier-plugin-svelte": "^3.0.3",
 		"svelte": "^4.2.0",
 		"svelte-preprocess": "^5.0.4",
-		"vite": "^4.4.9"
+		"vite": "^4.4.9",
+		"vite-plugin-svelte-svg": "^2.3.0"
 	},
 	"type": "module"
 }
