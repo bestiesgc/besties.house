@@ -217,7 +217,8 @@ export const splashes = [
 	'no cops allowed',
 	'brainrot commune',
 	'need myself some zloty',
-	'no lies....'
+	'no lies....',
+	'im neuroswagger'
 ]
 
 export const projects = [
