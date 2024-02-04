@@ -66,6 +66,9 @@ export const roles = {
 		name: 'code nerd idot',
 		color: '#FF5981'
 	},
+	'fucking-gay': {
+		name: 'fucking gay'
+	},
 	sweetheart: {
 		color: '#AA00FF'
 	},
@@ -137,6 +140,22 @@ export const members = [
 		bio: '(probably) breathing right now'
 	},
 	{
+		name: 'MeowcaTheoRange',
+		socials: {
+			mastodon: 'https://local.abtmtr.link/@mtr',
+			lastfm: 'MeowcaTheoRange',
+			email: 'me@abtmtr.link'
+		},
+		discord: '604075087292923943',
+		isCat: false,
+		avatar: '/avatars/mtr.webp',
+		color: '#39132d',
+		pronouns: 'she/they/any',
+		roles: ['fucking-gay', 'code-nerd-idot'],
+		url: 'https://abtmtr.link/',
+		bio: 'changes wildly based on the day'
+	},
+	{
 		name: '/astr(a|o|e|x)/',
 		socials: {
 			sharkey: 'https://fedi.intragon.org/@astra',
@@ -187,6 +206,7 @@ export const splashes = [
 	'hope you like amateur web design',
 	'Just a glimpse into my dark reality. A full stare would make most simply go insane lmao',
 	'the radical left, the marxists, the anarchists, the agitators, the looters,',
+	'meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow',
 	'reality surf x3',
 	'if i post pics u gotta like it',
 	'delete my fcking socials idc anymore',
