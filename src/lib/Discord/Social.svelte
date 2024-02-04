@@ -8,6 +8,7 @@
 	import Firefish from '$lib/Icons/Firefish.svg?c'
 	import Sharkey from '$lib/Icons/Sharkey.svg?c'
 	import Tumblr from '$lib/Icons/Tumblr.svg?c'
+	import Akkoma from '$lib/Icons/Akkoma.svg?c'
 
 	const detailsMap = {
 		github: {
@@ -49,6 +50,11 @@
 			href: value => value,
 			title: 'Sharkey',
 			icon: Sharkey
+		},
+		akkoma: {
+			href: value => value,
+			title: 'Akkoma',
+			icon: Akkoma
 		},
 		tumblr: {
 			href: value => `https://${value}.tumblr.com`,

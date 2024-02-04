@@ -142,13 +142,13 @@ export const members = [
 	{
 		name: 'MeowcaTheoRange',
 		socials: {
-			mastodon: 'https://local.abtmtr.link/@mtr',
+			akkoma: 'https://local.abtmtr.link/@mtr',
 			lastfm: 'MeowcaTheoRange',
 			email: 'me@abtmtr.link'
 		},
 		discord: '604075087292923943',
 		isCat: false,
-		avatar: '/avatars/mtr.webp',
+		avatar: 'https://abtmtr.link/favicon.ico',
 		color: '#39132d',
 		pronouns: 'she/they/any',
 		roles: ['fucking-gay', 'code-nerd-idot'],
