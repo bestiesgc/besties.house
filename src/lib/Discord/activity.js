@@ -16,9 +16,11 @@ export function getActivityCover(activity) {
 	const coverValue = activity?.assets?.large_image
 	if (coverValue && coverValue != '') {
 		return assetURL(coverValue, activity.application_id)
-	} else if (activity.application_id != '') {
-		return `https://3000.besties.house/applications/${activity.application_id}/icon.png`
 	}
+	if (!activity.application_id || activity.application_id == '') {
+		return undefined
+	}
+	return `https://3000.besties.house/applications/${activity.application_id}/icon.png`
 }
 
 const musicApps = ['1115748230328758325']

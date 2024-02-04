@@ -19,8 +19,8 @@
 	let gameActivity = null
 	let musicActivity = null
 	$: {
-		const memberDetails = member.socials.discord
-			? $allMemberDetails[member.socials.discord]
+		const memberDetails = member.discord
+			? $allMemberDetails[member.discord]
 			: null
 		if (memberDetails) {
 			status = memberDetails.status != '' ? memberDetails.status : null
