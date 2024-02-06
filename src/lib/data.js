@@ -185,14 +185,14 @@ export const members = [
 		roles: ['childrens-church']
 	},
 	{
-		name: 'Trixie',
+		name: 'emilia',
 		socials: {
 			mastodon: 'https://besties.house/@t',
 			lastfm: 'twilightemi',
 			email: 'izzy@besties.house'
 		},
 		discord: '389440708399988736',
-		avatar: '/avatars/trixie.webp',
+		avatar: '/avatars/emilia.webp',
 		roles: ['pone'],
 		color: '#2f0a4f',
 		pronouns: 'she/her',
