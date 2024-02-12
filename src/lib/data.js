@@ -153,20 +153,18 @@ export const members = [
 		bio: '(probably) breathing right now'
 	},
 	{
-		name: 'MeowcaTheoRange',
+		name: 'abtmtr.link',
 		socials: {
-			akkoma: 'https://local.abtmtr.link/mtr',
-			lastfm: 'MeowcaTheoRange',
-			email: 'me@abtmtr.link'
+			lastfm: 'MeowcaTheoRange'
 		},
 		discord: '604075087292923943',
 		isCat: false,
 		avatar: 'https://abtmtr.link/favicon.ico',
-		color: '#39132d',
-		pronouns: 'she/they/any',
-		roles: ['fucking-gay', 'code-nerd-idot'],
+		color: '#202020',
+		pronouns: 'they/she/he',
+		roles: ['fucking-gay'],
 		url: 'https://abtmtr.link/',
-		bio: 'changes wildly based on the day'
+		bio: 'the physical manifestation of the abtmtr.link website'
 	},
 	{
 		name: '/astr(a|o|e|x)/',
