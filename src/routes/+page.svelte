@@ -173,6 +173,12 @@
 	}
 	.info {
 		padding: 1rem;
+
+		/* iPhone notch when viewing horizontally */
+		@supports (padding: max(0px)) {
+			padding-left: calc(env(safe-area-inset-left) + 1rem);
+			padding-right: calc(env(safe-area-inset-right) + 1rem);
+		}
 	}
 	.info :first-child {
 		margin-top: 0;

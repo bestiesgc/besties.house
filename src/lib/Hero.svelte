@@ -22,6 +22,11 @@
 	.hero {
 		position: relative;
 		padding: 0 2rem;
+		/* iPhone notch when viewing horizontally */
+		@supports (padding: max(0px)) {
+			padding-left: calc(env(safe-area-inset-left) + 2rem);
+			padding-right: calc(env(safe-area-inset-right) + 2rem);
+		}
 		text-align: center;
 		overflow-x: hidden;
 		display: flex;
