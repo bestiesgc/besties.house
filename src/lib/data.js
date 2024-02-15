@@ -236,7 +236,8 @@ export const splashes = [
 	'brainrot commune',
 	'need myself some zloty',
 	'no lies....',
-	'im neuroswagger'
+	'im neuroswagger',
+	'why is it called "besties" when you best ie the house best of ors eat the house'
 ]
 
 export const projects = [
