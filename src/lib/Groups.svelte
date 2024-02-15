@@ -5,7 +5,7 @@
 	// a copy for editing
 	let membersWork = members
 	for (const roleId of Object.keys(roles)) {
-		let theRest = []
+		const theRest = []
 		if (!roles[roleId].showSeparately) continue
 		memberGroups[roleId] = {
 			...roles[roleId],
