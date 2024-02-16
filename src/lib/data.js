@@ -114,19 +114,6 @@ export const members = [
 		bio: 'weezer enjoyer, bad webdev'
 	},
 	{
-		name: 'Rosalinya',
-		socials: {
-			firefish: 'https://fedi.catgirlin.space/@catgirl'
-		},
-		discord: '263819308528828416',
-		avatar: '/avatars/rosalinya.webp',
-		roles: ['sweetheart'],
-		isCat: true,
-		color: '#AA00FF',
-		pronouns: 'she/her',
-		bio: 'mrowww meow'
-	},
-	{
 		name: 'luna',
 		socials: {
 			twitter: '765711397820989440',
