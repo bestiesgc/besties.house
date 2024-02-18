@@ -125,19 +125,18 @@ export const members = [
 		roles: ['honorary']
 	},
 	{
-		name: 'ultra',
+		name: 'aly',
 		socials: {
-			twitter: '1580957316077215750',
 			mastodon: 'https://besties.house/@shoegayze',
 			lastfm: 'alexdrownz'
 		},
 		discord: '616430038694363146',
 		isCat: true,
-		avatar: '/avatars/ultra.webp',
+		avatar: '/avatars/aly.webp',
 		color: '#206694',
-		pronouns: 'they/them',
+		pronouns: 'she/her',
 		roles: ['childrens-church'],
-		bio: '(probably) breathing right now'
+		bio: 'silly nilly'
 	},
 	{
 		name: 'abtmtr.link',
