@@ -115,7 +115,7 @@
 					height="24"
 					draggable="false"
 					style="display: inline-block;vertical-align: middle;"
-					src="/icons/pleadingcat.png"
+					src="/icons/pleadingcat.svg"
 					title=":pleadingcat:"
 					alt="🥺🐱"
 				/>
