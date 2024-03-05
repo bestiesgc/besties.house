@@ -139,20 +139,6 @@ export const members = [
 		bio: 'silly nilly'
 	},
 	{
-		name: 'abtmtr.link',
-		socials: {
-			lastfm: 'MeowcaTheoRange'
-		},
-		discord: '604075087292923943',
-		isCat: false,
-		avatar: 'https://abtmtr.link/favicon.ico',
-		color: '#202020',
-		pronouns: 'they/she/he',
-		roles: ['fucking-gay'],
-		url: 'https://abtmtr.link/',
-		bio: 'the physical manifestation of the abtmtr.link website'
-	},
-	{
 		name: '/astr(a|o|e|x)/',
 		socials: {
 			sharkey: 'https://fedi.intragon.org/@astra',
