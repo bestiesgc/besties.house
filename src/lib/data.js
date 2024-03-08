@@ -70,7 +70,7 @@ export const roles = {
 		name: 'fucking gay'
 	},
 	sweetheart: {
-		color: '#AA00FF'
+		color: '#922bb5'
 	},
 	honorary: {
 		name: 'honorary members',
@@ -95,6 +95,21 @@ export const members = [
 		roles: ['leaders', 'teen-bible-study', 'code-nerd-idot'],
 		url: 'https://hazy.gay',
 		bio: 'im cute'
+	},
+	{
+		name: 'null',
+		socials: {
+			lastfm: 'kdj8',
+			mastodon: 'https://besties.house/@kdj8',
+			email: 'kdj8@vern.cc'
+		},
+		pronouns: 'she/it',
+		isCat: true,
+		avatar: '/avatars/kdj8.png',
+		color: '#922bb5',
+		roles: ['sweetheart'],
+		url: 'https://kdj8.pages.gay',
+		bio: 'i exist'
 	},
 	{
 		name: 'aria',
