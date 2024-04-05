@@ -209,5 +209,6 @@
 	}
 	.button-badge {
 		user-select: none;
+		image-rendering: pixelated;
 	}
 </style>
