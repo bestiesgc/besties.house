@@ -160,7 +160,7 @@
 						class="button-badge"
 						src="/badges/pc100.png"
 						alt="pc100"
-					</img>
+					/>
 				</a>
 			</div>
 			<br/>
