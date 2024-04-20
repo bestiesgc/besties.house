@@ -153,6 +153,15 @@
 					src="/badges/acab.gif"
 					alt="acab"
 				/>
+				<a href="https://pinkcreeper100.pages.gay">
+					<img
+						width="88"
+						height="31"
+						class="button-badge"
+						src="/badges/pc100.png"
+						alt="pc100"
+					</img>
+				</a>
 			</div>
 			<br/>
 			<a href="https://git.gay/besties/besties.house">source code on git.gay</a>
