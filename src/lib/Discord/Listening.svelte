@@ -42,16 +42,21 @@
 		if (!listening) return
 		const discordPresence = {
 			name: listening.track.name,
-			details: `by ${listening.artist.name}`,
 			assets: {
-				large_image: listening.cover.replace('/200s/', '/avatar300s/'),
-				large_text: listening.album.name
+				large_image: listening.cover?.replace('/200s/', '/avatar300s/'),
+				large_text: listening.album?.name
 			},
 			start: listening.start,
 			end: listening.end,
 			duration: listening.duration
 		}
-		if (listening.album.name && listening.album.name != listening.track.name) {
+		if (listening.artist.name) {
+			discordPresence.details = `by ${listening.artist.name}`
+		}
+		if (
+			listening.album?.name &&
+			listening.album?.name != listening.track.name
+		) {
 			discordPresence.state = `on ${listening.album.name}`
 		}
 		return discordPresence
