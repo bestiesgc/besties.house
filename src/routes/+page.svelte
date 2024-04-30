@@ -129,7 +129,7 @@
 					width="88"
 					height="31"
 					class="button-badge"
-					src="/badges/besties.gif"
+					src="/buttons/besties.gif"
 					alt="besties - first unionised group chat"
 					title="besties - first unionised group chat"
 				/>
@@ -137,7 +137,7 @@
 					width="88"
 					height="31"
 					class="button-badge"
-					src="/badges/trans.png"
+					src="/buttons/trans.png"
 					alt="trans flag"
 					title="trans flag"
 				/>
@@ -145,7 +145,7 @@
 					width="88"
 					height="31"
 					class="button-badge"
-					src="/badges/piracy.gif"
+					src="/buttons/piracy.gif"
 					alt="piracy now"
 					title="piracy now"
 				/>
@@ -153,7 +153,7 @@
 					width="88"
 					height="31"
 					class="button-badge"
-					src="/badges/acab.gif"
+					src="/buttons/acab.gif"
 					alt="acab"
 					title="acab"
 				/>
@@ -162,7 +162,7 @@
 						width="88"
 						height="31"
 						class="button-badge"
-						src="/badges/pc100.png"
+						src="/buttons/pc100.png"
 						alt="pc100"
 						title="pc100"
 					/>

@@ -204,7 +204,7 @@ export const members = [
 		},
 		buttons: [
 			{
-				src: '/badges/emilia.gif',
+				src: '/buttons/emilia.gif',
 				alt: "emilia's web",
 				url: 'https://ponymare.ovh'
 			}
