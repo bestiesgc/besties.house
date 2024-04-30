@@ -98,6 +98,34 @@
 				>
 			{/each}
 		</ul>
+		{#if member.buttons}
+      <p class="heading">buttons</p>
+			<div class="button-badges">
+				{#each member.buttons.sort() as button}
+          {#if button.url}
+            <a href={button.url}>
+            <img
+              width={button.width || 88}
+              height={button.height || 31}
+              class="button-badge"
+              src={button.src}
+              alt={button.alt || ""}
+              title={button.alt}
+            />
+            </a>
+          {:else}
+            <img
+              width={button.width || 88}
+              height={button.height || 31}
+              class="button-badge"
+              src={button.src}
+              alt={button.alt || ""}
+              title={button.alt}
+            />
+          {/if}
+				{/each}
+			</div>
+		{/if}
 		{#if member.socials || member.email}
 			<hr />
 			<div class="social-list">
@@ -191,4 +219,11 @@
 		grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
 		gap: 0.5rem;
 	}
+  .button-badge {
+    opacity: 0.8;
+    transition: opacity 0.125s;
+  }
+  .button-badge:hover {
+    opacity: 1;
+  }
 </style>
