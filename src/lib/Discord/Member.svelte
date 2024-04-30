@@ -231,6 +231,7 @@
 	}
   .button-badge {
     opacity: 0.8;
+	image-rendering: pixelated;
     transition: opacity 0.125s;
   }
   .button-badge:hover {

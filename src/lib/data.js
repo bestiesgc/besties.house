@@ -4,7 +4,7 @@ export const roles = {
 	},
 	'pre-ucb': {
 		name: 'pre-UCB'
-  },
+	},
 	'childrens-church': {
 		name: 'childrens church',
 		color: '#206694',
@@ -177,23 +177,23 @@ export const members = [
 			akkoma: 'https://local.abtmtr.link/users/mtr',
 			gitgay: 'MeowcaTheoRange'
 		},
-    buttons: [
-      {
-        src: 'https://cdn.abtmtr.link/88x31/abtmtr_link.png',
-        alt: 'abtmtr.link',
-        url: 'https://abtmtr.link/'
-      },
-      {
-        src: 'https://abtmtr.link/88x31/esoteric/vivaldi.gif',
-        alt: '[Vivaldi logo] I use Vivaldi',
-        url: 'https://vivaldi.com/'
-      }
-    ],
+		buttons: [
+			{
+				src: 'https://cdn.abtmtr.link/88x31/abtmtr_link.png',
+				alt: 'abtmtr.link',
+				url: 'https://abtmtr.link/'
+			},
+			{
+				src: 'https://abtmtr.link/88x31/esoteric/vivaldi.gif',
+				alt: '[Vivaldi logo] I use Vivaldi',
+				url: 'https://vivaldi.com/'
+			}
+		],
 		discord: '604075087292923943',
 		avatar: 'https://abtmtr.link/favicon.ico',
 		color: 'null',
 		pronouns: 'they/them',
-    roles: []
+		roles: []
 	},
 	{
 		name: 'emilia',
