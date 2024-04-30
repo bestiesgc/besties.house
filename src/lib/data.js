@@ -202,6 +202,13 @@ export const members = [
 			lastfm: 'twilightemi',
 			email: 'izzy@besties.house'
 		},
+		buttons: [
+			{
+				src: '/badges/emilia.gif',
+				alt: "emilia's web",
+				url: 'https://ponymare.ovh'
+			}
+		],
 		discord: '389440708399988736',
 		avatar: '/avatars/emilia.webp',
 		roles: ['pone'],
