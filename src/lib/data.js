@@ -4,11 +4,7 @@ export const roles = {
 	},
 	'pre-ucb': {
 		name: 'pre-UCB'
-	},
-	'boy-homo': {
-		name: 'boy-homo',
-		color: '#40FF00'
-	},
+  },
 	'childrens-church': {
 		name: 'childrens church',
 		color: '#206694',
@@ -197,7 +193,7 @@ export const members = [
 		avatar: 'https://abtmtr.link/favicon.ico',
 		color: 'null',
 		pronouns: 'they/them',
-		roles: ['boy-homo']
+    roles: []
 	},
 	{
 		name: 'emilia',
