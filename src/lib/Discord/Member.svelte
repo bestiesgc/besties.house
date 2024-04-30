@@ -77,8 +77,16 @@
 				{customStatus.state}
 			</p>
 		{/if}
-		{#if member.bio}
+    {#if 
+      member.bio 
+      || gameActivity 
+      || musicActivity 
+      || member.roles.length > 0 
+      || member.buttons
+    }
 			<hr />
+    {/if}
+		{#if member.bio}
 			<p class="heading">about me</p>
 			<p class="bio"><BasicMarkdown text={member.bio} /></p>
 		{/if}
@@ -90,14 +98,16 @@
 		{:else}
 			<Listening {member} />
 		{/if}
-		<p class="heading">roles</p>
-		<ul class="roles">
-			{#each member.roles as role}
-				<span class="role" style:--role-color={roles[role]?.color}
-					>{roles[role]?.name ?? role}</span
-				>
-			{/each}
-		</ul>
+		{#if member.roles.length > 0}
+      <p class="heading">roles</p>
+      <ul class="roles">
+        {#each member.roles as role}
+          <span class="role" style:--role-color={roles[role]?.color}
+            >{roles[role]?.name ?? role}</span
+          >
+        {/each}
+      </ul>
+		{/if}
 		{#if member.buttons}
       <p class="heading">buttons</p>
 			<div class="button-badges">
