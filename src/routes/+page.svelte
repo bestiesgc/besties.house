@@ -131,6 +131,7 @@
 					class="button-badge"
 					src="/badges/besties.gif"
 					alt="besties - first unionised group chat"
+					title="besties - first unionised group chat"
 				/>
 				<img
 					width="88"
@@ -138,6 +139,7 @@
 					class="button-badge"
 					src="/badges/trans.png"
 					alt="trans flag"
+					title="trans flag"
 				/>
 				<img
 					width="88"
@@ -145,6 +147,7 @@
 					class="button-badge"
 					src="/badges/piracy.gif"
 					alt="piracy now"
+					title="piracy now"
 				/>
 				<img
 					width="88"
@@ -152,6 +155,7 @@
 					class="button-badge"
 					src="/badges/acab.gif"
 					alt="acab"
+					title="acab"
 				/>
 				<a href="https://pinkcreeper100.pages.gay">
 					<img
@@ -160,6 +164,7 @@
 						class="button-badge"
 						src="/badges/pc100.png"
 						alt="pc100"
+						title="pc100"
 					/>
 				</a>
 			</div>
