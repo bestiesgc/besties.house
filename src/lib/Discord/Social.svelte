@@ -1,5 +1,7 @@
 <script>
+	import Website from '$lib/Icons/Website.svg?c'
 	import GitHub from '$lib/Icons/GitHub.svg?c'
+	import GitGay from '$lib/Icons/GitGay.svg?c'
 	import Twitter from '$lib/Icons/Twitter.svg?c'
 	import Mail from '$lib/Icons/Mail.svg?c'
 	import Mastodon from '$lib/Icons/Mastodon.svg?c'
@@ -11,10 +13,20 @@
 	import Akkoma from '$lib/Icons/Akkoma.svg?c'
 
 	const detailsMap = {
+		website: {
+			href: value => `https://${value}`,
+			title: value => value,
+			icon: Website
+		},
 		github: {
 			href: value => `https://github.com/${value}`,
 			title: 'GitHub',
 			icon: GitHub
+		},
+		gitgay: {
+			href: value => `https://git.gay/${value}`,
+			title: 'git.gay',
+			icon: GitGay
 		},
 		twitter: {
 			href: value => `https://twitter.com/intent/user?user_id=${value}`,

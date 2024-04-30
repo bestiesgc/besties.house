@@ -5,6 +5,10 @@ export const roles = {
 	'pre-ucb': {
 		name: 'pre-UCB'
 	},
+	'boy-homo': {
+		name: 'boy-homo',
+		color: '#40FF00'
+	},
 	'childrens-church': {
 		name: 'childrens church',
 		color: '#206694',
@@ -168,6 +172,20 @@ export const members = [
 		pronouns: 'she/they',
 		bio: 'per aspera ad astra',
 		roles: ['childrens-church']
+	},
+	{
+		name: 'MeowcaTheoRange',
+		socials: {
+			website: 'abtmtr.link',
+			email: 'me@abtmtr.link',
+			akkoma: 'https://local.abtmtr.link/users/mtr',
+			gitgay: 'MeowcaTheoRange'
+		},
+		discord: '604075087292923943',
+		avatar: 'https://abtmtr.link/favicon.ico',
+		color: 'null',
+		pronouns: 'they/them',
+		roles: ['boy-homo']
 	},
 	{
 		name: 'emilia',
