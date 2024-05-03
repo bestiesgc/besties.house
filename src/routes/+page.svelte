@@ -58,26 +58,26 @@
 			"@context": "https://schema.org",
 			"@type": "Organization",
 			"name": "Besties",
-			"legalName" : "Besties",
+			"legalName": "Besties",
 			"url": "https://besties.house",
 			"logo": "https://besties.house/icons/ucb.png",
 			"foundingDate": "2021",
 			"founders": [
 				{
-				"@type": "Person",
-				"name": "Hazel Cora"
+					"@type": "Person",
+					"name": "Hazel Cora"
 				},
 				{
-				"@type": "Person",
-				"name": "Aria Blue"
+					"@type": "Person",
+					"name": "Aria Blue"
 				}
 			],
-			"sameAs": [ 
+			"sameAs": [
 				"https://social.besties.house/@besties",
 				"https://twitter.com/bestiesgc",
 				"https://github.com/bestiesgc"
 			]
-	}
+		}
 	</script>
 </svelte:head>
 <div style:display="none">
@@ -168,7 +168,7 @@
 					/>
 				</a>
 			</div>
-			<br/>
+			<br />
 			<a href="https://git.gay/besties/besties.house">source code on git.gay</a>
 		</main>
 	</div>
