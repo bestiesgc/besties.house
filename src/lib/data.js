@@ -175,6 +175,7 @@ export const members = [
 		socials: {
 			website: 'abtmtr.link',
 			email: 'me@abtmtr.link',
+			lastfm: 'MeowcaTheoRange',
 			akkoma: 'https://local.abtmtr.link/users/mtr',
 			gitgay: 'MeowcaTheoRange'
 		},
