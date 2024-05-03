@@ -103,6 +103,7 @@ export const members = [
 			mastodon: 'https://besties.house/@kdj8',
 			email: 'kdj8@vern.cc'
 		},
+		discord: '1150972816875860099',
 		pronouns: 'she/it',
 		isCat: true,
 		avatar: '/avatars/kdj8.png',
