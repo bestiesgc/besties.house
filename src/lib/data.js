@@ -186,7 +186,7 @@ export const members = [
 				url: 'https://abtmtr.link/'
 			},
 			{
-				src: 'https://abtmtr.link/88x31/esoteric/vivaldi.gif',
+				src: 'https://cdn.abtmtr.link/site_content/88x31/esoteric/vivaldi.gif',
 				alt: '[Vivaldi logo] I use Vivaldi',
 				url: 'https://vivaldi.com/'
 			}
