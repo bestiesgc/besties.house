@@ -85,7 +85,7 @@ export const members = [
 			twitter: '1021804959703212034',
 			mastodon: 'https://besties.house/@h',
 			lastfm: 'hazycora',
-			email: 'h@besties.house'
+			website: 'hazy.gay'
 		},
 		discord: '728131016392441916',
 		isCat: true,
