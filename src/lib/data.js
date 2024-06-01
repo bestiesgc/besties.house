@@ -101,7 +101,7 @@ export const members = [
 		socials: {
 			lastfm: 'kdj8',
 			mastodon: 'https://besties.house/@kdj8',
-			email: 'kdj8@vern.cc'
+			email: 'kdj8@besties.house'
 		},
 		discord: '1150972816875860099',
 		pronouns: 'she/it',
@@ -110,7 +110,7 @@ export const members = [
 		color: '#922bb5',
 		roles: ['sweetheart'],
 		url: 'https://kdj8.pages.gay',
-		bio: 'i exist'
+		bio: 'meoww :33 meowmeowmeowwwww *purrs*'
 	},
 	{
 		name: 'aria',
