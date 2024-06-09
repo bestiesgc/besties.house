@@ -108,7 +108,7 @@ export const members = [
 		isCat: true,
 		avatar: '/avatars/kdj8.png',
 		color: '#922bb5',
-		roles: ['sweetheart'],
+		roles: [],
 		url: 'https://kdj8.pages.gay',
 		bio: 'meoww :33 meowmeowmeowwwww *purrs*'
 	},
