@@ -171,32 +171,6 @@ export const members = [
 		roles: ['childrens-church']
 	},
 	{
-		name: 'MeowcaTheoRange',
-		socials: {
-			website: 'abtmtr.link',
-			email: 'me@abtmtr.link',
-			lastfm: 'MeowcaTheoRange',
-			sharkey: 'https://shrk.abtmtr.link/@mtr'
-		},
-		buttons: [
-			{
-				src: 'https://cdn.abtmtr.link/88x31/abtmtr_link.png',
-				alt: 'abtmtr.link',
-				url: 'https://abtmtr.link/'
-			},
-			{
-				src: 'https://cdn.abtmtr.link/site_content/88x31/esoteric/vivaldi.gif',
-				alt: '[Vivaldi logo] I use Vivaldi',
-				url: 'https://vivaldi.com/'
-			}
-		],
-		discord: '604075087292923943',
-		avatar: 'https://abtmtr.link/favicon.ico',
-		color: 'null',
-		pronouns: 'they/them',
-		roles: []
-	},
-	{
 		name: 'emilia',
 		socials: {
 			mastodon: 'https://besties.house/@t',
