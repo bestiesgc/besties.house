@@ -176,8 +176,7 @@ export const members = [
 			website: 'abtmtr.link',
 			email: 'me@abtmtr.link',
 			lastfm: 'MeowcaTheoRange',
-			akkoma: 'https://local.abtmtr.link/users/mtr',
-			gitgay: 'MeowcaTheoRange'
+			sharkey: 'https://shrk.abtmtr.link/@mtr'
 		},
 		buttons: [
 			{
