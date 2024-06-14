@@ -11,6 +11,7 @@
 	import Sharkey from '$lib/Icons/Sharkey.svg?c'
 	import Tumblr from '$lib/Icons/Tumblr.svg?c'
 	import Akkoma from '$lib/Icons/Akkoma.svg?c'
+	import Keyoxide from '$lib/Icons/Keyoxide.svg?c'
 
 	const detailsMap = {
 		website: {
@@ -72,6 +73,11 @@
 			href: value => `https://${value}.tumblr.com`,
 			title: 'Tumblr',
 			icon: Tumblr
+		},
+		keyoxide: {
+			href: value => value,
+			title: 'Keyoxide',
+			icon: Keyoxide
 		}
 	}
 
