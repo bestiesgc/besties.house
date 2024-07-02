@@ -97,24 +97,6 @@ export const members = [
 		bio: 'im cute'
 	},
 	{
-		name: 'null',
-		socials: {
-			lastfm: 'kdj8',
-			mastodon: 'https://wetdry.world/@kdj8',
-			sharkey: 'https://otherling.social/@kdj8',
-			email: 'kdj8@besties.house',
-			keyoxide: 'https://keyoxide.org/99C303A5B479BF9CCF2F6438CEC766160CB8A645'
-		},
-		discord: '1150972816875860099',
-		pronouns: 'she/it',
-		isCat: true,
-		avatar: '/avatars/kdj8.png',
-		color: '#922bb5',
-		roles: [],
-		url: 'https://kdj8.pages.gay',
-		bio: 'meoww :33 meowmeowmeowwwww *purrs*'
-	},
-	{
 		name: 'aria',
 		socials: {
 			twitter: '1450703231642972161',
