@@ -139,6 +139,19 @@ export const members = [
 		bio: 'silly nilly'
 	},
 	{
+		name: 'willow',
+		socials: {
+			lastfm: 'willowmeows'
+		},
+		discord: '850481897808199710',
+		isCat: true,
+		avatar: '/avatars/willow.webp',
+		color: '#7f7f7f',
+		pronouns: 'she/her',
+		roles: ['childrens-church'],
+		bio: 'eepy'
+	},
+	{
 		name: '/astr(a|o|e|x)/',
 		socials: {
 			sharkey: 'https://fedi.intragon.org/@astra',
