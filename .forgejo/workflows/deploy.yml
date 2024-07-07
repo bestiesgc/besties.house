@@ -20,7 +20,7 @@ jobs:
           cat > deploy.sh << EOF
           cd /var/www/html/besties.house
           git pull
-          pnpm i
+          pnpm i --frozen-lockfile
           pnpm run build
           EOF
           ssh -o "StrictHostKeyChecking no" "${{ secrets.SSH_HOST }}" -p "${{ secrets.SSH_PORT || 22 }}" -l "${{ secrets.SSH_USER }}" -i "$SSH_KEY_PATH" 'bash -s' < deploy.sh
