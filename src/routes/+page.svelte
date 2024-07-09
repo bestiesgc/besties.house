@@ -162,9 +162,9 @@
 						width="88"
 						height="31"
 						class="button-badge"
-						src="/buttons/pc100.png"
-						alt="pc100"
-						title="pc100"
+						src="/buttons/oli.svg"
+						alt="oli"
+						title="oli"
 					/>
 				</a>
 			</div>
