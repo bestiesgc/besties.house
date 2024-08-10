@@ -177,6 +177,16 @@
 						title="theresnotime"
 					/>
 				</a>
+				<a href="https://larsfrommars.neocities.org">
+					<img
+						width="88"
+						height="31"
+						class="button-badge"
+						src="/buttons/lars.png"
+						alt="hi i'm lars"
+						title="hi i'm lars"
+					/>
+				</a>
 			</div>
 			<br />
 			<a href="https://git.gay/besties/besties.house">source code on git.gay</a>
