@@ -132,21 +132,9 @@
 						title="besties - first unionised group chat"
 					/>
 				</a>
-				<img
-					src="/buttons/trans.png"
-					alt="trans flag"
-					title="trans flag"
-				/>
-				<img
-					src="/buttons/piracy.gif"
-					alt="piracy now"
-					title="piracy now"
-				/>
-				<img
-					src="/buttons/acab.gif"
-					alt="acab"
-					title="acab"
-				/>
+				<img src="/buttons/trans.png" alt="trans flag" title="trans flag" />
+				<img src="/buttons/piracy.gif" alt="piracy now" title="piracy now" />
+				<img src="/buttons/acab.gif" alt="acab" title="acab" />
 				<a href="https://oli.pages.gay">
 					<img
 						src="https://oli.pages.gay/WebButton.svg"
@@ -156,14 +144,14 @@
 				</a>
 				<a href="https://theresnotime.co.uk">
 					<img
-						src="/buttons/theresnotime.png"
+						src="https://www.theresnotime.co.uk/button.png"
 						alt="theresnotime"
 						title="theresnotime"
 					/>
 				</a>
 				<a href="https://larsfrommars.neocities.org">
 					<img
-						src="/buttons/lars.png"
+						src="https://larsfrommars.neocities.org/buttons/lars.png"
 						alt="hi i'm lars"
 						title="hi i'm lars"
 					/>
@@ -174,6 +162,23 @@
 						alt="sneexy"
 						title="sneexy"
 					/>
+				</a>
+				<a href="https://w.on-t.work">
+					<img
+						src="https://w.on-t.work/assets/88x31.png"
+						alt="won't work"
+						title="won't work"
+					/>
+				</a>
+				<a href="https://freeplay.floof.company">
+					<img
+						src="https://freeplay.floof.company/assets/buttons/free.gif"
+						alt="freee"
+						title="freee"
+					/>
+				</a>
+				<a href="https://labyrinth.zone/users/yassie_j">
+					<img src="/buttons/yassie_j.gif" alt="yassie_j" title="yassie_j" />
 				</a>
 			</div>
 			<br />
