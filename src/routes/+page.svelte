@@ -125,53 +125,37 @@
 			<h2>members</h2>
 			<Groups />
 			<div class="button-badges">
+				<a href="https://besties.house">
+					<img
+						src="/buttons/besties.gif"
+						alt="besties - first unionised group chat"
+						title="besties - first unionised group chat"
+					/>
+				</a>
 				<img
-					width="88"
-					height="31"
-					class="button-badge"
-					src="/buttons/besties.gif"
-					alt="besties - first unionised group chat"
-					title="besties - first unionised group chat"
-				/>
-				<img
-					width="88"
-					height="31"
-					class="button-badge"
 					src="/buttons/trans.png"
 					alt="trans flag"
 					title="trans flag"
 				/>
 				<img
-					width="88"
-					height="31"
-					class="button-badge"
 					src="/buttons/piracy.gif"
 					alt="piracy now"
 					title="piracy now"
 				/>
 				<img
-					width="88"
-					height="31"
-					class="button-badge"
 					src="/buttons/acab.gif"
 					alt="acab"
 					title="acab"
 				/>
 				<a href="https://oli.pages.gay">
 					<img
-						width="88"
-						height="31"
-						class="button-badge"
-						src="/buttons/oli.svg"
+						src="https://oli.pages.gay/WebButton.svg"
 						alt="oli"
 						title="oli"
 					/>
 				</a>
 				<a href="https://theresnotime.co.uk">
 					<img
-						width="88"
-						height="31"
-						class="button-badge"
 						src="/buttons/theresnotime.png"
 						alt="theresnotime"
 						title="theresnotime"
@@ -179,12 +163,16 @@
 				</a>
 				<a href="https://larsfrommars.neocities.org">
 					<img
-						width="88"
-						height="31"
-						class="button-badge"
 						src="/buttons/lars.png"
 						alt="hi i'm lars"
 						title="hi i'm lars"
+					/>
+				</a>
+				<a href="https://sneexy.pages.gay">
+					<img
+						src="https://sneexy.pages.gay/assets/buttons/sneexy.png"
+						alt="sneexy"
+						title="sneexy"
 					/>
 				</a>
 			</div>
@@ -241,7 +229,9 @@
 		flex-wrap: wrap;
 		gap: 0.5rem;
 	}
-	.button-badge {
+	.button-badges img {
+		width: 88px;
+		height: 31px;
 		user-select: none;
 		image-rendering: pixelated;
 	}
