@@ -46,12 +46,13 @@ float acsch(float x) { return    log((1.+sqrt(1.+x*x))/x); }
 uniform vec2 iResolution;
 uniform vec2 iMouse;
 uniform float iTime;
+uniform float iPixelRatio;
 
 ${shader}
 
 void main() 
 {
-    mainImage( gl_FragColor, gl_FragCoord.xy );
+    mainImage( gl_FragColor, gl_FragCoord.xy / iPixelRatio );
 }
 `
 	let doneAnimating = false
@@ -61,6 +62,7 @@ void main()
 		let canvas,
 			vp_size,
 			mousepos = [0, 0]
+		const ratio = window.devicePixelRatio + 1
 		const bufObj = {}
 		let progDraw
 
@@ -113,6 +115,7 @@ void main()
 			gl.linkProgram(progDraw)
 			const status = gl.getProgramParameter(progDraw, gl.LINK_STATUS)
 			if (!status) alert(gl.getProgramInfoLog(progDraw))
+			progDraw.iPixelRatio = gl.getUniformLocation(progDraw, 'iPixelRatio')
 			progDraw.inPos = gl.getAttribLocation(progDraw, 'inPos')
 			progDraw.iTime = gl.getUniformLocation(progDraw, 'iTime')
 			progDraw.iMouse = gl.getUniformLocation(progDraw, 'iMouse')
@@ -150,7 +153,7 @@ void main()
 			if (width && height) {
 				vp_size = [width, height]
 			} else {
-				vp_size = [canvas.clientWidth, canvas.clientHeight]
+				vp_size = [canvas.clientWidth * ratio, canvas.clientHeight * ratio]
 			}
 			canvas.width = vp_size[0]
 			canvas.height = vp_size[1]
@@ -162,8 +165,13 @@ void main()
 			gl.viewport(0, 0, canvas.width, canvas.height)
 			gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT)
 
+			gl.uniform1f(progDraw.iPixelRatio, ratio)
 			gl.uniform1f(progDraw.iTime, startOffset + deltaMS / 1000.0)
-			gl.uniform2f(progDraw.iResolution, canvas.width, canvas.height)
+			gl.uniform2f(
+				progDraw.iResolution,
+				canvas.width / ratio,
+				canvas.height / ratio
+			)
 			gl.uniform2f(progDraw.iMouse, mousepos[0], mousepos[1])
 			gl.drawElements(gl.TRIANGLES, bufObj.inx.len, gl.UNSIGNED_SHORT, 0)
 			if (!doneAnimating) requestAnimationFrame(render)
