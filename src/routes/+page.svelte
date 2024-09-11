@@ -3,7 +3,9 @@
 	import Hero from '$lib/Hero.svelte'
 	import Groups from '$lib/Groups.svelte'
 	import ProjectList from '$lib/Project/ProjectList.svelte'
-	import { splashes, projects } from '$lib/data.js'
+	import projects from '$lib/data/projects.js'
+	import splashes from '$lib/data/splashes.js'
+	import buttons from '$lib/data/buttons.js'
 	import { writable } from 'svelte/store'
 	const memberDetails = writable([])
 	setContext('member-details', memberDetails)
@@ -125,68 +127,23 @@
 			<h2>members</h2>
 			<Groups />
 			<div class="button-badges">
-				<a href="https://besties.house">
-					<img
-						src="/buttons/besties.gif"
-						alt="besties - first unionised group chat"
-						title="besties - first unionised group chat"
-					/>
-				</a>
-				<img src="/buttons/trans.png" alt="trans flag" title="trans flag" />
-				<img src="/buttons/piracy.gif" alt="piracy now" title="piracy now" />
-				<img src="/buttons/acab.gif" alt="acab" title="acab" />
-				<a href="https://harper.eepy.zone">
-					<img
-						src="https://git.gay/blueb/site/raw/commit/9cfb12561b65ef283d5bac6840f2309413896a4d/assets/btns/kattgutte.png"
-						alt="sad kitten looking at viewer with text saying kattgutte er ikke ekte"
-						title="kattgutte er ikke ekte"
-					/>
-				</a>
-				<a href="https://oli.pages.gay">
-					<img
-						src="https://oli.pages.gay/WebButton.svg"
-						alt="oli"
-						title="oli"
-					/>
-				</a>
-				<a href="https://theresnotime.co.uk">
-					<img
-						src="https://www.theresnotime.co.uk/button.png"
-						alt="theresnotime"
-						title="theresnotime"
-					/>
-				</a>
-				<a href="https://larsfrommars.neocities.org">
-					<img
-						src="https://larsfrommars.neocities.org/buttons/lars.png"
-						alt="hi i'm lars"
-						title="hi i'm lars"
-					/>
-				</a>
-				<a href="https://sneexy.pages.gay">
-					<img
-						src="https://sneexy.pages.gay/assets/buttons/sneexy.png"
-						alt="sneexy"
-						title="sneexy"
-					/>
-				</a>
-				<a href="https://w.on-t.work">
-					<img
-						src="https://w.on-t.work/assets/88x31.png"
-						alt="won't work"
-						title="won't work"
-					/>
-				</a>
-				<a href="https://freeplay.floof.company">
-					<img
-						src="https://freeplay.floof.company/assets/buttons/free.gif"
-						alt="freee"
-						title="freee"
-					/>
-				</a>
-				<a href="https://labyrinth.zone/users/yassie_j">
-					<img src="/buttons/yassie_j.gif" alt="yassie_j" title="yassie_j" />
-				</a>
+				{#each buttons as button}
+					{#if button.href}
+						<a href={button.href}>
+							<img
+								src={button.src}
+								alt={button.alt}
+								title={button.title ?? button.alt}
+							/>
+						</a>
+					{:else}
+						<img
+							src={button.src}
+							alt={button.alt}
+							title={button.title ?? button.alt}
+						/>
+					{/if}
+				{/each}
 			</div>
 			<br />
 			<a href="https://git.gay/besties/besties.house">source code on git.gay</a>
@@ -245,6 +202,8 @@
 		width: 88px;
 		height: 31px;
 		user-select: none;
-		image-rendering: pixelated;
+		&:not([src$='.svg']) {
+			image-rendering: pixelated;
+		}
 	}
 </style>

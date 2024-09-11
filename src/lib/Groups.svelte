@@ -1,5 +1,6 @@
 <script>
-	import { members, roles } from '$lib/data.js'
+	import members from '$lib/data/members.js'
+	import roles from '$lib/data/roles.js'
 	import MemberGroup from '$lib/MemberGroup.svelte'
 	let memberGroups = {}
 	// a copy for editing

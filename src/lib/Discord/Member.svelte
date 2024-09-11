@@ -1,6 +1,6 @@
 <script>
 	import { getSpecialActivities } from '$lib/Discord/activity.js'
-	import { roles } from '$lib/data.js'
+	import roles from '$lib/data/roles.js'
 	import Avatar from '$lib/Discord/Avatar.svelte'
 	import Listening from '$lib/Discord/Listening.svelte'
 	import Playing from '$lib/Discord/Playing.svelte'
