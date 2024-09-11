@@ -7,8 +7,7 @@
 	import Mastodon from '$lib/Icons/Mastodon.svg?c'
 	import YouTube from '$lib/Icons/YouTube.svg?c'
 	import Lastfm from '$lib/Icons/Lastfm.svg?c'
-	import Firefish from '$lib/Icons/Firefish.svg?c'
-	import Sharkey from '$lib/Icons/Sharkey.svg?c'
+	import Fedi from '$lib/Icons/Fedi.svg?c'
 	import Tumblr from '$lib/Icons/Tumblr.svg?c'
 	import Akkoma from '$lib/Icons/Akkoma.svg?c'
 	import Keyoxide from '$lib/Icons/Keyoxide.svg?c'
@@ -54,15 +53,10 @@
 			title: 'Last.fm',
 			icon: Lastfm
 		},
-		firefish: {
+		fedi: {
 			href: value => value,
-			title: 'Firefish',
-			icon: Firefish
-		},
-		sharkey: {
-			href: value => value,
-			title: 'Sharkey',
-			icon: Sharkey
+			title: 'Fediverse',
+			icon: Fedi
 		},
 		akkoma: {
 			href: value => value,
@@ -111,7 +105,7 @@
 		user-select: none;
 		border: 1px solid var(--violet-650);
 		display: grid;
-		grid-template-columns: 1.25rem 1fr;
+		grid-template-columns: 1rem 1fr;
 		height: 100%;
 		border-radius: 0.25rem;
 		padding: 0.5rem;
@@ -120,8 +114,8 @@
 		font-weight: 600;
 	}
 	.social :global(svg) {
-		width: 1.25rem;
-		height: 1.25rem;
+		width: 1rem;
+		height: 1rem;
 	}
 	.social-label {
 		min-width: 0;
