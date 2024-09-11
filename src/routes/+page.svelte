@@ -135,6 +135,13 @@
 				<img src="/buttons/trans.png" alt="trans flag" title="trans flag" />
 				<img src="/buttons/piracy.gif" alt="piracy now" title="piracy now" />
 				<img src="/buttons/acab.gif" alt="acab" title="acab" />
+				<a href="https://harper.eepy.zone">
+					<img
+						src="https://git.gay/blueb/site/raw/commit/9cfb12561b65ef283d5bac6840f2309413896a4d/assets/btns/kattgutte.png"
+						alt="sad kitten looking at viewer with text saying kattgutte er ikke ekte"
+						title="kattgutte er ikke ekte"
+					/>
+				</a>
 				<a href="https://oli.pages.gay">
 					<img
 						src="https://oli.pages.gay/WebButton.svg"
