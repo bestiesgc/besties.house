@@ -98,9 +98,9 @@
 			<p class="heading">roles</p>
 			<ul class="roles">
 				{#each member.roles as role}
-					<span class="role" style:--role-color={roles[role]?.color}
-						>{roles[role]?.name ?? role}</span
-					>
+					<li class="role" style:--role-color={roles[role]?.color}>
+						{roles[role]?.name ?? role}
+					</li>
 				{/each}
 			</ul>
 		{/if}
@@ -184,6 +184,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		gap: 0.25rem;
+		list-style: none;
 	}
 	.role {
 		font-size: 0.625rem;

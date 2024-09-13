@@ -7,7 +7,7 @@ const roles = {
 	},
 	'childrens-church': {
 		name: 'childrens church',
-		color: '#206694',
+		color: '#61acdd',
 		showSeparately: true,
 		subtitles: [
 			'Hazy is a Dictator please help',
