@@ -3,6 +3,7 @@
 	import Hero from '$lib/Hero.svelte'
 	import Groups from '$lib/Groups.svelte'
 	import ProjectList from '$lib/Project/ProjectList.svelte'
+	import ButtonBadgeList from '$lib/ButtonBadgeList.svelte'
 	import projects from '$lib/data/projects.js'
 	import splashes from '$lib/data/splashes.js'
 	import buttons from '$lib/data/buttons.js'
@@ -62,21 +63,34 @@
 			"name": "Besties",
 			"legalName": "Besties",
 			"url": "https://besties.house",
-			"logo": "https://besties.house/icons/ucb.png",
+			"logo": "https://besties.house/logo.png",
 			"foundingDate": "2021",
-			"founders": [
+			"founder": [
 				{
 					"@type": "Person",
-					"name": "Hazel Cora"
+					"givenName": "Hazel",
+					"familyName": "Cora",
+					"name": "hazycora",
+					"sameAs": [
+						"https://hazy.sh",
+						"https://hazy.gay",
+						"https://social.besties.house/@h",
+						"https://github.com/hazycora"
+					]
 				},
 				{
 					"@type": "Person",
-					"name": "Aria Blue"
+					"name": "Aria Blue",
+					"givenName": "Aria",
+					"familyName": "Blue",
+					"sameAs": [
+						"https://tacohitbox.com",
+						"https://social.besties.house/@a"
+					]
 				}
 			],
 			"sameAs": [
 				"https://social.besties.house/@besties",
-				"https://twitter.com/bestiesgc",
 				"https://github.com/bestiesgc"
 			]
 		}
@@ -126,25 +140,8 @@
 			<ProjectList {projects} />
 			<h2>members</h2>
 			<Groups />
-			<div class="button-badges">
-				{#each buttons as button}
-					{#if button.href}
-						<a href={button.href}>
-							<img
-								src={button.src}
-								alt={button.alt}
-								title={button.title ?? button.alt}
-							/>
-						</a>
-					{:else}
-						<img
-							src={button.src}
-							alt={button.alt}
-							title={button.title ?? button.alt}
-						/>
-					{/if}
-				{/each}
-			</div>
+			<br />
+			<ButtonBadgeList {buttons} />
 			<br />
 			<a href="https://git.gay/besties/besties.house">source code on git.gay</a>
 		</main>
@@ -190,20 +187,6 @@
 
 			scrollbar-color: var(--violet-100) var(--violet-400);
 			scrollbar-width: thin;
-		}
-	}
-	.button-badges {
-		margin-top: 1rem;
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.5rem;
-	}
-	.button-badges img {
-		width: 88px;
-		height: 31px;
-		user-select: none;
-		&:not([src$='.svg']) {
-			image-rendering: pixelated;
 		}
 	}
 </style>

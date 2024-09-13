@@ -5,8 +5,9 @@
 	import Listening from '$lib/Discord/Listening.svelte'
 	import Playing from '$lib/Discord/Playing.svelte'
 	import BasicMarkdown from '$lib/BasicMarkdown.svelte'
+	import Social from '$lib/Discord/Social.svelte'
+	import ButtonBadgeList from '$lib/ButtonBadgeList.svelte'
 	import { getContext } from 'svelte'
-	import Social from './Social.svelte'
 
 	export let member
 
@@ -64,6 +65,7 @@
 					{customStatus.emoji.name}
 				{:else if customStatus.emoji?.id}
 					<img
+						loading="lazy"
 						class="status-emoji"
 						width="21"
 						height="21"
@@ -104,31 +106,7 @@
 		{/if}
 		{#if member.buttons}
 			<p class="heading">buttons</p>
-			<div class="button-badges">
-				{#each member.buttons.sort() as button}
-					{#if button.url}
-						<a href={button.url}>
-							<img
-								width={button.width || 88}
-								height={button.height || 31}
-								class="button-badge"
-								src={button.src}
-								alt={button.alt || ''}
-								title={button.alt}
-							/>
-						</a>
-					{:else}
-						<img
-							width={button.width || 88}
-							height={button.height || 31}
-							class="button-badge"
-							src={button.src}
-							alt={button.alt || ''}
-							title={button.alt}
-						/>
-					{/if}
-				{/each}
-			</div>
+			<ButtonBadgeList buttons={member.buttons} flex />
 		{/if}
 		{#if member.socials || member.email}
 			<hr />
@@ -222,13 +200,5 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
 		gap: 0.5rem;
-	}
-	.button-badge {
-		opacity: 0.8;
-		image-rendering: pixelated;
-		transition: opacity 0.125s;
-	}
-	.button-badge:hover {
-		opacity: 1;
 	}
 </style>

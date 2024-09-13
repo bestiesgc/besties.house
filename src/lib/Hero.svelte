@@ -7,10 +7,9 @@
 	}
 </script>
 
-<div class="hero" data-nosnippet>
+<div class="hero">
 	<GlitchyBg />
 	<h1 class="besties-heading">besties</h1>
-	<slot />
 	<RandomMessage
 		on:update-message={handleRandomMessageUpdate}
 		class="besties-splash"
@@ -35,7 +34,7 @@
 		justify-content: center;
 		font-size: 2rem;
 		--negative-bottom-margin: 0rem;
-		min-height: calc(100vh - var(--member-list-min-height));
+		min-height: calc(100vh - 12rem);
 		color: #a39fb2;
 		background-color: var(--violet-700);
 	}
@@ -58,7 +57,7 @@
 		transform: scaleY(0.8);
 		position: relative;
 		z-index: 2;
-		--3d-anaglyph: 0.05em;
+		--3d-anaglyph: 0.025em;
 		--blend-mode: color-dodge;
 	}
 

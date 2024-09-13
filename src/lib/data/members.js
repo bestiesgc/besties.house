@@ -98,7 +98,7 @@ const members = [
 			{
 				src: '/buttons/emilia.gif',
 				alt: "emilia's web",
-				url: 'https://ponymare.ovh'
+				href: 'https://ponymare.ovh'
 			}
 		],
 		discord: '389440708399988736',

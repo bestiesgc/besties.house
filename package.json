@@ -18,6 +18,8 @@
 		"autoprefixer": "^10.4.19",
 		"eslint": "^8.57.0",
 		"eslint-plugin-svelte": "^2.39.0",
+		"fontconf": "^0.1.0",
+		"html-minifier": "^4.0.0",
 		"postcss": "^8.4.38",
 		"postcss-nesting": "^12.1.4",
 		"postcss-scrollbar": "^0.5.1",

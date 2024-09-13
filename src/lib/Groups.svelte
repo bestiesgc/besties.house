@@ -33,7 +33,6 @@
 <style lang="postcss">
 	.member-list-wrapper {
 		width: 100%;
-		min-height: var(--member-list-min-height);
 		display: grid;
 		gap: 2rem;
 		overflow-y: hidden;

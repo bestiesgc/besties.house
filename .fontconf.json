@@ -1,0 +1,6 @@
+{
+	"fonts": {
+		"dm-sans": ["DM Sans", "Arial", "Helvetica"]
+	},
+	"outputFile": "fonts.css"
+}

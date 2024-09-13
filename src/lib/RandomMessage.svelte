@@ -38,7 +38,7 @@
 </script>
 
 {#key splash}
-	<p class={classList} transition:slide>
+	<p data-nosnippet class={classList} transition:slide>
 		<BasicMarkdown text={splash ? splash : ''} />
 	</p>
 {/key}

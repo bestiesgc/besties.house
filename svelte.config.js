@@ -11,7 +11,7 @@ const config = {
 			precompress: true,
 			strict: true
 		}),
-		inlineStyleThreshold: 9000
+		inlineStyleThreshold: 18000
 	},
 
 	preprocess: [
