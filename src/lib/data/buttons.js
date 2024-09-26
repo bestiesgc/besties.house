@@ -23,7 +23,7 @@ const buttons = [
 		title: 'kattgutte er ikke ekte'
 	},
 	{
-		src: 'https://oli.pages.gay/WebButton.svg',
+		src: 'https://oli.pages.gay/badges/WebButton.svg',
 		href: 'https://oli.pages.gay',
 		alt: 'oli'
 	},
