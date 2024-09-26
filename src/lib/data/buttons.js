@@ -5,6 +5,11 @@ const buttons = [
 		alt: 'besties - first unionised group chat'
 	},
 	{
+		src: '/buttons/gitgay.svg',
+		href: 'https://git.gay',
+		alt: 'git.gay'
+	},
+	{
 		src: '/buttons/trans.png',
 		alt: 'trans flag'
 	},
@@ -56,6 +61,11 @@ const buttons = [
 		src: '/buttons/yassie_j.gif',
 		href: 'https://labyrinth.zone/users/yassie_j',
 		alt: 'yassie_j'
+	},
+	{
+		src: 'https://authenyo.xyz/images/button.gif',
+		href: 'https://authenyo.xyz',
+		alt: 'authen'
 	}
 ]
 
