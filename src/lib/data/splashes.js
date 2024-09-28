@@ -4,7 +4,7 @@ const splashes = [
 	'hope you like amateur web design',
 	'Just a glimpse into my dark reality. A full stare would make most simply go insane lmao',
 	'the radical left, the marxists, the anarchists, the agitators, the looters,',
-	'meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow',
+	'meow meow meow meow meow meow meow meow meow meow meow meow',
 	'reality surf x3',
 	'if i post pics u gotta like it',
 	'delete my fcking socials idc anymore',

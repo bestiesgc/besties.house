@@ -83,6 +83,7 @@
 
 	.hero :global(.besties-splash) {
 		z-index: 2;
+		font-size: 1.75rem;
 	}
 
 	@media (min-width: 1050px) {
