@@ -23,7 +23,7 @@ const buttons = [
 	},
 	{
 		src: '/buttons/kattgutte.png',
-		href: 'https://harper.eepy.zone',
+		href: 'https://blueb.pages.gay',
 		alt: 'sad kitten looking at viewer with text saying kattgutte er ikke ekte',
 		title: 'kattgutte er ikke ekte'
 	},
@@ -66,6 +66,11 @@ const buttons = [
 		src: 'https://authenyo.xyz/images/button.gif',
 		href: 'https://authenyo.xyz',
 		alt: 'authen'
+	},
+	{
+		src: 'https://houl.floof.company/assets/img/fof-button.gif',
+		href: 'https://houl.floof.company',
+		alt: 'a fox!'
 	}
 ]
 
