@@ -20,8 +20,8 @@ jobs:
           cat > deploy.sh << EOF
           cd /var/www/html/besties.house
           git pull
-          pnpm i --frozen-lockfile
-          pnpm run build
+          corepack pnpm i --frozen-lockfile
+          corepack pnpm run build
           EOF
           ssh -o "StrictHostKeyChecking no" "${{ secrets.SSH_HOST }}" -p "${{ secrets.SSH_PORT || 22 }}" -l "${{ secrets.SSH_USER }}" -i "$SSH_KEY_PATH" 'bash -s' < deploy.sh
           rm -rf $TEMP_PATH
