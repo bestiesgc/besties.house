@@ -1,6 +1,7 @@
 <script>
 	import ProjectItem from './ProjectItem.svelte'
-	export let projects
+	/** @type {{projects: any}} */
+	let { projects } = $props();
 </script>
 
 <div class="project-list-wrapper">

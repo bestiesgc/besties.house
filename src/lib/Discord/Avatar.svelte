@@ -2,8 +2,8 @@
 	import { fade } from 'svelte/transition'
 	import { expoOut } from 'svelte/easing'
 	import ImgAndFallback from '$lib/Discord/ImgAndFallback.svelte'
-	export let member
-	export let status
+	/** @type {{member: any, status: any}} */
+	let { member, status } = $props();
 </script>
 
 <div
@@ -23,7 +23,7 @@
 			<div
 				class="avatar-img"
 				style="background-color: var(--member-color); position: absolute; top: 0; bottom: 0; left: 0; right: 0;"
-			/>
+			></div>
 		</ImgAndFallback>
 	{/if}
 	{#if status}
@@ -31,7 +31,7 @@
 			class="status"
 			data-status={status}
 			in:fade={{ duration: 800, easing: expoOut }}
-		/>
+		></div>
 	{/if}
 </div>
 

@@ -1,43 +1,14 @@
 <script>
+	import { run } from 'svelte/legacy';
+
 	import { getActivityCover } from '$lib/Discord/activity.js'
 	import { browser } from '$app/environment'
 	import { onMount } from 'svelte'
 	import Playing from '$lib/Discord/Playing.svelte'
 	import Duration from '$lib/Duration.svelte'
-	let listening = null
-	export let member = null
-	export let activity = null
-	$: {
-		if (browser && !activity) loadYellowcab(member.socials.lastfm)
-	}
-	$: if (activity) {
-		now = Date.now()
-		let start, end, duration
-		if (activity.timestamps.start) {
-			start = new Date(activity.timestamps.start)
-		}
-		if (activity.timestamps.end) {
-			end = new Date(activity.timestamps.end)
-		}
-		if (start && end) {
-			duration = end - start
-		}
-		listening = yellowcabToDiscord({
-			cover: getActivityCover(activity),
-			track: {
-				name: activity.details
-			},
-			album: {
-				name: activity.assets.large_text
-			},
-			artist: {
-				name: activity.state
-			},
-			start,
-			end,
-			duration
-		})
-	}
+	let listening = $state(null)
+	/** @type {{member?: any, activity?: any}} */
+	let { member = null, activity = null } = $props();
 	function yellowcabToDiscord(listening) {
 		if (!listening) return
 		const discordPresence = {
@@ -69,7 +40,7 @@
 			listening = yellowcabToDiscord(data.response)
 		}
 	}
-	let now = Date.now()
+	let now = $state(Date.now())
 	onMount(() => {
 		const int = setInterval(() => {
 			now = Date.now()
@@ -78,11 +49,44 @@
 			clearInterval(int)
 		}
 	})
+	run(() => {
+		if (browser && !activity) loadYellowcab(member.socials.lastfm)
+	});
+	run(() => {
+		if (activity) {
+			now = Date.now()
+			let start, end, duration
+			if (activity.timestamps.start) {
+				start = new Date(activity.timestamps.start)
+			}
+			if (activity.timestamps.end) {
+				end = new Date(activity.timestamps.end)
+			}
+			if (start && end) {
+				duration = end - start
+			}
+			listening = yellowcabToDiscord({
+				cover: getActivityCover(activity),
+				track: {
+					name: activity.details
+				},
+				album: {
+					name: activity.assets.large_text
+				},
+				artist: {
+					name: activity.state
+				},
+				start,
+				end,
+				duration
+			})
+		}
+	});
 </script>
 
 {#if listening}
 	<Playing heading="listening to music" activity={listening}>
-		<svelte:fragment slot="icon-fallback">
+		<svelte:fragment slot="iconFallback">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				height="24"

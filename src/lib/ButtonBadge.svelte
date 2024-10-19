@@ -1,5 +1,6 @@
 <script>
-	export let button
+	/** @type {{button: any}} */
+	let { button } = $props();
 </script>
 
 {#if button.href}

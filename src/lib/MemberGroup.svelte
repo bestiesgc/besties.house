@@ -1,7 +1,8 @@
 <script>
 	import Member from '$lib/Discord/Member.svelte'
 	import RandomMessage from '$lib/RandomMessage.svelte'
-	export let group
+	/** @type {{group: any}} */
+	let { group } = $props();
 </script>
 
 <div class="member-group" style={group.style}>

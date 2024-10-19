@@ -1,8 +1,8 @@
 <script>
 	import ButtonBadge from './ButtonBadge.svelte'
 
-	export let buttons
-	export let flex = false
+	/** @type {{buttons: any, flex?: boolean}} */
+	let { buttons, flex = false } = $props();
 </script>
 
 <div class="button-badges" class:flex>

@@ -1,13 +1,17 @@
 <script>
 	import { onMount } from 'svelte'
-	export let shader
-	let loaded = false
-	export let doResize = true
-	export let width = null
-	export let height = null
-	export let style = ''
-	let className = ''
-	export { className as class }
+	let loaded = $state(false)
+	/** @type {{shader: any, doResize?: boolean, width?: any, height?: any, style?: string, class?: string, [key: string]: any}} */
+	let {
+		shader,
+		doResize = true,
+		width = null,
+		height = null,
+		style = '',
+		class: className = '',
+		...rest
+	} = $props();
+	
 	let animate = false
 
 	const vertexShader = `attribute vec2 inPos;
@@ -55,7 +59,7 @@ void main()
     mainImage( gl_FragColor, gl_FragCoord.xy / iPixelRatio );
 }
 `
-	let doneAnimating = false
+	let doneAnimating = $state(false)
 
 	onMount(() => {
 		let gl = null
@@ -187,13 +191,13 @@ void main()
 </script>
 
 {#if doneAnimating}
-	<div {style} class="{className} tooslow" {...$$restProps} />
+	<div {style} class="{className} tooslow" {...rest}></div>
 {:else}
 	<canvas
 		{style}
 		class="{className} {loaded ? 'loaded' : ''}"
-		{...$$restProps}
-	/>
+		{...rest}
+	></canvas>
 {/if}
 
 <style lang="postcss">

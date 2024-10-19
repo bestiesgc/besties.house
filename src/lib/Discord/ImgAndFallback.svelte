@@ -1,10 +1,13 @@
 <script>
-	let classList
-	export let src
-	export let alt
-	export let width
-	export let height
-	export { classList as class }
+	/** @type {{class: any, src: any, alt: any, width: any, height: any}} */
+	let {
+		class: classList,
+		src,
+		alt,
+		width,
+		height
+	} = $props();
+	
 </script>
 
 <div class="img">

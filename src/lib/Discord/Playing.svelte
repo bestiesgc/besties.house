@@ -34,7 +34,7 @@
 			</div>
 		{:else}
 			<div class="cover fallback" aria-hidden="true">
-				<slot name="icon-fallback">
+				<slot name="iconFallback">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						height="24"
@@ -60,51 +60,4 @@
 	</div>
 {/if}
 
-<style lang="postcss">
-	.listening {
-		display: grid;
-		grid-template-columns: 3rem 1fr;
-		gap: 0.25rem;
-		font-size: 0.75rem;
-		color: var(--grey-600);
-	}
-	.cover {
-		user-select: none;
-		display: block;
-		position: relative;
-		width: 100%;
-		aspect-ratio: 1;
-		border-radius: 0.25rem;
-	}
-	.cover .small {
-		background-color: var(--violet-750);
-		border: 0.125rem solid var(--violet-750);
-		border-radius: 100%;
-		position: absolute;
-		bottom: -0.125rem;
-		right: -0.125rem;
-		width: 1rem;
-		height: auto;
-	}
-	.cover.fallback {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background: var(--violet-900);
-	}
-	.meta {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		min-width: 0;
-	}
-	.meta p {
-		overflow: hidden;
-		white-space: nowrap;
-		text-overflow: ellipsis;
-	}
-	.track-name {
-		color: var(--grey-400);
-		font-weight: 600;
-	}
-</style>
+<style lang="postcss">/*$$__STYLE_CONTENT__$$*/</style>

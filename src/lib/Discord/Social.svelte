@@ -1,4 +1,6 @@
 <script>
+	import { run } from 'svelte/legacy';
+
 	import Website from '$lib/Icons/Website.svg?c'
 	import GitHub from '$lib/Icons/GitHub.svg?c'
 	import GitGay from '$lib/Icons/GitGay.svg?c'
@@ -75,8 +77,10 @@
 		}
 	}
 
-	let href, title, icon
-	$: {
+	let href = $state(), title = $state(), icon = $state()
+	/** @type {{type: any, value: any}} */
+	let { type, value } = $props();
+	run(() => {
 		href = detailsMap[type].href(value)
 		if (typeof detailsMap[type].title === 'function') {
 			title = detailsMap[type].title(value)
@@ -84,14 +88,14 @@
 			title = detailsMap[type].title
 		}
 		icon = detailsMap[type].icon
-	}
-	export let type
-	export let value
+	});
+
+	const SvelteComponent = $derived(icon);
 </script>
 
 <a {href}>
 	<div class="social">
-		<svelte:component this={icon} aria-hidden="true" />
+		<SvelteComponent aria-hidden="true" />
 		<p class="social-label">{title}</p>
 	</div>
 </a>

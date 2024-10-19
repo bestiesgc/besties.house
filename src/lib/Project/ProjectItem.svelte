@@ -1,5 +1,6 @@
 <script>
-	export let project
+	/** @type {{project: any}} */
+	let { project } = $props();
 </script>
 
 <a href={project.url} class="project-item-wrapper">

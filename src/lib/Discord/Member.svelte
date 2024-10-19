@@ -1,4 +1,6 @@
 <script>
+	import { run } from 'svelte/legacy';
+
 	import { getSpecialActivities } from '$lib/Discord/activity.js'
 	import roles from '$lib/data/roles.js'
 	import Avatar from '$lib/Discord/Avatar.svelte'
@@ -9,17 +11,18 @@
 	import ButtonBadgeList from '$lib/ButtonBadgeList.svelte'
 	import { getContext } from 'svelte'
 
-	export let member
+	/** @type {{member: any}} */
+	let { member = $bindable() } = $props();
 
 	if (member.bio && Array.isArray(member.bio)) {
 		member.bio = member.bio[Math.round(Math.random() * (member.bio.length - 1))]
 	}
 	const allMemberDetails = getContext('member-details')
-	let status = null
-	let customStatus = null
-	let gameActivity = null
-	let musicActivity = null
-	$: {
+	let status = $state(null)
+	let customStatus = $state(null)
+	let gameActivity = $state(null)
+	let musicActivity = $state(null)
+	run(() => {
 		const memberDetails = member.discord
 			? $allMemberDetails[member.discord]
 			: null
@@ -30,11 +33,11 @@
 			gameActivity = specialActivities.gameActivity
 			musicActivity = specialActivities.musicActivity
 		}
-	}
+	});
 </script>
 
 <div class="member" style={member.style || null}>
-	<div class="banner" style:background-color={member.color} />
+	<div class="banner" style:background-color={member.color}></div>
 	<Avatar {member} {status} />
 	<div class="info">
 		<p class="name">

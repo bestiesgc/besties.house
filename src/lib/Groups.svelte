@@ -2,29 +2,36 @@
 	import members from '$lib/data/members.js'
 	import roles from '$lib/data/roles.js'
 	import MemberGroup from '$lib/MemberGroup.svelte'
-	let memberGroups = {}
-	// a copy for editing
-	let membersWork = members
-	for (const roleId of Object.keys(roles)) {
-		const theRest = []
-		if (!roles[roleId].showSeparately) continue
-		memberGroups[roleId] = {
-			...roles[roleId],
-			members: membersWork.filter(member => {
-				if (!member.roles.includes(roleId)) {
-					theRest.push(member)
-					return false
+
+	function separateGroups() {
+		let groups = {}
+		let others = []
+		for (const member of members) {
+			let highestSeparateRole
+			for (const role of member.roles) {
+				if (!roles[role]?.showSeparately) continue
+				highestSeparateRole = role
+				break
+			}
+			if (!highestSeparateRole) {
+				others.push(member)
+				continue
+			}
+			if (!groups[highestSeparateRole]) {
+				groups[highestSeparateRole] = {
+					...roles[highestSeparateRole],
+					members: []
 				}
-				return true
-			})
+			}
+			groups[highestSeparateRole].members.push(member)
 		}
-		membersWork = theRest
+		return [others, groups]
 	}
-	memberGroups = memberGroups
+	let [others, memberGroups] = separateGroups()
 </script>
 
 <div class="member-list-wrapper">
-	<MemberGroup group={{ hideName: true, members: membersWork }} />
+	<MemberGroup group={{ hideName: true, members: others }} />
 	{#each Object.values(memberGroups) as group}
 		<MemberGroup {group} />
 	{/each}
