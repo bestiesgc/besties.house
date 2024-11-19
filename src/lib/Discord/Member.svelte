@@ -33,7 +33,9 @@
 			status = memberDetails.status != '' ? memberDetails.status : null
 			const specialActivities = getSpecialActivities(memberDetails.activities)
 			customStatus = specialActivities.customStatus
-			gameActivity = specialActivities.gameActivity
+			if (specialActivities.gameActivity || !gameActivity?.nso) {
+				gameActivity = specialActivities.gameActivity
+			}
 			musicActivity = specialActivities.musicActivity
 		}
 	})
@@ -41,7 +43,9 @@
 	function updateNintendoPresence() {
 		if (!member.nso) return
 		getNintendoPresence(member.nso).then(presence => {
+			if (!presence && !gameActivity.nso) return
 			gameActivity = presence
+			gameActivity.nso = true
 		})
 	}
 
