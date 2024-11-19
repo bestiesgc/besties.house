@@ -5,9 +5,10 @@ const members = [
 			twitter: '1021804959703212034',
 			mastodon: 'https://besties.house/@h',
 			lastfm: 'hazycora',
-			website: 'hazy.gay'
+			website: 'hazy.gay',
+			discord: '728131016392441916'
 		},
-		discord: '728131016392441916',
+		nso: 'https://nxapi-presence.fancy.org.uk/api/presence/d9e70cf0886e1429',
 		isCat: true,
 		avatar: '/avatars/hazycora.webp',
 		color: '#ff36ed',
@@ -22,9 +23,9 @@ const members = [
 			twitter: '1450703231642972161',
 			mastodon: 'https://besties.house/@a',
 			lastfm: 'tacohitbox',
-			email: 'aria@besties.house'
+			email: 'aria@besties.house',
+			discord: '872868956585742337'
 		},
-		discord: '872868956585742337',
 		isCat: true,
 		avatar: '/avatars/aria.webp',
 		color: '#33b2e7',
@@ -48,9 +49,9 @@ const members = [
 		name: 'aly',
 		socials: {
 			mastodon: 'https://besties.house/@shoegayze',
-			lastfm: 'alypuppy'
+			lastfm: 'alypuppy',
+			discord: '616430038694363146'
 		},
-		discord: '616430038694363146',
 		isCat: true,
 		avatar: '/avatars/aly.webp',
 		color: '#206694',
@@ -61,9 +62,9 @@ const members = [
 	{
 		name: 'willow',
 		socials: {
-			lastfm: 'willowmeows'
+			lastfm: 'willowmeows',
+			discord: '850481897808199710'
 		},
-		discord: '850481897808199710',
 		isCat: true,
 		avatar: '/avatars/willow.webp',
 		color: '#7f7f7f',
@@ -77,9 +78,9 @@ const members = [
 			fedi: 'https://fedi.intragon.org/@astra',
 			lastfm: 'astroorbis',
 			youtube: 'astroorbis',
-			email: 'astroorbis@gmail.com'
+			email: 'astroorbis@gmail.com',
+			discord: '846357388607881226'
 		},
-		discord: '846357388607881226',
 		isCat: true,
 		avatar: '/avatars/astro.webp',
 		color: '#33AEF6',
@@ -92,7 +93,8 @@ const members = [
 		socials: {
 			mastodon: 'https://besties.house/@t',
 			lastfm: 'twilightemi',
-			email: 'izzy@besties.house'
+			email: 'izzy@besties.house',
+			discord: '389440708399988736'
 		},
 		buttons: [
 			{
@@ -101,7 +103,6 @@ const members = [
 				href: 'https://ponymare.ovh'
 			}
 		],
-		discord: '389440708399988736',
 		avatar: '/avatars/emilia.webp',
 		roles: ['pone'],
 		color: '#2f0a4f',

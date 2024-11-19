@@ -1,7 +1,10 @@
 <script>
-	import { run } from 'svelte/legacy';
+	import { run } from 'svelte/legacy'
 
-	import { getSpecialActivities } from '$lib/Discord/activity.js'
+	import {
+		getSpecialActivities,
+		getNintendoPresence
+	} from '$lib/Discord/activity.js'
 	import roles from '$lib/data/roles.js'
 	import Avatar from '$lib/Discord/Avatar.svelte'
 	import Listening from '$lib/Discord/Listening.svelte'
@@ -9,10 +12,10 @@
 	import BasicMarkdown from '$lib/BasicMarkdown.svelte'
 	import Social from '$lib/Discord/Social.svelte'
 	import ButtonBadgeList from '$lib/ButtonBadgeList.svelte'
-	import { getContext } from 'svelte'
+	import { getContext, onMount } from 'svelte'
 
 	/** @type {{member: any}} */
-	let { member = $bindable() } = $props();
+	let { member = $bindable() } = $props()
 
 	if (member.bio && Array.isArray(member.bio)) {
 		member.bio = member.bio[Math.round(Math.random() * (member.bio.length - 1))]
@@ -23,8 +26,8 @@
 	let gameActivity = $state(null)
 	let musicActivity = $state(null)
 	run(() => {
-		const memberDetails = member.discord
-			? $allMemberDetails[member.discord]
+		const memberDetails = member.socials?.discord
+			? $allMemberDetails[member.socials.discord]
 			: null
 		if (memberDetails) {
 			status = memberDetails.status != '' ? memberDetails.status : null
@@ -33,7 +36,22 @@
 			gameActivity = specialActivities.gameActivity
 			musicActivity = specialActivities.musicActivity
 		}
-	});
+	})
+
+	function updateNintendoPresence() {
+		if (!member.nso) return
+		getNintendoPresence(member.nso).then(presence => {
+			gameActivity = presence
+		})
+	}
+
+	onMount(async () => {
+		updateNintendoPresence()
+
+		const nsoTimeout = setInterval(updateNintendoPresence, 60 * 1000)
+
+		return () => clearInterval(nsoTimeout)
+	})
 </script>
 
 <div class="member" style={member.style || null}>

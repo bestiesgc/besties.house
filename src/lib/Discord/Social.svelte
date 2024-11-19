@@ -1,7 +1,8 @@
 <script>
-	import { run } from 'svelte/legacy';
+	import { run } from 'svelte/legacy'
 
 	import Website from '$lib/Icons/Website.svg?c'
+	import Discord from '$lib/Icons/Discord.svg?c'
 	import GitHub from '$lib/Icons/GitHub.svg?c'
 	import GitGay from '$lib/Icons/GitGay.svg?c'
 	import Twitter from '$lib/Icons/Twitter.svg?c'
@@ -19,6 +20,11 @@
 			href: value => `https://${value}`,
 			title: value => value,
 			icon: Website
+		},
+		discord: {
+			href: value => `https://discord.com/users/${value}`,
+			title: 'Discord',
+			icon: Discord
 		},
 		github: {
 			href: value => `https://github.com/${value}`,
@@ -77,9 +83,11 @@
 		}
 	}
 
-	let href = $state(), title = $state(), icon = $state()
+	let href = $state(),
+		title = $state(),
+		icon = $state()
 	/** @type {{type: any, value: any}} */
-	let { type, value } = $props();
+	let { type, value } = $props()
 	run(() => {
 		href = detailsMap[type].href(value)
 		if (typeof detailsMap[type].title === 'function') {
@@ -88,9 +96,9 @@
 			title = detailsMap[type].title
 		}
 		icon = detailsMap[type].icon
-	});
+	})
 
-	const SvelteComponent = $derived(icon);
+	const SvelteComponent = $derived(icon)
 </script>
 
 <a {href}>

@@ -1,13 +1,40 @@
 <script>
 	import { getActivityCover, assetURL } from '$lib/Discord/activity.js'
+	import { onMount } from 'svelte'
+	import Game from '$lib/Icons/Game.svg?c'
 	export let activity
 	export let heading = 'playing a game'
 
+	$: start = activity?.timestamps?.start
+		? new Date(activity?.timestamps?.start)
+		: null
 	$: cover = getActivityCover(activity)
 	$: smallCover = assetURL(
 		activity?.assets?.small_image,
 		activity?.application_id
 	)
+	let duration
+
+	function timestampToDuration() {
+		if (!start) return null
+		const now = new Date()
+		const diff = now - start
+
+		const hours = Math.floor(diff / 1000 / 60 / 60)
+		const minutes = Math.floor((diff / 1000 / 60) % 60).toString()
+
+		if (hours > 0) {
+			duration = `${hours}:${minutes.padStart(2, '0')}`
+			return
+		}
+		duration = `${minutes} minute${minutes === '1' ? '' : 's'}`
+	}
+
+	onMount(() => {
+		timestampToDuration()
+		const durationInterval = setInterval(timestampToDuration, 1000)
+		return () => clearInterval(durationInterval)
+	})
 </script>
 
 {#if activity}
@@ -56,6 +83,12 @@
 			{#if activity.state}
 				<p class="album-name">{activity.state}</p>
 			{/if}
+			{#if duration}
+				<p class="timestamp">
+					<Game aria-hidden />
+					{duration}
+				</p>
+			{/if}
 		</div>
 	</div>
 {/if}
@@ -97,6 +130,7 @@
 		flex-direction: column;
 		justify-content: center;
 		min-width: 0;
+		line-height: 1.2;
 	}
 	.meta p {
 		overflow: hidden;
@@ -106,5 +140,14 @@
 	.track-name {
 		color: var(--grey-400);
 		font-weight: 600;
+	}
+	.timestamp {
+		color: #6dce8c;
+		font-weight: 600;
+		font-size: 0.625rem;
+		display: flex;
+		align-items: center;
+		gap: 0.5ch;
+		margin-block-start: 0.125rem;
 	}
 </style>

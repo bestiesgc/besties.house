@@ -42,3 +42,26 @@ export function getSpecialActivities(activities) {
 		musicActivity
 	}
 }
+
+export async function getNintendoPresence(nsoPresenceUrl) {
+	const response = await fetch(nsoPresenceUrl)
+
+	if (!response.ok) return
+	const data = await response.json()
+
+	const game = data.friend?.presence?.game
+
+	if (!game) return
+
+	const title = data.title
+
+	return {
+		name: game.name,
+		assets: {
+			large_image: game.imageUri
+		},
+		timestamps: {
+			start: new Date(title.since).getTime()
+		}
+	}
+}
