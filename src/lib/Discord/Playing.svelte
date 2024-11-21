@@ -22,12 +22,13 @@
 
 		const hours = Math.floor(diff / 1000 / 60 / 60)
 		const minutes = Math.floor((diff / 1000 / 60) % 60).toString()
+		const seconds = Math.floor((diff / 1000) % 60).toString()
 
 		if (hours > 0) {
-			duration = `${hours}:${minutes.padStart(2, '0')}`
+			duration = `${hours}:${minutes.padStart(2, '0')}:${seconds.padStart(2, '0')}`
 			return
 		}
-		duration = `${minutes} minute${minutes === '1' ? '' : 's'}`
+		duration = `${minutes}:${seconds.padStart(2, '0')}`
 	}
 
 	onMount(() => {
