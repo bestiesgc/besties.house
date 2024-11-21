@@ -2,7 +2,7 @@
 	import RandomMessage from '$lib/RandomMessage.svelte'
 	import GlitchyBg from '$lib/GlitchyBg.svelte'
 	/** @type {{splashes: any}} */
-	let { splashes } = $props();
+	let { splashes } = $props()
 	function handleRandomMessageUpdate(e) {
 		document.title = `besties - ${e.detail.text}`
 	}

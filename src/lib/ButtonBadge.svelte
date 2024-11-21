@@ -1,6 +1,6 @@
 <script>
 	/** @type {{button: any}} */
-	let { button } = $props();
+	let { button } = $props()
 </script>
 
 {#if button.href}

@@ -6,7 +6,7 @@
 	const dispatch = createEventDispatcher()
 
 	/** @type {{class: any, messages: any}} */
-	let { class: classList, messages = $bindable() } = $props();
+	let { class: classList, messages = $bindable() } = $props()
 	let splash = $state()
 	function shuffle(a) {
 		for (let i = a.length - 1; i > 0; i--) {
@@ -34,7 +34,6 @@
 			clearInterval(splashInterval)
 		}
 	})
-	
 </script>
 
 {#key splash}

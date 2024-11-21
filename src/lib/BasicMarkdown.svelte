@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte'
 	/** @type {{text: any}} */
-	let { text } = $props();
+	let { text } = $props()
 	let markdownElement = $state()
 
 	const ATTR_REGEX = /[&"]/g

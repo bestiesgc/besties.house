@@ -10,8 +10,8 @@
 		style = '',
 		class: className = '',
 		...rest
-	} = $props();
-	
+	} = $props()
+
 	let animate = false
 
 	const vertexShader = `attribute vec2 inPos;
@@ -193,10 +193,7 @@ void main()
 {#if doneAnimating}
 	<div {style} class="{className} tooslow" {...rest}></div>
 {:else}
-	<canvas
-		{style}
-		class="{className} {loaded ? 'loaded' : ''}"
-		{...rest}
+	<canvas {style} class="{className} {loaded ? 'loaded' : ''}" {...rest}
 	></canvas>
 {/if}
 

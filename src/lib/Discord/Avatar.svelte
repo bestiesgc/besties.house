@@ -3,7 +3,7 @@
 	import { expoOut } from 'svelte/easing'
 	import ImgAndFallback from '$lib/Discord/ImgAndFallback.svelte'
 	/** @type {{member: any, status: any}} */
-	let { member, status } = $props();
+	let { member, status } = $props()
 </script>
 
 <div

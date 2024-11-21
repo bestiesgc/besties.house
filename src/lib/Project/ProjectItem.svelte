@@ -1,6 +1,6 @@
 <script>
 	/** @type {{project: any}} */
-	let { project } = $props();
+	let { project } = $props()
 </script>
 
 <a href={project.url} class="project-item-wrapper">

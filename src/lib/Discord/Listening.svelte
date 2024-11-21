@@ -1,5 +1,5 @@
 <script>
-	import { run } from 'svelte/legacy';
+	import { run } from 'svelte/legacy'
 
 	import { getActivityCover } from '$lib/Discord/activity.js'
 	import { browser } from '$app/environment'
@@ -8,7 +8,7 @@
 	import Duration from '$lib/Duration.svelte'
 	let listening = $state(null)
 	/** @type {{member?: any, activity?: any}} */
-	let { member = null, activity = null } = $props();
+	let { member = null, activity = null } = $props()
 	function yellowcabToDiscord(listening) {
 		if (!listening) return
 		const discordPresence = {
@@ -51,7 +51,7 @@
 	})
 	run(() => {
 		if (browser && !activity) loadYellowcab(member.socials.lastfm)
-	});
+	})
 	run(() => {
 		if (activity) {
 			now = Date.now()
@@ -81,7 +81,7 @@
 				duration
 			})
 		}
-	});
+	})
 </script>
 
 {#if listening}

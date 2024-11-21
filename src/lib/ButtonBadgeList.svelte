@@ -2,7 +2,7 @@
 	import ButtonBadge from './ButtonBadge.svelte'
 
 	/** @type {{buttons: any, flex?: boolean}} */
-	let { buttons, flex = false } = $props();
+	let { buttons, flex = false } = $props()
 </script>
 
 <div class="button-badges" class:flex>
