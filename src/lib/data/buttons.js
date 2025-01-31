@@ -28,8 +28,8 @@ const buttons = [
 		title: 'kattgutte er ikke ekte'
 	},
 	{
-		src: 'https://oli.pages.gay/badges/oli.svg',
-		href: 'https://oli.pages.gay',
+		src: 'https://floof.gay/img/badges/oli.svg',
+		href: 'https://floof.gay',
 		alt: 'oli'
 	},
 	{
