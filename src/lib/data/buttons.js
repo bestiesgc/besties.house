@@ -28,6 +28,11 @@ const buttons = [
 		title: 'fawnoverfun'
 	},
 	{
+		src: 'https://authenticweirdgirl.neocities.org/ellietime.png',
+		href: 'https://authenticweirdgirl.neocities.org',
+		alt: 'ellie time'
+	},
+	{
 		src: '/buttons/kattgutte.png',
 		href: 'https://blueb.pages.gay',
 		alt: 'sad kitten looking at viewer with text saying kattgutte er ikke ekte',
