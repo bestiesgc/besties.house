@@ -22,6 +22,12 @@ const buttons = [
 		alt: 'acab'
 	},
 	{
+		src: '/buttons/fawnoverfun.svg',
+		href: 'https://fawnover.fun',
+		alt: 'f > f. to the right are deer antlers in the shape of a heart',
+		title: 'fawnoverfun'
+	},
+	{
 		src: '/buttons/kattgutte.png',
 		href: 'https://blueb.pages.gay',
 		alt: 'sad kitten looking at viewer with text saying kattgutte er ikke ekte',
