@@ -5,7 +5,7 @@ const buttons = [
 		alt: 'besties - first unionised group chat'
 	},
 	{
-		src: '/buttons/gitgay.svg',
+		src: 'https://git.gay/button.svg',
 		href: 'https://git.gay',
 		alt: 'git.gay'
 	},
