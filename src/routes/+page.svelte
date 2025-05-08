@@ -93,12 +93,6 @@
 		}
 	</script>
 </svelte:head>
-<div style:display="none">
-	<!-- For fediverse link verification -->
-	<a rel="me" href="https://social.besties.house/@besties"
-		>@besties@besties.house</a
-	>
-</div>
 
 <div class="page">
 	<div class="main-wrapper">
@@ -136,7 +130,7 @@
 			</p>
 			<p>
 				For updates on our services, you can find us collectively on the
-				Fediverse at <a rel="me" href="https://social.besties.house"
+				Fediverse at <a rel="me" href="https://social.besties.house/@besties"
 					>@besties@besties.house</a
 				>, and there's a mirror of our account on Bluesky at
 				<a href="https://bsky.app/profile/besties.house">@besties.house</a>. If
