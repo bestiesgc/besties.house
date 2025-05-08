@@ -1,6 +1,6 @@
 const members = [
 	{
-		name: 'hazycora',
+		name: 'hazel',
 		socials: {
 			twitter: '1021804959703212034',
 			mastodon: 'https://besties.house/@h',
