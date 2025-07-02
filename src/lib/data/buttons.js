@@ -79,7 +79,7 @@ const buttons = [
 		alt: 'authen'
 	},
 	{
-		src: 'https://houl.floof.company/assets/images/buttons/fof-button.gif',
+		src: 'https://houl.floof.company/assets/images/buttons/fof-button.webp',
 		href: 'https://houl.floof.company',
 		alt: 'a fox!'
 	},
