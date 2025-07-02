@@ -82,6 +82,11 @@ const buttons = [
 		src: 'https://houl.floof.company/assets/images/buttons/fof-button.gif',
 		href: 'https://houl.floof.company',
 		alt: 'a fox!'
+	},
+	{
+		src: 'https://maia.crimew.gay/badges/maia.crimew.gay.png',
+		href: 'https://maia.crimew.gay',
+		alt: 'maia.crimew.gay'
 	}
 ]
 
