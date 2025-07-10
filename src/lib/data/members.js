@@ -20,6 +20,7 @@ const members = [
 	{
 		name: 'aria',
 		socials: {
+			website: 'tacohitbox.com',
 			twitter: '1450703231642972161',
 			mastodon: 'https://besties.house/@a',
 			lastfm: 'tacohitbox',
