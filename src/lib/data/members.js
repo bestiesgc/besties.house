@@ -6,6 +6,7 @@ const members = [
 			mastodon: 'https://besties.house/@h',
 			lastfm: 'hazycora',
 			website: 'hazy.gay',
+			email: 'hey@hazy.gay',
 			discord: '728131016392441916'
 		},
 		nso: 'https://nxapi-presence.fancy.org.uk/api/presence/d9e70cf0886e1429',
