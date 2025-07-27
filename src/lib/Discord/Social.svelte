@@ -1,6 +1,5 @@
 <script>
-	import { run } from 'svelte/legacy'
-
+	import { browser } from '$app/environment'
 	import Website from '$lib/Icons/Website.svg?c'
 	import Discord from '$lib/Icons/Discord.svg?c'
 	import GitHub from '$lib/Icons/GitHub.svg?c'
@@ -44,7 +43,8 @@
 		email: {
 			href: value => `mailto:${value}`,
 			title: value => value,
-			icon: Mail
+			icon: Mail,
+			clientSide: true
 		},
 		mastodon: {
 			href: value => value,
@@ -83,28 +83,29 @@
 		}
 	}
 
-	let href = $state(),
-		title = $state(),
-		icon = $state()
-	/** @type {{type: any, value: any}} */
 	let { type, value } = $props()
-	run(() => {
-		href = detailsMap[type].href(value)
-		if (typeof detailsMap[type].title === 'function') {
-			title = detailsMap[type].title(value)
-		} else {
-			title = detailsMap[type].title
-		}
-		icon = detailsMap[type].icon
-	})
 
-	const SvelteComponent = $derived(icon)
+	let social = $derived.by(() => {
+		const socialDetails = detailsMap[type]
+		return {
+			...socialDetails,
+			href: socialDetails.href(value),
+			title:
+				typeof socialDetails.title == 'function'
+					? socialDetails.title(value)
+					: socialDetails.title
+		}
+	})
 </script>
 
-<a {href}>
+<a href={social.clientSide && !browser ? '#' : social.href}>
 	<div class="social">
-		<SvelteComponent aria-hidden="true" />
-		<p class="social-label">{title}</p>
+		<social.icon aria-hidden="true" />
+		{#if social.clientSide && !browser}
+			<p class="social-label">Loading</p>
+		{:else}
+			<p class="social-label">{social.title}</p>
+		{/if}
 	</div>
 </a>
 
