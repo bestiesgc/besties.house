@@ -39,9 +39,9 @@ const buttons = [
 		title: 'kattgutte er ikke ekte'
 	},
 	{
-		src: 'https://floof.gay/img/badges/oli.svg',
+		src: 'https://floof.gay/img/badges/olivia.png',
 		href: 'https://floof.gay',
-		alt: 'oli'
+		alt: 'olivia'
 	},
 	{
 		src: 'https://www.theresnotime.co.uk/button.png',
