@@ -102,7 +102,7 @@ const members = [
 			{
 				src: '/buttons/emilia.gif',
 				alt: "emilia's web",
-				href: 'https://ponymare.ovh'
+				href: 'https://emilia.tf'
 			}
 		],
 		avatar: '/avatars/emilia.webp',
