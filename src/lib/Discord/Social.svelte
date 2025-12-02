@@ -102,7 +102,11 @@
 	<div class="social">
 		<social.icon aria-hidden="true" />
 		{#if social.clientSide && !browser}
-			<p class="social-label">Loading</p>
+			<p class="social-label">
+				Loading
+
+				<noscript>- You may need to enable JavaScript</noscript>
+			</p>
 		{:else}
 			<p class="social-label">{social.title}</p>
 		{/if}
