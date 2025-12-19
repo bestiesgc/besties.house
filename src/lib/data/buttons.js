@@ -22,6 +22,16 @@ const buttons = [
 		alt: 'acab'
 	},
 	{
+		src: '/buttons/macintosh.gif',
+		href: 'https://www.apple.com',
+		alt: 'made with Macintosh'
+	},
+	{
+		src: '/buttons/archlinux.gif',
+		href: 'https://archlinux.org',
+		alt: 'Arch Linux'
+	},
+	{
 		src: '/buttons/fawnoverfun.svg',
 		href: 'https://fawnover.fun',
 		alt: 'f > f. to the right are deer antlers in the shape of a heart',
@@ -39,9 +49,9 @@ const buttons = [
 		title: 'kattgutte er ikke ekte'
 	},
 	{
-		src: 'https://floof.gay/img/badges/olivia.png',
-		href: 'https://floof.gay',
-		alt: 'olivia'
+		src: 'https://holly.mlem.systems/img/badges/holly.png',
+		href: 'https://holly.mlem.systems',
+		alt: 'holly'
 	},
 	{
 		src: 'https://www.theresnotime.co.uk/button.png',
@@ -83,6 +93,11 @@ const buttons = [
 		href: 'https://houl.floof.company',
 		alt: 'a fox!'
 	},
+	{
+                src: 'https://wolfyja.de/badges/commit-api-crimes-now.png',
+                href: 'https://gts.apicrim.es',
+                alt: 'commit API crimes NOW!'
+        },
 	{
 		src: 'https://maia.crimew.gay/badges/maia.crimew.gay.png',
 		href: 'https://maia.crimew.gay',
