@@ -74,6 +74,11 @@ const buttons = [
 		alt: "won't work"
 	},
 	{
+		src: 'https://zenfyr.dev/88_31/88_31.webp',
+		href: 'https://zenfyr.dev',
+		alt: 'zenfyr'
+	},
+	{
 		src: 'https://freeplay.floof.company/assets/buttons/free.gif',
 		href: 'https://freeplay.floof.company',
 		alt: 'freee'
