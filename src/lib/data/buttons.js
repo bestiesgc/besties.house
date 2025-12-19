@@ -38,6 +38,11 @@ const buttons = [
 		title: 'fawnoverfun'
 	},
 	{
+		src: 'https://autumn.town/assets/buttons/mybutton.webp',
+		href: 'https://autumn.town',
+		alt: 'Autumn Town Café'
+	},
+	{
 		src: 'https://authenticweirdgirl.neocities.org/ellietime.png',
 		href: 'https://authenticweirdgirl.neocities.org',
 		alt: 'ellie time'
