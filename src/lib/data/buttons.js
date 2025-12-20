@@ -104,10 +104,10 @@ const buttons = [
 		alt: 'a fox!'
 	},
 	{
-                src: 'https://wolfyja.de/badges/commit-api-crimes-now.png',
-                href: 'https://gts.apicrim.es',
-                alt: 'commit API crimes NOW!'
-        },
+		src: 'https://wolfyja.de/badges/commit-api-crimes-now.png',
+		href: 'https://gts.apicrim.es',
+		alt: 'commit API crimes NOW!'
+	},
 	{
 		src: 'https://maia.crimew.gay/badges/maia.crimew.gay.png',
 		href: 'https://maia.crimew.gay',
