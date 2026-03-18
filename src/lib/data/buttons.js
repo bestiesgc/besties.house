@@ -69,8 +69,8 @@ const buttons = [
 		alt: "hi i'm lars"
 	},
 	{
-		src: 'https://sneexy.pages.gay/assets/buttons/sneexy.png',
-		href: 'https://sneexy.pages.gay',
+		src: 'https://sneexy.synth.download/assets/buttons/sneexy.png',
+		href: 'https://sneexy.synth.download',
 		alt: 'sneexy'
 	},
 	{
