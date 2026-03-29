@@ -119,7 +119,7 @@
 		{:else}
 			<Listening {member} />
 		{/if}
-		{#if member.roles.length > 0}
+		{#if member.roles?.length > 0}
 			<p class="heading">roles</p>
 			<ul class="roles">
 				{#each member.roles as role}

@@ -8,7 +8,7 @@
 		let others = []
 		for (const member of members) {
 			let highestSeparateRole
-			for (const role of member.roles) {
+			for (const role of member.roles ?? []) {
 				if (!roles[role]?.showSeparately) continue
 				highestSeparateRole = role
 				break
