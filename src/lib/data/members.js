@@ -38,7 +38,7 @@ const members = [
 		isCat: true,
 		avatar: '/avatars/aria.webp',
 		color: '#33b2e7',
-		pronouns: 'she/it',
+		pronouns: 'it/she',
 		roles: ['pre-ucb', 'weezer enjoyer (distance yourself)', 'punching bag'],
 		url: 'https://ariajb.net',
 		bio: 'weezer enjoyer, bad webdev'
