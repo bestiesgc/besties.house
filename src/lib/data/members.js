@@ -21,13 +21,20 @@ const members = [
 	{
 		name: 'aria',
 		socials: {
-			website: 'tacohitbox.com',
+			website: 'ariajb.net',
 			twitter: '1450703231642972161',
 			mastodon: 'https://besties.house/@a',
 			lastfm: 'tacohitbox',
 			email: 'meow@ariajb.net',
 			discord: '872868956585742337'
 		},
+		buttons: [
+			{
+				src: '/buttons/ariajb.webp',
+				alt: "ariajb.net",
+				href: 'https://ariajb.net'
+			}
+		],
 		isCat: true,
 		avatar: '/avatars/aria.webp',
 		color: '#33b2e7',
