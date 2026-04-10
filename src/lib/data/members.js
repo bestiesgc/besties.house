@@ -2,7 +2,7 @@ const members = [
 	{
 		name: 'hazel',
 		socials: {
-			twitter: '1021804959703212034',
+			twitter: '1549471059535069186',
 			mastodon: 'https://besties.house/@h',
 			lastfm: 'hazycora',
 			website: 'hazy.gay',
