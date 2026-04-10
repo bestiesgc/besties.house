@@ -25,7 +25,7 @@ const members = [
 			twitter: '1450703231642972161',
 			mastodon: 'https://besties.house/@a',
 			lastfm: 'tacohitbox',
-			email: 'aria@besties.house',
+			email: 'meow@ariajb.net',
 			discord: '872868956585742337'
 		},
 		isCat: true,
@@ -33,7 +33,7 @@ const members = [
 		color: '#33b2e7',
 		pronouns: 'she/it',
 		roles: ['pre-ucb', 'weezer enjoyer (distance yourself)', 'punching bag'],
-		url: 'https://tacohitbox.com',
+		url: 'https://ariajb.net',
 		bio: 'weezer enjoyer, bad webdev'
 	},
 	{
